@@ -58,7 +58,7 @@ const Footer = () => {
                             >
                                 Privacy Policy
                             </Link>
-                        </li>    
+                        </li>
                     </ul>
                 </div>
 
@@ -69,7 +69,7 @@ const Footer = () => {
                         <li className="flex items-start gap-2">
                             <FiMapPin className="mt-1 text-red-700" />
                             <a
-                                href="https://www.google.com/maps?q=85a+Market+Street,+Ashby+LE65+1AH"
+                                href="https://www.google.com/maps?q=23-27+Station+Street,+Ratby,+Leicestershire,+LE6+0JQ"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="hover:underline text-gray-400"
@@ -80,7 +80,7 @@ const Footer = () => {
                         <li className="flex items-center gap-2">
                             <FiPhone className="text-red-700" />
                             <a
-                                href="https://wa.me/441530648708"
+                                href="tel: 0116 2395 644"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="hover:underline text-gray-400"

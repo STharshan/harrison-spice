@@ -3,6 +3,7 @@ import Hero from '../components/Hero'
 import About from '../components/About'
 import MenuFlipbook from '../components/Menu/MenuSection'
 import Contact from '../components/Contact'
+import FindUs from '../components/Findus'
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <About />
       <MenuFlipbook />
       <Contact />
+      <FindUs />
     </div>
   )
 }

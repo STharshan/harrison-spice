@@ -21,9 +21,16 @@ const Contact = () => {
                                     <div>
                                         <p className="font-medium text-foreground">Address</p>
                                         <p className="text-muted-foreground">
-                                            23-27 Station Street, Ratby
-                                            <br />
-                                            Leicestershire, LE6 0JQ
+                                            <a
+                                                href="https://www.google.com/maps?q=23-27+Station+Street,+Ratby,+Leicestershire,+LE6+0JQ"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="hover:underline"
+                                            >
+                                                23-27 Station Street, Ratby
+                                                <br />
+                                                Leicestershire, LE6 0JQ
+                                            </a>
                                         </p>
                                     </div>
                                 </div>
@@ -32,7 +39,14 @@ const Contact = () => {
                                     <FaPhoneAlt className="h-5 w-5 text-emerald-700" />
                                     <div>
                                         <p className="font-medium text-foreground">Phone</p>
-                                        <p className="text-muted-foreground">0116 2395 644</p>
+                                        <p className="text-muted-foreground">
+                                            <a
+                                                href="tel:01162395644"
+                                                className="hover:underline"
+                                            >
+                                                0116 2395 644
+                                            </a>
+                                        </p>
                                     </div>
                                 </div>
                                 <hr className='text-gray-300 mt-5' />
@@ -40,7 +54,14 @@ const Contact = () => {
                                     <FaEnvelope className="h-5 w-5 text-emerald-700" />
                                     <div>
                                         <p className="font-medium text-foreground">Email</p>
-                                        <p className="text-muted-foreground">reservations@harrisonsspice.co.uk</p>
+                                        <p className="text-muted-foreground">
+                                            <a
+                                                href="mailto:reservations@harrisonsspice.co.uk"
+                                                className="hover:underline"
+                                            >
+                                                reservations@harrisonsspice.co.uk
+                                            </a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -70,10 +91,12 @@ const Contact = () => {
                             </div>
                             <hr className='text-gray-300 mt-5' />
                             <div className="text-center mt-10">
-                                <button className="w-full items-center justify-center bg-red-600 flex hover:bg-red-700 text-white py-2 rounded-lg">
-                                    <FaPhoneAlt className="mr-2 h-4 w-4" />
-                                    Call for Reservation
-                                </button>
+                                <a href="tel:01162395644">
+                                    <button className="w-full items-center justify-center bg-red-600 flex hover:bg-red-700 text-white py-2 rounded-lg">
+                                        <FaPhoneAlt className="mr-2 h-4 w-4" />
+                                        Call for Reservation
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>

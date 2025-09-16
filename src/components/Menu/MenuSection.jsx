@@ -162,7 +162,10 @@ const InfoPage = forwardRef((_, ref) => (
         <div className="rounded-2xl border bg-white/60 p-4">
           <p className="text-sm font-semibold">Contact</p>
           <p className="text-sm text-neutral-600">
-            0116 2395 644 • reservations@harrisonsspice.co.uk
+            0116 2395 644 
+          </p>
+          <p className="text-xs text-neutral-600">
+            reservations@harrisonsspice.co.uk
           </p>
         </div>
       </div>
