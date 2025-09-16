@@ -3,7 +3,7 @@
 import React, { forwardRef, useMemo, useRef, useState, useEffect } from "react";
 import HTMLFlipBook from "react-pageflip";
 import { motion } from "framer-motion";
-import sectionsSeed from "./menu.json";
+import sectionsSeed from "./Menu.json";
 
 // ---------- Utility ----------
 const paginateByHeight = (items, maxHeight = 550) => {
