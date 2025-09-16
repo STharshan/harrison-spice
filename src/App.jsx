@@ -1,22 +1,25 @@
-import About from "./components/About"
-import Contact from "./components/Contact"
-import Footer from "./components/Footer"
-import Hero from "./components/Hero"
-import MenuFlipbook from "./components/Menu/MenuSection"
-import Navbar from "./components/Navbar"
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import TermsConditions from "./components/Term";
+import Home from "./pages/Home";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
-
   return (
-    <>
-     <Navbar />
-     <Hero />
-     <About />
-     <MenuFlipbook />
-     <Contact />
-     <Footer />
-    </>
-  )
+    <Router>
+      <ScrollToTop />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/terms&condition" element={<TermsConditions />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }
 
-export default App
+export default App;

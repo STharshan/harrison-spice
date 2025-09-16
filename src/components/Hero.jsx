@@ -19,7 +19,7 @@ const Hero = () => {
                             View Menu
                         </button>
                         <button
-                            className="border-red-600 text-red-600 hover:bg-red-600 flex hover:text-white py-2 px-6 rounded-lg font-semibold bg-transparent"
+                            className="border-red-600 border text-red-600 hover:bg-red-600 flex hover:text-white py-2 px-6 rounded-lg font-semibold bg-transparent"
                         >
                             <FiPhone className="mr-2 h-5 w-5" />
                             Make Reservation

@@ -1,6 +1,7 @@
 import React from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -43,11 +44,21 @@ const Footer = () => {
                         <li><a href="#" className="hover:text-gray-300">Tandoori Specialities</a></li>
                         <li><a href="#" className="hover:text-gray-300">Balti Special Dishes</a></li>
                         <li>
-                            <a className="hover:text-gray-300">Privacy Policy</a> {/* Updated link */}
+                            <Link
+                                to="/terms&condition" // Redirects to the Terms & Conditions page
+                                className="hover:text-gray-300 transition"
+                            >
+                                Term & Conditions
+                            </Link>
                         </li>
                         <li>
-                            <a className="hover:text-gray-300">Terms & Conditions</a> {/* Updated link */}
-                        </li>
+                            <Link
+                                to="/privacy-policy" // Assuming you have a privacy policy page as well
+                                className="hover:text-gray-300 transition"
+                            >
+                                Privacy Policy
+                            </Link>
+                        </li>    
                     </ul>
                 </div>
 
@@ -63,7 +74,7 @@ const Footer = () => {
                                 rel="noopener noreferrer"
                                 className="hover:underline text-gray-400"
                             >
-                               Station Street, Ratby, Leicestershire, LE6 0JQ
+                                Station Street, Ratby, Leicestershire, LE6 0JQ
                             </a>
                         </li>
                         <li className="flex items-center gap-2">

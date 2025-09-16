@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaAward, FaHeart, FaStar, FaUsers, FaUtensils } from 'react-icons/fa'; // Importing icons
+import { FaAward, FaRegHeart, FaStar, FaUsers} from 'react-icons/fa'; // Importing icons
+import { LuChefHat } from 'react-icons/lu';
 
 const About = () => {
     const cards = [
@@ -17,7 +18,7 @@ const About = () => {
         },
         {
             id: 3,
-            icon: <FaHeart className="h-10 w-10 text-red-600" />,
+            icon: <FaRegHeart className="h-10 w-10 text-red-600" />,
             title: 'Warm Hospitality',
             description: 'Friendly service and welcoming atmosphere that makes every visit memorable',
         },
@@ -29,7 +30,7 @@ const About = () => {
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-12">
                         <div className="flex justify-center mb-6">
-                            <FaUtensils className="h-12 w-12 text-emerald-700" />
+                            <LuChefHat className="h-12 w-12 text-emerald-700" />
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-emerald-800 mb-8">About Us</h2>
                     </div>
