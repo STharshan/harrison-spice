@@ -1,18 +1,18 @@
 import React from 'react'
-import About from "../components/About"
-import Contact from "../components/Contact"
-import Hero from "../components/Hero"
-import MenuFlipbook from "../components/Menu/MenuSection"
+import Hero from '../components/Hero'
+import About from '../components/About'
+import MenuFlipbook from '../components/Menu/MenuSection'
+import Contact from '../components/Contact'
 
 const Home = () => {
-    return (
-        <div>
-            <Hero />
-            <About />
-            <MenuFlipbook />
-            <Contact />
-        </div>
-    )
+  return (
+    <div>
+      <Hero />
+      <About />
+      <MenuFlipbook />
+      <Contact />
+    </div>
+  )
 }
 
 export default Home

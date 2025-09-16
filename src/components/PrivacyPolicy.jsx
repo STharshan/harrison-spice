@@ -111,7 +111,7 @@ const PrivacyPolicy = () => {
                     </p>
                     <div className="text-gray-700">
                         <p><strong>Harrison Spice</strong></p>
-                        <p>Email: <a href="mailto:reservations@harrisonsspice.co.uk" className="text-blue-600 hover:underline">reservations@harrisonsspice.co.uk</a></p>
+                        <p>Email: <a href="mailto:reservations@harrisonsspice.co.uk" className="text-emerald-800 hover:underline">reservations@harrisonsspice.co.uk</a></p>
                         <p>Phone: 0116 2395 644</p>
                         <p>Address: Station Street, Ratby Leicestershire, LE6 0JQ</p>
                     </div>
@@ -121,7 +121,7 @@ const PrivacyPolicy = () => {
                             href="https://ico.org.uk/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-600 hover:underline"
+                            className="text-emerald-800 hover:underline"
                         >
                             Information Commissioner’s Office (ICO)
                         </a>.
