@@ -1,0 +1,97 @@
+[
+    {
+        "id": "Vegetarian Appestisers",
+        "title": "Vegetarian Appestisers",
+        "subtitle": "served with salad & mint sauce",
+        "items": [
+            {
+                "name": "Onion Bhaji",
+                "description": "served with salad & mint sauce",
+                "price": "£3.45",
+                "image": "/menu/puff.jpeg"
+            },
+            {
+                "name": "Veg Samosa",
+                "description": "served with salad & mint sauce",
+                "price": "£3.95",
+                "image": "/menu/chicken.jpeg"
+            }
+        ]
+    },
+    {
+        "id": "Fish Appetisers",
+        "title": "Fish Appetisers",
+        "subtitle": "Served with Salad and Mint sauce",
+        "items": [
+            {
+                "name": "Fish Tikka",
+                "price": "£4.95",
+                "description": "Served with Salad and Mint sauce",
+                "image": "/chicken-rice.png"
+            },
+            {
+                "name": "Prawn Puree",
+                "price": "£4.95",
+                "description": "Served with Salad and Mint sauce",
+                "image": "/menu/jellof.png"
+            }
+        ]
+    },
+    {
+        "id": "Meat & Poultry Appetisers",
+        "title": "Meat & Poultry Appetisers",
+        "subtitle": "Served with Salad and Mint sauce",
+        "items": [
+            {
+                "name": "Meat Samosa",
+                "price": "£3.95",
+                "description": "Served with Salad and Mint sauce",
+                "image": "/menu/egussi-fish.png"
+            },
+            {
+                "name": "Chicken Tikka",
+                "price": "£3.95",
+                "description": "Served with Salad and Mint sauce",
+                "image": "/menu/egussi-meat.png"
+            }
+        ]
+    },
+    {
+        "id": "Tandoori Specialities",
+        "title": "Tandoori Specialities",
+        "subtitle": "grilled in tandoori oven",
+        "items": [
+            {
+                "name": "Tandoori Chicken Half",
+                "price": "£8.45",
+                "description": "grilled in tandoori oven",
+                "image": "/menu/goat-curry.png"
+            },
+            {
+                "name": "Chicken Tikka Main",
+                "price": "£7.95",
+                "description": "grilled in tandoori oven",
+                "image": "/menu/chicken-curry.png"
+            }
+        ]
+    },
+    {
+        "id": "Balti Special Dishes",
+        "title": "Balti Special Dishes",
+        "subtitle": "served with plain naan bread or rice - balti is a dish prepared in an iron wok",
+        "items": [
+            {
+                "name": "Balti Chicken",
+                "price": "£9.95",
+                "description": "served with plain naan bread or rice - balti is a dish prepared in an iron wok",
+                "image": "/menu/okra-soup.png"
+            },
+            {
+                "name": "Balti Lamb",
+                "price": "£10.95",
+                "description": "served with plain naan bread or rice - balti is a dish prepared in an iron wok",
+                "image": "/menu/ogbono-soup.png"
+            }
+        ]
+    }
+]

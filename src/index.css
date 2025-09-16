@@ -1,0 +1,11 @@
+@import "tailwindcss"; /* Import Tailwind CSS */
+
+/* Apply smooth scrolling behavior to html and body */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
