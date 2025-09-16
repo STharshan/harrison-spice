@@ -74,7 +74,7 @@ const Footer = () => {
                                 rel="noopener noreferrer"
                                 className="hover:underline text-gray-400"
                             >
-                                Station Street, Ratby, Leicestershire, LE6 0JQ
+                                23-27 Station Street, Ratby, Leicestershire, LE6 0JQ
                             </a>
                         </li>
                         <li className="flex items-center gap-2">

@@ -21,7 +21,7 @@ const Contact = () => {
                                     <div>
                                         <p className="font-medium text-foreground">Address</p>
                                         <p className="text-muted-foreground">
-                                            Station Street, Ratby
+                                            23-27 Station Street, Ratby
                                             <br />
                                             Leicestershire, LE6 0JQ
                                         </p>

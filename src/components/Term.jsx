@@ -79,7 +79,7 @@ const TermsConditions = () => {
             <p><strong>Harrison Spice</strong></p>
             <p>Email: <a href="mailto:reservations@harrisonsspice.co.uk" className="text-emerald-800 hover:underline">reservations@harrisonsspice.co.uk</a></p>
             <p>Phone: 0116 2395 644</p>
-            <p>Address: Station Street, Ratby Leicestershire, LE6 0JQ</p>
+            <p>Address: 23-27 Station Street, Ratby Leicestershire, LE6 0JQ</p>
           </div>
         </section>
       </div>
