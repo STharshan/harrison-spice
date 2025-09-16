@@ -223,6 +223,11 @@
                 "image": "/menu/okra-soup.png"
             },
             {
+                "name": "balti king prawn",
+                "price": "£14.95",
+                "image": "/menu/okra-soup.png"
+            },
+            {
                 "name": "balti mixed vegetables",
                 "price": "£7.95",
                 "image": "/menu/okra-soup.png"
@@ -429,6 +434,7 @@
             },
             {
                 "name": "bringel gosht",
+                "description" : "Lamb cooked with rich spices and fresh aubergine.",
                 "price": "£9.95",
                 "image": "/menu/okra-soup.png"
             },

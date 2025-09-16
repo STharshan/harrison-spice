@@ -25,7 +25,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Navigation Links */}
-                    <nav className="flex-grow flex justify-center space-x-6 font-semibold">
+                    <nav className="hidden flex-grow md:flex justify-center space-x-6 font-semibold">
                         <a href="#home" className="text-foreground hover:text-emerald-700 transition-colors">
                             Home
                         </a>
@@ -39,9 +39,8 @@ const Navbar = () => {
                             Contact
                         </a>
                     </nav>
-
                     {/* Button on the right */}
-                    <button className="bg-emerald-700 py-2 px-3 rounded-lg font-semibold hover:bg-emerald-800 text-white ml-6">
+                    <button className="hidden md:flex bg-emerald-700 py-2 px-3 rounded-lg font-semibold hover:bg-emerald-800 text-white ml-6">
                         Make Reservation
                     </button>
 
@@ -70,7 +69,9 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             <div
-                className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden absolute top-16 left-0 w-full bg-[#f8f0dc] border-t border-gray-300 py-4`}
+                className={`${
+                    isMenuOpen ? 'block' : 'hidden'
+                } md:hidden top-20 fixed left-0 w-full bg-[#f8f0dc] py-4 z-40`}
             >
                 <div className="flex flex-col items-center space-y-4">
                     <a href="#menu" className="text-foreground hover:text-emerald-700 transition-colors">
