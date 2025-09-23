@@ -11,7 +11,7 @@ const Navbar = () => {
     return (
         <div>
             {/* Header */}
-            <header className="bg-[#f8f0dc] border-b border-gray-300 shadow-sm fixed top-0 left-0 w-full z-50">
+            <header className="bg-red-400 border-b border-gray-300 shadow-sm fixed top-0 left-0 w-full z-50">
                 <div className="px-4 py-4 flex items-center justify-between max-w-7xl mx-auto">
                     {/* Logo */}
                     <div className="flex items-center space-x-4">
@@ -25,7 +25,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Navigation Links */}
-                    <nav className="hidden flex-grow md:flex justify-center space-x-6 font-semibold">
+                    <nav className="hidden text-lg flex-grow md:flex justify-center space-x-6 font-semibold">
                         <a href="#home" className="text-foreground hover:text-emerald-700 transition-colors">
                             Home
                         </a>
@@ -72,7 +72,7 @@ const Navbar = () => {
                 className={`${isMenuOpen ? 'block' : 'hidden'
                     } md:hidden top-20 fixed left-0 w-full bg-[#f8f0dc] py-4 z-40`}
             >
-                <div className="flex flex-col items-center space-y-4">
+                <div className="flex flex-col items-center space-y-4 font-semibold">
                     <a href="#home" className="text-foreground hover:text-emerald-700 transition-colors">
                         Home
                     </a>

@@ -4,7 +4,7 @@ import { FiPhone } from 'react-icons/fi';
 
 const Hero = () => {
     return (
-        <section className="relative bg-gradient-to-r from-emerald-50 to-red-50 py-20" id="home">
+        <section className="relative bg-white py-20" id="home">
             <div className="container mx-auto px-4 text-center">
                 <div className="max-w-4xl mx-auto mt-15">
                     {/* Heading */}

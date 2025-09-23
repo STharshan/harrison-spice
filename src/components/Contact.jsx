@@ -3,7 +3,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaRegClock } from 'react-icons/
 
 const Contact = () => {
     return (
-        <section id="contact" className="py-16 bg-[#f8f0dc] scroll-m-10">
+        <section id="contact" className="py-16 bg-red-400 scroll-m-10">
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-12">

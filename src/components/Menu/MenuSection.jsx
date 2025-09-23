@@ -217,10 +217,10 @@ export default function MenuFlipbook() {
   const goTo = (p) => flipRef.current?.pageFlip()?.flip(p);
 
   return (
-    <div className="mx-auto max-w-7xl px-3 py-6 sm:py-10">
+    <div className="mx-auto max-w-7xl px-3 py-6 sm:py-10 scroll-m-14 bg-white" id="menu">
       {/* Header / Controls */}
       <div className="mb-4 flex flex-col items-center justify-between gap-3 sm:mb-6 sm:flex-row">
-        <h1 className="text-2xl font-bold tracking-tight text-[#68a879]">Restaurant Menu</h1>
+        <h1 className="text-2xl font-bold tracking-tight text-emerald-700">Restaurant Menu</h1>
         <div className="flex items-center gap-2">
           <button onClick={goPrev} className="rounded-2xl border px-3 py-2 text-sm shadow-sm hover:bg-neutral-50">◀ Prev</button>
           <span className="text-sm tabular-nums select-none">

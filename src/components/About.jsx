@@ -18,14 +18,14 @@ const About = () => {
         },
         {
             id: 3,
-            icon: <FaRegHeart className="h-10 w-10 text-red-600" />,
+            icon: <FaRegHeart className="h-10 w-10 text-emerald-700" />,
             title: 'Warm Hospitality',
             description: 'Friendly service and welcoming atmosphere that makes every visit memorable',
         },
     ];
 
     return (
-        <section id="about" className="py-16 bg-[#f8f0dc] scroll-m-10">
+        <section id="about" className="py-16 bg-red-400 scroll-m-10">
             <div className="container mx-auto px-4">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-12">
@@ -51,7 +51,7 @@ const About = () => {
                             </div>
                             <div className="flex items-center space-x-1">
                                 {[...Array(5)].map((_, i) => (
-                                    <FaStar key={i} className="h-5 w-5 fill-red-600 text-red-600" />
+                                    <FaStar key={i} className="h-5 w-5 fill-emerald-700" />
                                 ))}
                                 <span className="ml-2 text-muted-foreground">Exceptional Service</span>
                             </div>
@@ -63,7 +63,7 @@ const About = () => {
                                 alt="Restaurant Interior"
                                 width={600}
                                 height={400}
-                                className="rounded-lg shadow-lg"
+                                className="rounded-lg shadow-lg h-80"
                             />
                         </div>
                     </div>
