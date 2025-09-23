@@ -70,7 +70,7 @@ const Navbar = () => {
             {/* Mobile Menu */}
             <div
                 className={`${isMenuOpen ? 'block' : 'hidden'
-                    } md:hidden top-20 fixed left-0 w-full bg-[#f8f0dc] py-4 z-40`}
+                    } md:hidden top-20 fixed left-0 w-full bg-white py-4 z-40`}
             >
                 <div className="flex flex-col items-center space-y-4 font-semibold">
                     <a href="#home" className="text-foreground hover:text-emerald-700 transition-colors">
