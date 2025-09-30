@@ -40,9 +40,9 @@ const About = () => {
           {/* Section Heading */}
           <div className="text-center mb-12" data-aos="fade-up">
             <div className="flex justify-center mb-6">
-              <LuChefHat className="h-12 w-12 text-[#00684A]" />
+              <LuChefHat className="h-12 w-12 text-white" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#00684A] mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
               About Us
             </h2>
           </div>
@@ -92,7 +92,7 @@ const About = () => {
             {cards.map((card, index) => (
               <div
                 key={card.id}
-                className="bg-white border-gray-300 text-center p-6 rounded-lg shadow-lg hover:shadow-red-600 active:shadow-red-600 active:shadow-xl hover:shadow-xl transition-all
+                className="bg-white border-gray-300 text-center p-6 rounded-lg shadow-lg active:shadow-xl hover:shadow-xl transition-all
                             duration-300 hover:scale-105"
                 data-aos="zoom-in"
                 data-aos-delay={index * 200} // stagger effect
