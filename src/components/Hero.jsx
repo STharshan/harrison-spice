@@ -1,41 +1,68 @@
-import React from 'react';
-import { FaUtensils } from 'react-icons/fa'; // Import icons
+import React, { useEffect } from 'react';
+import { FaUtensils } from 'react-icons/fa';
 import { FiPhone } from 'react-icons/fi';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Hero = () => {
-    return (
-        <section className="relative bg-white py-20" id="home">
-            <div className="container mx-auto px-4 text-center">
-                <div className="max-w-4xl mx-auto mt-15">
-                    {/* Heading */}
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-emerald-800 mb-6 text-balance">
-                        Welcome to Harrison's Spice
-                    </h1>
-                    {/* Subheading */}
-                    <p className="text-xl sm:text-2xl md:text-3xl text-emerald-700 mb-8 text-pretty">
-                        Refined Indian cuisine with a modern twist in the heart of Ratby
-                    </p>
-                    {/* Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 items-center sm:justify-center">
-                        {/* View Menu Button */}
-                        <a href="#menu">
-                            <button className="bg-emerald-700 hover:bg-emerald-800 flex text-white py-2 px-6 rounded-lg font-semibold">
-                                <FaUtensils className="mr-2 h-5 w-5" />
-                                View Menu
-                            </button>
-                        </a>
-                        {/* Make Reservation Button */}
-                        <a href="tel:01162395644">
-                            <button className="border-red-600 border text-red-600 hover:bg-red-600 flex hover:text-white py-2 px-6 rounded-lg font-semibold bg-transparent">
-                                <FiPhone className="mr-2 h-5 w-5" />
-                                Make Reservation
-                            </button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-}
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); // once:true = animate only once
+  }, []);
+
+  return (
+    <section
+      className="relative h-[100vh] bg-white"
+      id="home"
+    >
+      <div className="container mx-auto px-4 h-full flex items-center justify-center text-center">
+        <div className="max-w-4xl">
+          {/* Heading */}
+          <h1
+            data-aos="fade-up"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#00684A] mb-6 drop-shadow-md"
+          >
+            Welcome to Harrison&apos;s Spice
+          </h1>
+
+          {/* Subheading */}
+          <p
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="text-xl sm:text-2xl md:text-3xl text-[#00684A] mb-8 drop-shadow-sm"
+          >
+            Refined Indian cuisine with a modern twist in the heart of Ratby
+          </p>
+
+          {/* Buttons */}
+          <div
+            data-aos="zoom-in"
+            data-aos-delay="400"
+            className="flex flex-col sm:flex-row gap-4 items-center justify-center"
+          >
+            {/* View Menu Button */}
+            <a href="#menu">
+              <button className="group bg-[#00684A] hover:scale-105  active:scale-105 hover:shadow-lg hover:shadow-[#47e2b6] active:shadow-[#47e2b6] active:shadow-lg flex items-center text-white py-2 px-6 rounded-lg font-semibold transition-all duration-300 shadow-md">
+                <FaUtensils className="mr-2 h-5 w-5 transform transition-all duration-300 group-hover:-translate-x-1" />
+                <span className="transform transition-all duration-300 group-hover:translate-x-1">
+                  View Menu
+                </span>
+              </button>
+            </a>
+
+            {/* Make Reservation Button */}
+            <a href="tel:01162395644">
+              <button className="group border hover:scale-105 hover:shadow-lg active:shadow-lg active:shadow-[#e76971] hover:shadow-[#e76971] text-[#981921] hover:bg-[#981921] flex items-center hover:text-white py-2 px-6 rounded-lg font-semibold bg-transparent transition-all duration-300 shadow-md">
+                <FiPhone className="mr-2 h-5 w-5 transform transition-all duration-300 group-hover:-translate-x-1" />
+                <span className="transform transition-all duration-300 group-hover:translate-x-1">
+                  Make Reservation
+                </span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Hero;

@@ -4,6 +4,8 @@ import React, { forwardRef, useMemo, useRef, useState, useEffect } from "react";
 import HTMLFlipBook from "react-pageflip";
 import { motion } from "framer-motion";
 import sectionsSeed from "./Menu.json";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // ---------- Utility ----------
 const paginateByHeight = (items, maxHeight = 550) => {
@@ -163,6 +165,16 @@ export default function MenuFlipbook() {
   const [page, setPage] = useState(0);
   const [bookSize, setBookSize] = useState({ width: 700, height: 900 });
 
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      offset: 100,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
+
   // Responsive width/height
   useEffect(() => {
     const handleResize = () => {
@@ -187,7 +199,6 @@ export default function MenuFlipbook() {
         restaurant="Harrison Spice"
         tagline="Modern Comfort Food & Coastal Cocktails"
       />
-
     );
 
     let currentIndex = 1;
@@ -217,21 +228,37 @@ export default function MenuFlipbook() {
   const goTo = (p) => flipRef.current?.pageFlip()?.flip(p);
 
   return (
-    <div className="mx-auto max-w-7xl px-3 py-6 sm:py-10 scroll-m-14 bg-white" id="menu">
+    <div
+      className="mx-auto max-w-7xl px-3 py-6 sm:py-10 scroll-m-14 bg-white"
+      id="menu"
+    >
       {/* Header / Controls */}
-      <div className="mb-4 flex flex-col items-center justify-between gap-3 sm:mb-6 sm:flex-row">
+      <div
+        className="mb-4 flex flex-col items-center justify-between gap-3 sm:mb-6 sm:flex-row"
+        data-aos="fade-down"
+      >
         <h1 className="text-2xl font-bold tracking-tight text-emerald-700">Restaurant Menu</h1>
         <div className="flex items-center gap-2">
-          <button onClick={goPrev} className="rounded-2xl border px-3 py-2 text-sm shadow-sm hover:bg-neutral-50">◀ Prev</button>
+          <button
+            onClick={goPrev}
+            className="rounded-2xl border px-3 py-2 text-sm shadow-sm hover:bg-neutral-50"
+          >
+            ◀ Prev
+          </button>
           <span className="text-sm tabular-nums select-none">
             {String(page + 1).padStart(2, "0")} / {String(pages.length).padStart(2, "0")}
           </span>
-          <button onClick={goNext} className="rounded-2xl border px-3 py-2 text-sm shadow-sm hover:bg-neutral-50">Next ▶</button>
+          <button
+            onClick={goNext}
+            className="rounded-2xl border px-3 py-2 text-sm shadow-sm hover:bg-neutral-50"
+          >
+            Next ▶
+          </button>
         </div>
       </div>
 
       {/* Book */}
-      <div className="mx-auto flex w-full justify-center">
+      <div className="mx-auto flex w-full justify-center" data-aos="fade-up" data-aos-delay="100">
         <HTMLFlipBook
           width={bookSize.width}
           height={bookSize.height}
@@ -258,21 +285,24 @@ export default function MenuFlipbook() {
       </div>
 
       {/* Quick Navigator */}
-      <div className="mx-auto mt-6 grid grid-cols-2 sm:grid-cols-4 gap-2">
+      <div
+        className="mx-auto mt-6 grid grid-cols-2 sm:grid-cols-4 gap-2"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
         {sectionsSeed.map((s) => {
           const target = sectionPageMap[s.id];
-          // Check if the current page, the next page or previous page matches the target
           const isActive =
             page === target || page === target - 1 || page === target + 1;
 
           return (
             <button
               key={s.id}
-              onClick={() => goTo(target)} // Navigate to the corresponding page
+              onClick={() => goTo(target)}
               className={`
-          rounded-2xl border px-3 py-2 text-sm shadow-sm hover:bg-neutral-50 
-          ${isActive ? "border-amber-400 ring-2 ring-amber-200" : "border-neutral-300"}
-        `}
+                rounded-2xl border px-3 py-2 text-sm shadow-sm hover:bg-neutral-50 
+                ${isActive ? "border-[#981921] ring-2 ring-[#d6121f]" : "border-neutral-300"}
+              `}
             >
               {s.title}
             </button>
