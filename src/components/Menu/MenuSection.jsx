@@ -229,7 +229,7 @@ export default function MenuFlipbook() {
 
   return (
     <div
-      className="mx-auto max-w-7xl px-3 py-6 sm:py-10 scroll-m-14 bg-white"
+      className="mx-auto max-w-6xl px-3 py-6 sm:py-10 scroll-m-14 bg-white"
       id="menu"
     >
       {/* Header / Controls */}
@@ -286,7 +286,7 @@ export default function MenuFlipbook() {
 
       {/* Quick Navigator */}
       <div
-        className="mx-auto mt-6 grid grid-cols-2 sm:grid-cols-4 gap-2"
+        className="mx-auto mt-27 grid grid-cols-2 sm:grid-cols-4 gap-2"
         data-aos="fade-up"
         data-aos-delay="200"
       >

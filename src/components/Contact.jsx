@@ -3,8 +3,8 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section className="bg-[#981921] text-white py-20 px-6 lg:px-20">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 relative">
+    <section className="bg-[#981921] text-white py-20 px-6 lg:px-20 scroll-m-15" id="contact">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 relative">
         
         {/* LEFT SIDE */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">

@@ -3,8 +3,8 @@ import { FaFacebookF, FaInstagram, FaPinterestP, FaYoutube } from "react-icons/f
 
 const Footer = () => {
   return (
-    <footer className="bg-[#981921] text-gray-200 py-8 px-4">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+    <footer className="bg-[#981921] text-gray-200 py-5 px-4">
+      <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row items-center justify-between gap-8">
         {/* Left Image */}
         <div className="flex justify-center lg:justify-start w-full lg:w-1/3">
           <div className="rounded-full border border-yellow-600 overflow-hidden w-64 h-64 flex items-center justify-center">
@@ -35,7 +35,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="hover:underline text-gray-200"
             >
-              23-27 Station Street, Ratby, Leicestershire, LE6 0JQ
+              23-27 Station Street, Ratby, Leicestershire, <br /> LE6 0JQ
             </a>
           </p>
           <p>
@@ -45,19 +45,19 @@ const Footer = () => {
           </p>
           <p>
             <a href="tel:+441162395644" className="text-gray-200">
-              Booking Request : <span className="hover:underline">0116 2395 644</span> 
+              Booking Request : <span className="hover:underline">0116 2395 644</span>
             </a>
           </p>
 
           <div className="my-6 border-t border-yellow-600 w-12 mx-auto relative">
-            <span className="absolute -top-2 left-1/2 -translate-x-1/2 text-yellow-600">✦</span>
+            <span className="absolute left-1/2 -translate-x-1/2 text-yellow-600">✦</span>
           </div>
 
           {/* Newsletter */}
-          <h3 className="text-white text-xl font-semibold mb-1">Our Newsletter</h3>
+          {/* <h3 className="text-white text-xl font-semibold mb-1">Our Newsletter</h3>
           <p className="text-gray-400 mb-4">
             Subscribe us & Get 25% Off. Get latest updates.
-          </p>
+          </p> */}
           <div className="flex max-w-md mx-auto">
             <input
               type="email"
@@ -67,6 +67,12 @@ const Footer = () => {
             <button className="px-6 py-2 bg-yellow-600 text-black font-semibold rounded-r-md hover:bg-yellow-500 transition">
               SUBSCRIBE
             </button>
+          </div>
+          <div className="flex justify-center gap-4 mt-4">
+            <FaFacebookF className="hover:text-yellow-600 cursor-pointer" />
+            <FaInstagram className="hover:text-yellow-600 cursor-pointer" />
+            <FaPinterestP className="hover:text-yellow-600 cursor-pointer" />
+            <FaYoutube className="hover:text-yellow-600 cursor-pointer" />
           </div>
         </div>
 
@@ -83,28 +89,48 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="mt-12 border-t border-gray-700 pt-6 text-center">
-        <p>© 2025 All Rights Reserved</p>
-        <div className="mt-2 text-center font-semibold">
-          <p>
-            Powered by{" "}
+      <div className="mt-5 border-t border-gray-700 pt-6">
+        <div className="container mt-2 mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-4">
+
+          {/* Left - Links */}
+          <div className="flex gap-4 text-gray-300 text-sm">
             <a
-              href="https://www.ansely.co.uk/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-yellow-500 hover:underline"
+              href="/privacy-policy"
+              className="hover:text-yellow-500 transition hover:underline"
             >
-              Ansely
+              Privacy Policy
             </a>
-          </p>
-        </div>
-        <div className="flex justify-center gap-4 mt-4">
-          <FaFacebookF className="hover:text-yellow-600 cursor-pointer" />
-          <FaInstagram className="hover:text-yellow-600 cursor-pointer" />
-          <FaPinterestP className="hover:text-yellow-600 cursor-pointer" />
-          <FaYoutube className="hover:text-yellow-600 cursor-pointer" />
+            <span>|</span>
+            <a
+              href="/terms&condition"
+              className="hover:text-yellow-500 transition hover:underline"
+            >
+              Terms & Conditions
+            </a>
+          </div>
+
+          {/* Center - Copyright */}
+          <div className="text-center text-sm">
+            <p>© 2025 All Rights Reserved</p>
+          </div>
+
+          {/* Right - Powered by */}
+          <div className="text-sm font-semibold text-gray-300">
+            <p>
+              Powered by{" "}
+              <a
+                href="https://www.ansely.co.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-yellow-500 hover:underline"
+              >
+                Ansely
+              </a>
+            </p>
+          </div>
         </div>
       </div>
+
     </footer>
   );
 };

@@ -50,8 +50,8 @@ const About = () => {
           {/* Text + Image */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             {/* Left Text */}
-            <div className="space-y-6" data-aos="fade-right">
-              <div className="text-lg text-muted-foreground space-y-6 text-pretty">
+            <div className="space-y-6 " data-aos="fade-right">
+              <div className="text-lg text-muted-foreground space-y-6 text-pretty text-white">
                 <p>
                   We provide an emphasis on refined yet creative cuisine from
                   the Indian sub-continent. Our menu incorporates both
@@ -69,7 +69,7 @@ const About = () => {
                 {[...Array(5)].map((_, i) => (
                   <FaStar key={i} className="h-5 w-5 fill-[#00684A]" />
                 ))}
-                <span className="ml-2 text-muted-foreground">
+                <span className="ml-2 text-muted-foreground text-white">
                   Exceptional Service
                 </span>
               </div>

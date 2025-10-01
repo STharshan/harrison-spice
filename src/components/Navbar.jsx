@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,28 +17,28 @@ const Navbar = () => {
                     {/* Logo */}
                     <div className="flex items-center space-x-4">
                         <img
-                            src="logo.png"
+                            src="tab.png"
                             alt="Harrison's Spice Logo"
                             width={200}
                             height={60}
-                            className="h-12 w-auto"
+                            className="h-12 w-auto rounded-lg"
                         />
                     </div>
 
                     {/* Navigation Links */}
-                    <nav className="hidden text-lg flex-grow md:flex justify-center space-x-6 font-semibold">
-                        <a href="#home" className="text-foreground hover:text-[#00684A] transition-colors">
+                    <nav className="hidden text-lg flex-grow md:flex justify-center space-x-6 font-semibold text-white">
+                        <HashLink smooth to="/#home" className="text-foreground hover:text-[#00684A] transition-colors">
                             Home
-                        </a>
-                        <a href="#about" className="text-foreground hover:text-[#00684A] transition-colors">
+                        </HashLink>
+                        <HashLink smooth to="/#about" className="text-foreground hover:text-[#00684A] transition-colors">
                             About
-                        </a>
-                        <a href="#menu" className="text-foreground hover:text-[#00684A] transition-colors">
+                        </HashLink>
+                        <HashLink  smooth to="/#menu" className="text-foreground hover:text-[#00684A] transition-colors">
                             Menu
-                        </a>
-                        <a href="#contact" className="text-foreground hover:text-[#00684A] transition-colors">
+                        </HashLink>
+                        <HashLink smooth to="/#contact" className="text-foreground hover:text-[#00684A] transition-colors">
                             Contact
-                        </a>
+                        </HashLink>
                     </nav>
                     {/* Button on the right */}
                     <button className="hidden md:flex bg-[#00684A] transition-transform duration:300 hover:scale-105 active:scale-105 py-2 px-3 rounded-lg font-semibold hover:bg-[ #00684A] text-white ml-6">
@@ -73,18 +74,18 @@ const Navbar = () => {
                     } md:hidden top-20 fixed left-0 w-full bg-white py-4 z-40`}
             >
                 <div className="flex flex-col items-center space-y-4 font-semibold">
-                    <a href="#home" className="text-foreground hover:text-[#00684A] transition-colors">
+                    <HashLink smooth to="/#home" className="text-foreground hover:text-[#00684A] transition-colors">
                         Home
-                    </a>
-                    <a href="#menu" className="text-foreground hover:text-[#00684A] transition-colors">
+                    </HashLink>
+                    <HashLink smooth to="/#menu" className="text-foreground hover:text-[#00684A] transition-colors">
                         Menu
-                    </a>
-                    <a href="#about" className="text-foreground hover:text-[#00684A] transition-colors">
+                    </HashLink>
+                    <HashLink smooth to="/#about" className="text-foreground hover:text-[#00684A] transition-colors">
                         About
-                    </a>
-                    <a href="#contact" className="text-foreground hover:text-[#00684A] transition-colors">
+                    </HashLink>
+                    <HashLink smooth to="/#contact" className="text-foreground hover:text-[#00684A] transition-colors">
                         Contact
-                    </a>
+                    </HashLink>
                     <button className="bg-[#00684A] py-2 px-3 rounded-lg font-semibold transition-transform duration:300 hover:scale-105 active:scale-105 text-white">
                         Make Reservation
                     </button>
