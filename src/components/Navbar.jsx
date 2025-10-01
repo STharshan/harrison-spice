@@ -33,7 +33,7 @@ const Navbar = () => {
                         <HashLink smooth to="/#about" className="text-foreground hover:text-[#00684A] transition-colors">
                             About
                         </HashLink>
-                        <HashLink  smooth to="/#menu" className="text-foreground hover:text-[#00684A] transition-colors">
+                        <HashLink smooth to="/#menu" className="text-foreground hover:text-[#00684A] transition-colors">
                             Menu
                         </HashLink>
                         <HashLink smooth to="/#contact" className="text-foreground hover:text-[#00684A] transition-colors">
@@ -48,22 +48,41 @@ const Navbar = () => {
                     {/* Hamburger Icon for Mobile */}
                     <button
                         onClick={toggleMenu}
-                        className="md:hidden flex items-center justify-center p-2 rounded-md focus:outline-none"
+                        className="md:hidden flex items-center justify-center p-2 rounded-md focus:outline-none text-white"
                     >
-                        <svg
-                            className="w-6 h-6 text-foreground"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            strokeWidth="2"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M4 6h16M4 12h16M4 18h16"
-                            />
-                        </svg>
+                        {isMenuOpen ? (
+                            // Close (X) icon
+                            <svg
+                                className="w-6 h-6 text-foreground"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                strokeWidth="2"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M6 18L18 6M6 6l12 12"
+                                />
+                            </svg>
+                        ) : (
+                            // Hamburger (3 lines) icon
+                            <svg
+                                className="w-6 h-6 text-foreground"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                strokeWidth="2"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M4 6h16M4 12h16M4 18h16"
+                                />
+                            </svg>
+                        )}
                     </button>
                 </div>
             </header>
@@ -71,9 +90,9 @@ const Navbar = () => {
             {/* Mobile Menu */}
             <div
                 className={`${isMenuOpen ? 'block' : 'hidden'
-                    } md:hidden top-20 fixed left-0 w-full bg-white py-4 z-40`}
+                    } md:hidden top-20 fixed left-0 w-full bg-[#981921] py-4 z-40`}
             >
-                <div className="flex flex-col items-center space-y-4 font-semibold">
+                <div className="flex flex-col items-center space-y-4 font-semibold text-white">
                     <HashLink smooth to="/#home" className="text-foreground hover:text-[#00684A] transition-colors">
                         Home
                     </HashLink>
