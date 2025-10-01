@@ -6,7 +6,7 @@ import TermsConditions from "./components/Term";
 import Home from "./pages/Home";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import ScrollToTop from "./components/ScrollToTop";
-import GDPRConsent from "../../smartrepairpro/src/components/GDPRBanner";
+import GDPRConsent from "./components/GDPRBanner";
 
 function App() {
   return (
