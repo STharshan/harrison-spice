@@ -56,7 +56,7 @@ const CoverPage = forwardRef(({ restaurant, tagline }, ref) => (
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#68a879]"
+        className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[#981921]"
       >
         {restaurant}
       </motion.h1>
@@ -81,7 +81,7 @@ const SectionPage = forwardRef(({ title, subtitle, items }, ref) => (
   <Page ref={ref}>
     <div className="flex h-full flex-col">
       <div className="mb-3">
-        <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-[#68a879] backdrop-blur">{title}</h2>
+        <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-[#981921] backdrop-blur">{title}</h2>
         {subtitle && <p className="text-sm text-black backdrop-blur">{subtitle}</p>}
       </div>
       <div className="grid grid-cols-1 gap-3 pb-5">
@@ -122,7 +122,7 @@ SectionPage.displayName = "SectionPage";
 const InfoPage = forwardRef((_, ref) => (
   <Page ref={ref}>
     <div className="flex h-full flex-col">
-      <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-[#68a879]">About Us</h2>
+      <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-[#981921]">About Us</h2>
       <p className="mt-2 text-sm text-neutral-700">
         Welcome to <span className="font-semibold">Harrison Spice</span>, where seasonal
         produce meets cozy vibes. Our kitchen crafts familiar classics with a modern twist.
@@ -237,7 +237,7 @@ export default function MenuFlipbook() {
         className="mb-4 flex flex-col items-center justify-between gap-3 sm:mb-6 sm:flex-row"
         data-aos="fade-down"
       >
-        <h1 className="text-2xl font-bold tracking-tight text-emerald-700">Restaurant Menu</h1>
+        <h1 className="text-2xl font-bold tracking-tight text-[#981921]">Restaurant Menu</h1>
         <div className="flex items-center gap-2">
           <button
             onClick={goPrev}

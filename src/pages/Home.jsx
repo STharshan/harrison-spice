@@ -15,8 +15,8 @@ const Home = () => {
       <About />
       <MyStorySection />
       <WhyDineWithUs />
-      <MenuFlipbook />
       <FeaturedMenus />
+      <MenuFlipbook />
       <Contact />
       <FindUs />
     </div>

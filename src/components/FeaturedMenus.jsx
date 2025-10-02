@@ -7,17 +7,17 @@ const featuredMenus = [
   {
     title: "ASIAN STYLE",
     description: "Asian style canape and bowl food menu can have any theme you like.",
-    image: "/asian-style.jpg",
+    image: "/f1.jpg",
   },
   {
     title: "CANAPE",
     description: "Asian style canape and bowl food menu can have any theme you like.",
-    image: "/canape.jpg",
+    image: "/f2.jpg",
   },
   {
     title: "DELUXE",
     description: "Asian style canape and bowl food menu can have any theme you like.",
-    image: "/deluxe.jpg",
+    image: "/f3.jpg",
   },
 ];
 
@@ -44,7 +44,7 @@ const FeaturedMenus = () => {
           {featuredMenus.map((menu, index) => (
             <div
               key={index}
-              className="relative bg-black bg-opacity-70 hover:shadow-[#981921] active:shadow-[#981921] text-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition-all duration-300"
+              className="relative bg-opacity-70 hover:shadow-[#981921] active:shadow-[#981921] text-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition-all duration-300"
               data-aos="fade-up"
               data-aos-delay={index * 200} // Stagger animation
             >
@@ -53,12 +53,12 @@ const FeaturedMenus = () => {
                 alt={menu.title}
                 className="w-full h-64 object-cover"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center p-6">
+              <div className="absolute inset-0 bg-opacity-40 text-black font-semibold flex flex-col justify-center items-center p-6">
                 <h3 className="text-xl font-serif mb-2">{menu.title}</h3>
-                <p className="text-sm mb-4">{menu.description}</p>
+                <p className="text-md mb-4">{menu.description}</p>
                 <a
                   href="#"
-                  className="text-white underline hover:text-gray-300 text-sm"
+                  className="underline hover:text-gray-900"
                 >
                   Continue Reading ...
                 </a>

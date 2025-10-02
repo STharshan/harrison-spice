@@ -58,7 +58,7 @@ const Footer = () => {
           <p className="text-gray-400 mb-4">
             Subscribe us & Get 25% Off. Get latest updates.
           </p> */}
-          <div className="flex max-w-md mx-auto">
+          {/* <div className="flex max-w-md mx-auto">
             <input
               type="email"
               placeholder="Your email"
@@ -67,7 +67,7 @@ const Footer = () => {
             <button className="px-6 py-2 bg-yellow-600 text-black font-semibold rounded-r-md hover:bg-yellow-500 transition">
               SUBSCRIBE
             </button>
-          </div>
+          </div> */}
           <div className="flex justify-center gap-4 mt-4">
             <FaFacebookF className="hover:text-yellow-600 cursor-pointer" />
             <FaInstagram className="hover:text-yellow-600 cursor-pointer" />

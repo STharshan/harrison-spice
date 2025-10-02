@@ -20,7 +20,7 @@ export default function MyStorySection() {
             <img
               src="/story.jpg"
               alt="Chef cooking"
-              className="rounded-lg w-100 h-100"
+              className="rounded-lg w-150 h-100"
             />
           </div>
         </div>
