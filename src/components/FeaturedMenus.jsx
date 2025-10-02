@@ -44,21 +44,27 @@ const FeaturedMenus = () => {
           {featuredMenus.map((menu, index) => (
             <div
               key={index}
-              className="relative bg-opacity-70 hover:shadow-[#981921] active:shadow-[#981921] text-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition-all duration-300"
+              className="relative rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition-all duration-300"
               data-aos="fade-up"
               data-aos-delay={index * 200} // Stagger animation
             >
+              {/* Background image */}
               <img
                 src={menu.image}
                 alt={menu.title}
                 className="w-full h-64 object-cover"
               />
-              <div className="absolute inset-0 bg-opacity-40 text-black font-semibold flex flex-col justify-center items-center p-6">
+
+              {/* Dark overlay */}
+              <div className="absolute inset-0 bg-black/60"></div>
+
+              {/* Content */}
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-6 text-white font-semibold">
                 <h3 className="text-xl font-serif mb-2">{menu.title}</h3>
                 <p className="text-md mb-4">{menu.description}</p>
                 <a
                   href="#"
-                  className="underline hover:text-gray-900"
+                  className="underline hover:text-gray-300"
                 >
                   Continue Reading ...
                 </a>
