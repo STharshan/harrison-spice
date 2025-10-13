@@ -410,7 +410,7 @@ export default function MenuFlipbook() {
                 ${
                   isActive
                     ? "bg-gradient-to-r from-[#981921] to-orange-500 text-white shadow-lg"
-                    : "bg-white dark:bg-neutral-800 text-[#981921] border border-[#981921]/20 hover:scale-105 shadow-sm"
+                    : "bg-white dark:bg-neutral-800 text-white border border-[#981921] hover:scale-105 shadow-sm"
                 }`}
             >
               {s.title}
