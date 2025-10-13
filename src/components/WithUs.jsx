@@ -39,47 +39,50 @@ const WhyDineWithUs = () => {
   ];
 
   return (
-    <section className="bg-[#981921] text-white py-16 px-6 lg:px-20">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-[#981921] dark:bg-black text-white dark:text-gray-200 py-16 px-6 lg:px-20 transition-colors duration-500">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12" data-aos="fade-down">
-          <h2 className="text-3xl md:text-4xl font-semibold">Why Dine With Us</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold text-white dark:text-white transition-colors duration-500">
+            Why Dine With Us
+          </h2>
         </div>
 
-        {/* Features */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+        {/* Combined Features + Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-8 gap-6">
+          {/* Features */}
           {features.map((item, i) => (
             <div
               key={i}
-              className="flex flex-col items-center text-center shadow-lg p-4 rounded-lg"
+              className="flex flex-col items-center text-center shadow-lg dark:shadow-gray-700 p-6 rounded-lg bg-white dark:bg-[#981921] hover:scale-105 active:scale-105 transition-all duration-300 md:col-span-2"
               data-aos="fade-up"
-              data-aos-delay={i * 200} // stagger effect
+              data-aos-delay={i * 200}
             >
-              <div className="w-full h-72 rounded-t-full overflow-hidden">
+              <div className="w-full h-68 rounded-t-full overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <p className="mt-3 text-sm tracking-wider">{item.title}</p>
+              <p className="mt-3 text-sm tracking-wider text-gray-800 dark:text-gray-200">
+                {item.title}
+              </p>
             </div>
           ))}
-        </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-20 text-left">
+          {/* Stats */}
           {stats.map((stat, i) => (
             <div
               key={i}
-              className="shadow-lg p-6 w-65 rounded-lg hover:scale-105 active:scale-105 duration-300 transform-all"
+              className="shadow-lg dark:shadow-gray-700 p-6 rounded-lg bg-white dark:bg-[#981921] hover:scale-105 active:scale-105 transition-all duration-300 md:col-span-2"
               data-aos="fade-up"
-              data-aos-delay={i * 200 + 400} // staggered after features
+              data-aos-delay={i * 200 + 400}
             >
               <h3 className="text-5xl font-bold text-yellow-400">{stat.number}</h3>
               <p className="mt-2 uppercase text-sm tracking-wide text-yellow-200">
                 {stat.label}
               </p>
-              <p className="mt-3 text-gray-300 text-sm leading-relaxed">
+              <p className="mt-3 text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                 {stat.text}
               </p>
             </div>

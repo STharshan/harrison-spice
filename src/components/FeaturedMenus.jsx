@@ -27,15 +27,18 @@ const FeaturedMenus = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-white text-center px-4">
+    <section className="py-16 bg-white dark:bg-black text-center px-4 transition-colors duration-500">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-serif mb-4" data-aos="fade-up">
+        <h2
+          className="text-3xl font-serif mb-4 text-black dark:text-white transition-colors duration-500"
+          data-aos="fade-up"
+        >
           My Featured Menus
         </h2>
         <p
-          className="text-gray-500 text-lg font-semibold max-w-md mx-auto mb-12"
+          className="text-gray-500 dark:text-gray-300 text-lg font-semibold max-w-md mx-auto mb-12 transition-colors duration-500"
           data-aos="fade-up"
-          data-aos-delay="100"
+          data-aos-delay={100}
         >
           My passion for food has brought many new, fun and delicious dishes to the table.
         </p>
@@ -44,7 +47,7 @@ const FeaturedMenus = () => {
           {featuredMenus.map((menu, index) => (
             <div
               key={index}
-              className="relative rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition-all duration-300"
+              className="relative rounded-lg overflow-hidden shadow-lg dark:shadow-gray-700 hover:scale-105 transform transition-all duration-300"
               data-aos="fade-up"
               data-aos-delay={index * 200} // Stagger animation
             >
@@ -56,7 +59,7 @@ const FeaturedMenus = () => {
               />
 
               {/* Dark overlay */}
-              <div className="absolute inset-0 bg-black/60"></div>
+              <div className="absolute inset-0 bg-black/40 dark:bg-black/60 transition-colors duration-500"></div>
 
               {/* Content */}
               <div className="absolute inset-0 flex flex-col justify-center items-center p-6 text-white font-semibold">
@@ -64,7 +67,7 @@ const FeaturedMenus = () => {
                 <p className="text-md mb-4">{menu.description}</p>
                 <a
                   href="#"
-                  className="underline hover:text-gray-300"
+                  className="underline hover:text-gray-300 transition-colors duration-500"
                 >
                   Continue Reading ...
                 </a>

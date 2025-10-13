@@ -1,48 +1,51 @@
-import React, { useEffect } from 'react';
-import { FaAward, FaRegHeart, FaStar, FaUsers } from 'react-icons/fa';
-import { LuChefHat } from 'react-icons/lu';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useEffect } from "react";
+import { FaAward, FaRegHeart, FaStar, FaUsers } from "react-icons/fa";
+import { LuChefHat } from "react-icons/lu";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true }); // animations run once
+    AOS.init({ duration: 1000, once: true });
   }, []);
 
   const cards = [
     {
       id: 1,
       icon: <FaAward className="h-10 w-10 text-[#00684A]" />,
-      title: 'Premium Quality',
+      title: "Premium Quality",
       description:
-        'Fresh ingredients and authentic spices sourced directly from the Indian sub-continent',
+        "Fresh ingredients and authentic spices sourced directly from the Indian sub-continent",
     },
     {
       id: 2,
       icon: <FaUsers className="h-10 w-10 text-[#00684A]" />,
-      title: 'Expert Chefs',
+      title: "Expert Chefs",
       description:
-        'Our experienced chefs blend traditional techniques with modern culinary innovation',
+        "Our experienced chefs blend traditional techniques with modern culinary innovation",
     },
     {
       id: 3,
       icon: <FaRegHeart className="h-10 w-10 text-[#00684A]" />,
-      title: 'Warm Hospitality',
+      title: "Warm Hospitality",
       description:
-        'Friendly service and welcoming atmosphere that makes every visit memorable',
+        "Friendly service and welcoming atmosphere that makes every visit memorable",
     },
   ];
 
   return (
-    <section id="about" className="py-16 bg-[#981921] scroll-m-10">
+    <section
+      id="about"
+      className="py-16 bg-[#981921] dark:bg-black transition-colors duration-500 scroll-m-10"
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Heading */}
           <div className="text-center mb-12" data-aos="fade-up">
             <div className="flex justify-center mb-6">
-              <LuChefHat className="h-12 w-12 text-white" />
+              <LuChefHat className="h-12 w-12 text-white dark:text-[#f5f5f5]" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-white dark:text-[#f5f5f5] mb-8">
               About Us
             </h2>
           </div>
@@ -50,8 +53,8 @@ const About = () => {
           {/* Text + Image */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             {/* Left Text */}
-            <div className="space-y-6 " data-aos="fade-right">
-              <div className="text-lg text-muted-foreground space-y-6 text-pretty text-white">
+            <div className="space-y-6" data-aos="fade-right">
+              <div className="text-lg space-y-6 text-white dark:text-gray-200">
                 <p>
                   We provide an emphasis on refined yet creative cuisine from
                   the Indian sub-continent. Our menu incorporates both
@@ -69,7 +72,7 @@ const About = () => {
                 {[...Array(5)].map((_, i) => (
                   <FaStar key={i} className="h-5 w-5 fill-[#00684A]" />
                 ))}
-                <span className="ml-2 text-muted-foreground text-white">
+                <span className="ml-2 text-white dark:text-gray-200">
                   Exceptional Service
                 </span>
               </div>
@@ -92,16 +95,17 @@ const About = () => {
             {cards.map((card, index) => (
               <div
                 key={card.id}
-                className="bg-white border-gray-300 text-center p-6 rounded-lg shadow-lg active:shadow-xl hover:shadow-xl transition-all
-                            duration-300 hover:scale-105"
+                className="bg-white dark:bg-gray-900 text-center p-6 rounded-lg shadow-lg active:shadow-xl hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-300 dark:border-gray-700"
                 data-aos="zoom-in"
-                data-aos-delay={index * 200} // stagger effect
+                data-aos-delay={index * 200}
               >
                 <div className="flex justify-center mb-4">{card.icon}</div>
                 <h3 className="text-xl font-semibold text-[#00684A] mb-2">
                   {card.title}
                 </h3>
-                <p className="text-muted-foreground">{card.description}</p>
+                <p className="text-gray-700 dark:text-gray-300">
+                  {card.description}
+                </p>
               </div>
             ))}
           </div>
