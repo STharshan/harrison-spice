@@ -101,6 +101,254 @@
         ]
     },
     {
+        "id": "Starters",
+        "title": "Starters",
+        "subtitle": "",
+        "items": [
+            {
+                "name": "Vegetables Samosa (v)",
+                "price": "£4.95",
+                "description": "Two crisp pastries with filling of vegetables.",
+                "image": ""
+            },
+            {
+                "name": "Meat Samosa",
+                "price": "£4.95",
+                "description": "Two crisp pastries with filling of lamb.",
+                "image": ""
+            },
+            {
+                "name": "Onion Bhaji (v)",
+                "price": "£4.95",
+                "description": "Finely sliced onions coated in gram flour & spices, deep fried.",
+                "image": ""
+            },
+            {
+                "name": "Chicken Manchurian",
+                "price": "£5.95",
+                "description": "Tender pieces of chicken stir-fried with garlic, capsicum & spices.",
+                "image": ""
+            },
+            {
+                "name": "Lamb Boti Puri",
+                "price": "£7.95",
+                "description": "Tender pieces of succulent stir-fried lamb boti, tossed with fresh mint, mango, crushed chillies and kaffir lime, garnished in a puri.",
+                "image": ""
+            },
+            {
+                "name": "Chicken Chat",
+                "price": "£5.95",
+                "description": "Stir-fried tender pieces of chicken roasted with sweet chilli, cucumber and turmeric.",
+                "image": ""
+            },
+            {
+                "name": "Spicy Wings",
+                "price": "£4.95",
+                "description": "Chicken wings marinated in yogurt and spices.",
+                "image": ""
+            },
+            {
+                "name": "Chicken Tikka",
+                "price": "£5.50",
+                "description": "Pieces of chicken marinated with yogurt and fresh herbs & spices, cooked in a tandoori clay oven.",
+                "image": ""
+            },
+            {
+                "name": "Lamb Tikka",
+                "price": "£5.95",
+                "description": "Pieces of lamb marinated with yogurt and fresh herbs & spices, cooked in a tandoori clay oven.",
+                "image": ""
+            },
+            {
+                "name": "Sheek Kebab",
+                "price": "£5.50",
+                "description": "Minced lamb with onions, special herbs & spices, skewered & cooked in a tandoori clay oven.",
+                "image": ""
+            },
+            {
+                "name": "Chicken Kebab",
+                "price": "£5.50",
+                "description": "Minced chicken mixed with special herbs & spices, skewered & cooked in a tandoori clay oven.",
+                "image": ""
+            },
+            {
+                "name": "Mix Kebab",
+                "price": "£5.95",
+                "description": "An assortment of chicken tikka, lamb tikka, sheek kebab & spicy chicken wings.",
+                "image": ""
+            },
+            {
+                "name": "Chicken or Lamb Shashlick",
+                "price": "£5.95",
+                "description": "Pieces of tender chicken marinated in herbs & spices, cooked with onions, tomatoes & capsicum.",
+                "image": ""
+            },
+            {
+                "name": "Tandoori Lamb Chops",
+                "price": "£6.95",
+                "description": "Smoked green herb tikka smothered with garam masala.",
+                "image": ""
+            },
+            {
+                "name": "Tandoori Chicken",
+                "price": "£5.50",
+                "description": "Pieces of chicken breast marinated with yogurt & fresh herbs & spices, cooked in tandoori in hot chilli & garlic marinade.",
+                "image": ""
+            },
+            {
+                "name": "Chilli Paneer",
+                "price": "£5.50",
+                "description": "Deep fried homemade Indian cottage cheese with sweet red peppers, spring onions & coriander in a hot chilli & garlic marinade."
+            },
+            {
+                "name": "Paneer Tikka",
+                "price": "£5.95",
+                "description": "Deep fried homemade Indian cottage cheese marinated in spices and cooked in clay oven served with salad."
+            },
+            {
+                "name": "Hot Meat",
+                "price": "£6.95",
+                "description": "Stir fried tender pieces of lamb tossed with fresh green chilli cooked with garlic peppers herb and spices."
+            },
+            {
+                "name": "Sizzling Tandoori Platter (share for 2)",
+                "price": "£15.95",
+                "description": "An assortment of green herb lamb tikka, chicken tikka & salmon supreme tikka perfect for those looking to share."
+            },
+            {
+                "name": "Sizzling Vegetable Platter (share for 2)",
+                "price": "£11.95",
+                "description": "For those seeking a vegetarian alternative. A combination of paneer shashlik, onion bhaji & aloo chaat."
+            }
+        ]
+    },
+    {
+        "id": "seafood_starter",
+        "title": "SEAFOOD STARTERS",
+        "subtitle": "",
+        "items": [
+            {
+                "name": "Prawn Cocktail",
+                "price": "£5.95",
+                "description": "Succulent prawns, mixed with salad & served with cocktail sauce."
+            },
+            {
+                "name": "Fish Chilli",
+                "price": "£5.95",
+                "description": "Tilapia fish fried with capsicum, green chilli & spring onion in soya sauce."
+            },
+            {
+                "name": "Salmon Supreme Tikka",
+                "price": "£7.95",
+                "description": "Grilled fillet of salmon marinated in a rich spicy sauce of dill, ginger & honey."
+            },
+            {
+                "name": "King Prawns Tandoori",
+                "price": "£7.95",
+                "description": "King prawns marinated in yogurt and special ground spices, cooked in a tandoori clay oven."
+            },
+            {
+                "name": "King Prawn Puree",
+                "price": "£7.95",
+                "description": "Lightly spiced king prawn in a touch of sauce. Served on a puffed bread."
+            }
+        ]
+    },
+    {
+        "id": "tandoori_specialties",
+        "title": " TANDOORI SPECIALITIES",
+        "subtitle": "",
+        "items": [
+            {
+                "name": "Tandoori Chicken (half)",
+                "price": "£11.95",
+                "description": "Tender chicken on the bone marinated in yogurt, ginger, tandoori spices, cooked in a tandoori clay oven, served on a bed of fried onions."
+            },
+            {
+                "name": "Chicken Tikka",
+                "price": "£11.95",
+                "description": "Breast of chicken diced & marinated in yogurt, ginger, tandoori spices, cooked in a tandoori clay oven, served on a bed of fried onions."
+            },
+            {
+                "name": "Lamb Tikka",
+                "price": "£12.95",
+                "description": "Lamb tikka marinated in yogurt, ginger, tandoori spices, cooked in a tandoori clay oven, served on a bed of fried onions."
+            },
+            {
+                "name": "King Prawn Tandoori",
+                "price": "£16.95",
+                "description": "King prawn, marinated in yogurt and special ground spices, cooked in a tandoori clay oven, served on a bed of fried onions."
+            },
+            {
+                "name": "Maharajah Mixed Grill",
+                "price": "£15.95",
+                "description": "An assortment of tandoori chicken, chicken tikka, lamb tikka, king prawn, sheek kebab & chicken wings."
+            },
+            {
+                "name": "Paneer Shashlick (Saucy)",
+                "price": "£11.95",
+                "description": "Home made Indian cottage cheese marinated with mild spices tossed with grilled onion, pepper & tomatoes."
+            },
+            {
+                "name": "Chicken Tikka / Lamb Tikka Shashlick (Saucy / Dry)",
+                "price": "£13.95",
+                "description": "Marinated with green herbs & yogurt cooked with tomatoes, green pepper & onions."
+            },
+            {
+                "name": "King Prawn Shashlick (Dry)",
+                "price": "£17.95",
+                "description": "Marinated with tandoori spices barbecued in the clay oven with green peppers, onions & tomato."
+            },
+            {
+                "name": "Tandoori Fish Tikka",
+                "price": "£12.95",
+                "description": "Fish marinated in special herbs barbecued in tandoori clay oven."
+            },
+            {
+                "name": "Monk Fish Shashlick",
+                "price": "£16.95",
+                "description": "Chunks of succulent wild monk fish, marinated in a special tandoori blend of spice, cooked over charcoal, finished with a dressing of peppers, lemon grass, tomatoes."
+            }
+        ]
+    },
+    {
+        "id": "masala_specialties",
+        "title": "MASALA SPECIALTIES",
+        "subtitle": "Cooked in a thick & creamy special mild tandoori sauce, with ground almond, coconut & fresh cream.",
+        "items": [
+            {
+                "name": "Chicken Tikka Masala",
+                "price": "£12.45",
+                "description": "Cooked in a thick & creamy special mild tandoori sauce, with ground almond, coconut & fresh cream."
+            },
+            {
+                "name": "Lamb Tikka Masala",
+                "price": "£12.45",
+                "description": "Cooked in a thick & creamy special mild tandoori sauce, with ground almond, coconut & fresh cream."
+            },
+            {
+                "name": "Tandoori King Prawn Masala",
+                "price": "£16.95",
+                "description": "Cooked in a thick & creamy special mild tandoori sauce, with ground almond, coconut & fresh cream."
+            },
+            {
+                "name": "Monk Fish Masala",
+                "price": "£17.95",
+                "description": "Cooked in a thick & creamy special mild tandoori sauce, with ground almond, coconut & fresh cream."
+            },
+            {
+                "name": "Paneer Masala",
+                "price": "£11.00",
+                "description": "Cooked in a thick & creamy special mild tandoori sauce, with ground almond, coconut & fresh cream."
+            },
+            {
+                "name": "Butter Chicken Masala",
+                "price": "£12.45",
+                "description": "Cooked in a thick & creamy special mild tandoori sauce, with ground almond, coconut & fresh cream."
+            }
+        ]
+    },
+    {
         "id": "Tawa dishes",
         "title": "Tawa",
         "subtitle": "Specially cooked with garam masala, tomatoes, ring onions served in a cast iron tawa.",
@@ -272,647 +520,426 @@
         ]
     },
     {
-        "id": "Fish Appetisers",
-        "title": "Fish Appetisers",
-        "subtitle": "Served with Salad and Mint sauce",
-        "items": [
-            {
-                "name": "Tilapia Fish Tikka",
-                "price": "£5.95",
-                "image": "/chicken-rice.png"
-            },
-            {
-                "name": "Salmon Fish Tikka",
-                "price": "£6.95",
-                "image": "/chicken-rice.png"
-            },
-            {
-                "name": "Prawn Puree",
-                "price": "£5.95",
-                "image": "/menu/jellof.png"
-            },
-            {
-                "name": "King Prawn Puree",
-                "price": "6.95",
-                "image": "/chicken-rice.png"
-            },
-            {
-                "name": "King Prawn Tandoori",
-                "price": "£7.95",
-                "image": "/chicken-rice.png"
-            }
-        ]
-    },
-    {
-        "id": "Meat & Poultry Appetisers",
-        "title": "Meat & Poultry Appetisers",
-        "subtitle": "Served with Salad and Mint sauce",
-        "items": [
-            {
-                "name": "Meat Samosa (3pcs)",
-                "price": "£4.50",
-                "image": "/menu/egussi-fish.png"
-            },
-            {
-                "name": "Chicken Tikka",
-                "price": "£4.95",
-                "image": "/menu/egussi-meat.png"
-            },
-            {
-                "name": "Lamb Tikka",
-                "price": "£4.95",
-                "image": "/menu/egussi-fish.png"
-            },
-            {
-                "name": "Spicy Wings",
-                "price": "£4.50",
-                "image": "/menu/egussi-fish.png"
-            },
-            {
-                "name": "Sheek Kebab",
-                "price": "£4.95",
-                "image": "/menu/egussi-fish.png"
-            },
-            {
-                "name": "Chicken Shashlick",
-                "price": "£4.95",
-                "image": "/menu/egussi-fish.png"
-            },
-            {
-                "name": "Lamb Shashlick",
-                "price": "£4.95",
-                "image": "/menu/egussi-fish.png"
-            },
-            {
-                "name": "Tandoori Chicken",
-                "price": "£4.95",
-                "image": "/menu/egussi-fish.png"
-            },
-            {
-                "name": "Chicken Manchurian",
-                "price": "£5.50",
-                "image": "/menu/egussi-fish.png"
-            },
-            {
-                "name": "Chicken Chat",
-                "price": "£4.50",
-                "image": "/menu/egussi-fish.png"
-            },
-            {
-                "name": "Mixed Kebab",
-                "price": "£5.95",
-                "image": "/menu/egussi-fish.png"
-            }
-        ]
-    },
-    {
-        "id": "Tandoori Specialities",
-        "title": "Tandoori Specialities",
-        "subtitle": "grilled in tandoori oven",
-        "items": [
-            {
-                "name": "Chicken Tikka",
-                "price": "£8.95",
-                "image": "/menu/chicken-curry.png"
-            },
-            {
-                "name": "Lamb Tikka",
-                "price": "£9.50",
-                "image": "/menu/goat-curry.png"
-            },
-            {
-                "name": "Half Tandoori Chicken",
-                "price": "£9.50",
-                "image": "/menu/goat-curry.png"
-            },
-            {
-                "name": "Garlic Chicken Tikka",
-                "price": "£9.50",
-                "image": "/menu/goat-curry.png"
-            },
-            {
-                "name": "Paneer Shashlick",
-                "price": "£8.50",
-                "image": "/menu/goat-curry.png"
-            },
-            {
-                "name": "Chicken Shashlick",
-                "price": "£8.95",
-                "image": "/menu/goat-curry.png"
-            },
-            {
-                "name": "Chicken Shashlick (Dry)",
-                "price": "£9.95",
-                "image": "/menu/goat-curry.png"
-            },
-            {
-                "name": "King Prawn Shashlick",
-                "price": "£14.95",
-                "image": "/menu/goat-curry.png"
-            },
-            {
-                "name": "King Prawn Shashlick (Dry)",
-                "price": "£15.95",
-                "image": "/menu/goat-curry.png"
-            },
-            {
-                "name": "King Prawn Tandoori",
-                "price": "£14.95",
-                "image": "/menu/goat-curry.png"
-            },
-            {
-                "name": "Maharajah Mixed Grill",
-                "price": "£13.95",
-                "image": "/menu/goat-curry.png"
-            }
-        ]
-    },
-    {
-        "id": "Sagwala dishes",
-        "title": "Sagwala Dishes",
-        "subtitle": "A traditional dish medium hot, cooked with fresh green herbs and spinach, fairly dry.",
-        "items": [
-            {
-                "name": "Chicken Sagwala",
-                "price": "£9.50",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Lamb Sagwala",
-                "price": "£9.95",
-                "image": "/menu/ogbono-soup.png"
-            },
-            {
-                "name": "Chicken Tikka Sagwala",
-                "price": "£9.50",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Prawn Sagwala",
-                "price": "£9.50",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "King Prawn Sagwala",
-                "price": "£15.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Mixed Vegetable Sagwala",
-                "price": "£8.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Paneer Sagwala",
-                "price": "£9.50",
-                "image": "/menu/okra-soup.png"
-            }
-        ]
-    },
-    {
-        "id": "Jalfrezi dishes",
-        "title": "Jalfrezi Dishes",
-        "subtitle": "This dish is cooked with fresh garlic, onions, green peppers, tomatoes, coriander, green chillies, mustard paste & selection of herbs and spices.",
-        "items": [
-            {
-                "name": "Chicken Jalfrezi",
-                "price": "£9.50",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Lamb Jalfrezi",
-                "price": "£9.95",
-                "image": "/menu/ogbono-soup.png"
-            },
-            {
-                "name": "Chicken Tikka Jalfrezi",
-                "price": "£9.50",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Prawn Jalfrezi",
-                "price": "£9.50",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "King Prawn Jalfrezi",
-                "price": "£15.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Mixed Vegetable Jalfrezi",
-                "price": "£8.50",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Paneer Jalfrezi",
-                "price": "£9.50",
-                "image": "/menu/okra-soup.png"
-            }
-        ]
-    },
-    {
-        "id": "Masala dishes",
-        "title": "Masala dishes",
-        "subtitle": "A traditional classic dish marinated in special aromatic herbs and spices masala. With pistachios, coconut milk and fresh cream.",
-        "items": [
-            {
-                "name": "Chicken Tikka Masala",
-                "price": "£8.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Lamb Tikka Masala",
-                "price": "£8.95",
-                "image": "/menu/ogbono-soup.png"
-            },
-            {
-                "name": "Tandoori King Prawn Masala",
-                "price": "£15.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Tandoori Chicken Masala",
-                "price": "£8.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Butter Chicken Masala",
-                "price": "£8.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Paneer Masala",
-                "price": "£8.50",
-                "image": "/menu/okra-soup.png"
-            }
-        ]
-    },
-    {
-        "id": "Speciality dishes",
-        "title": "Speciality dishes",
+        "id": "CHEF'S SPECIALITIES",
+        "title": "CHEF'S SPECIALITIES",
         "subtitle": "",
         "items": [
             {
-                "name": "Murag Chilli masala",
-                "price": "£10.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Paneer Tikka Bhuna Masala (v)",
-                "price": "£10.95",
-                "image": "/menu/ogbono-soup.png"
-            },
-            {
-                "name": "Jhinga Chingri",
-                "price": "£16.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Methi Gosht",
-                "price": "£10.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Bringel Gosht",
-                "description": "Lamb cooked with rich spices and fresh aubergine.",
-                "price": "£10.95",
-                "image": "/menu/okra-soup.png"
+                "name": "Chicken Tikka Jalfrezi",
+                "price": "£12.45",
+                "description": "This dish is cooked with fresh garlic, onions, tomato, coriander, green chillies and mustard paste & a selection of herbs & spices."
             },
             {
                 "name": "Chicken or Lamb Makhani",
-                "price": "£10.95",
-                "image": "/menu/okra-soup.png"
+                "price": "£12.45",
+                "description": "The chicken or lamb is cooked in almond, coconut, milk and the chef’s special spices to give this dish a mild flavour."
             },
             {
-                "name": "Chicken or Lamb Naga",
-                "price": "£10.95",
-                "image": "/menu/okra-soup.png"
+                "name": "Garlic Chilli Masala Chicken or Lamb",
+                "price": "£13.45",
+                "description": "Marinated in selected spices, then it is cooked to perfection with onion, tomato, green chillies, garlic and ginger."
             },
             {
-                "name": "Lamb Chop Sylheti",
-                "price": "£14.95",
-                "image": "/menu/okra-soup.png"
+                "name": "Bringel Gosht",
+                "price": "£12.45",
+                "description": "Lamb cooked with rich spices & fresh aubergine & fresh mint leaves."
+            },
+            {
+                "name": "Methi Gosht",
+                "price": "£12.45",
+                "description": "Lamb prepared with fresh fenugreek leaves & cooked in special spicy sauce."
+            },
+            {
+                "name": "Naga",
+                "price": "£12.95",
+                "description": "Chicken Tikka marinated in garam masala with onions, pepper & naga chilli. A very hot dish."
+            },
+            {
+                "name": "Hyderabadi",
+                "price": "£12.95",
+                "description": "Stir fried with tangy spices green coriander, fresh sour yogurt, tomatoes, garlic and ginger puree in juices of bay leaves, cardamoms and cloves."
+            },
+            {
+                "name": "Jhinga Chingri",
+                "price": "£17.45",
+                "description": "King prawns marinated in ground spices & barbequed in a clay oven."
+            },
+            {
+                "name": "Paneer Tikka Bhuna Masala",
+                "price": "£11.95",
+                "description": "Homemade Indian cheese, cooked in clay oven & then tossed in a garam masala sauce with fresh tomatoes."
+            },
+            {
+                "name": "Slow Cooked Lamb Shank",
+                "price": "£18.95",
+                "description": "Adopting an ancient recipe, pre baked lamb is slow cooked ensuring it has a complex melange of fresh garlic, ginger, turmeric, star anise, cloves and corn plums."
+            },
+            {
+                "name": "Fish Bhuna",
+                "price": "£13.95",
+                "description": "Tilapia Bangladeshi fish cooked in chef’s special spices medium bhuna strength sauce. Served in a sized tawa."
+            },
+            {
+                "name": "Chicken or Lamb Saagwala",
+                "price": "£12.95",
+                "description": "A dish prepared using leaves of the finest spinach. Seasoned with fresh spices and fresh coriander."
+            },
+            {
+                "name": "Chef’s Special Tikka Dish Bemisal",
+                "price": "£16.95",
+                "description": "Charcoal Grilled Garlic Grilled Scottish Salmon in a characteristic smooth sauce where the smoothness of the buttery tomato & onion sauce with lemon grass sauce is complimented by sautéed brown onions."
             },
             {
                 "name": "Harrison Spice Special (Medium)",
-                "price": "£12.95",
-                "image": "/menu/okra-soup.png"
+                "price": "£14.95",
+                "description": "A special mixture of the chef's favourite ingredients creating a delightful dish to savour chicken or meat, chick peas, spinach & in a special chef's sauce with added bay leaves for added flavour."
+            },
+            {
+                "name": "King Prawn Aftabi",
+                "price": "£17.95",
+                "description": "A traditional Bangladeshi classic king prawn & green beans, slowly cooked in our specially prepared spices, a dish full of flavour & pleasantly aromatic (fairly hot)."
+            },
+            {
+                "name": "Achari Chicken Tikka / Lamb",
+                "price": "£12.45",
+                "description": "A delightful dish medium spiced cooked with an Indian pickle to create a slight citrus taste."
+            },
+            {
+                "name": "Rezela Chicken Tikka / Lamb",
+                "price": "£12.45",
+                "description": "Tender pieces of chicken or lamb tikka cooked in a delicately spiced fresh ginger sauce."
+            },
+            {
+                "name": "Chicken Tikka Rogan Josh",
+                "price": "£12.45",
+                "description": "A tomato based, a medium hot dish cooked with fresh garlic, capsicum & onion, finished with rich tomato sauce."
+            },
+            {
+                "name": "Murgh Chilli Masala",
+                "price": "£13.95",
+                "description": "Tandoori chicken shredded off the bone cooked with mince meat and chef's special sauce, infused with fresh green chillies."
             }
         ]
     },
     {
-        "id": "Korai dishes",
-        "title": "Korai Dishes",
-        "subtitle": "A wok styled dish is used to prepare this dish. It consists of onions, green peppers, tomatoes and mushroom cooked in a medium sauce.",
+        "id": "karahi",
+        "title": "KARAHI",
+        "subtitle": "Cooked with garam masala, cardamom & cloves in a thick medium strength sauce with a generous quantity of garlic with deep fried onions, capsicums & tomatoes.",
         "items": [
             {
-                "name": "Chicken Tikka Korai",
-                "price": "£9.50",
-                "image": "/menu/okra-soup.png"
+                "name": "Chicken Tikka Karahi",
+                "price": "£12.45"
             },
             {
-                "name": "Lamb Korai",
-                "price": "£9.95",
-                "image": "/menu/ogbono-soup.png"
+                "name": "Lamb Tikka Karahi",
+                "price": "£12.45"
             },
             {
-                "name": "Prawn Korai",
-                "price": "£9.50",
-                "image": "/menu/okra-soup.png"
+                "name": "Prawn Karahi",
+                "price": "£12.45"
             },
             {
-                "name": "King Prawn Korai",
-                "price": "£15.95",
-                "image": "/menu/okra-soup.png"
+                "name": "King Prawn Karahi",
+                "price": "£16.95"
             },
             {
-                "name": "Mixed Korai",
-                "price": "£13.95",
-                "image": "/menu/okra-soup.png"
+                "name": "Monk Fish",
+                "price": "£17.95"
             },
             {
-                "name": "Paneer Tikka Korai",
-                "price": "£9.50",
-                "image": "/menu/okra-soup.png"
+                "name": "Mix Karahi",
+                "price": "£15.45"
             },
             {
-                "name": "Mixed Vegetable Korai",
-                "price": "£7.95",
-                "image": "/menu/okra-soup.png"
+                "name": "Paneer Karahi",
+                "price": "£11.45"
+            },
+            {
+                "name": "Sea Food Karahi",
+                "price": "£16.45",
+                "description": "King Prawns, Tilapia, Salmon, Prawns."
             }
         ]
     },
     {
-        "id": "Biryani dishes",
-        "title": "Biryani dishes",
-        "subtitle": "Prepared with pilau rice and dressed with spiced cucumber, tomato and served with seperate vegetable curry.",
+        "id": "biryani_dishes",
+        "title": "BIRIYANI DISHES",
+        "subtitle": "Biryani dishes flavoured with a touch of saffron, complimented with a vegetable curry sauce.",
         "items": [
             {
                 "name": "Chicken Biryani",
-                "price": "£12.95",
-                "image": "/menu/okra-soup.png"
+                "price": "£13.95"
             },
             {
                 "name": "Lamb Biryani",
-                "price": "£13.50",
-                "image": "/menu/ogbono-soup.png"
-            },
-            {
-                "name": "Chicken Tikka Biryani",
-                "price": "£12.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Paneer Biryani",
-                "price": "£12.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Vegetable Biryani",
-                "price": "£11.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Prawn Biryani",
-                "price": "£12.95",
-                "image": "/menu/okra-soup.png"
+                "price": "£14.95"
             },
             {
                 "name": "King Prawn Biryani",
-                "price": "£15.95",
-                "image": "/menu/okra-soup.png"
+                "price": "£17.95"
             },
             {
-                "name": "Keema Biryani",
-                "price": "£12.95",
-                "image": "/menu/okra-soup.png"
+                "name": "Chicken Tikka Biryani",
+                "price": "£14.50"
             },
             {
-                "name": "Mixed Special Biryani",
-                "price": "£14.95",
-                "image": "/menu/okra-soup.png"
+                "name": "Chef's Special Biryani",
+                "price": "£14.95"
+            },
+            {
+                "name": "Lamb Tikka, Chicken Tikka & Mince Meat Biryani",
+                "price": "£14.95"
+            },
+            {
+                "name": "Vegetable Biryani",
+                "price": "£11.95"
             }
         ]
     },
     {
-        "id": "Rice",
-        "title": "Rice Dishes",
+        "id": "sides_rice",
+        "title": "RICE",
         "subtitle": "",
         "items": [
             {
                 "name": "Boiled Rice",
-                "price": "£2.95",
-                "image": "/menu/okra-soup.png"
+                "price": "£2.95"
             },
             {
                 "name": "Pilau Rice",
-                "price": "£3.25",
-                "image": "/menu/ogbono-soup.png"
+                "price": "£3.50"
             },
             {
-                "name": "Fried Rice",
-                "price": "£3.80",
-                "image": "/menu/okra-soup.png"
+                "name": "Mushroom Fried Rice",
+                "price": "£4.50"
             },
             {
-                "name": "Vegetable Rice",
-                "price": "£3.80",
-                "image": "/menu/okra-soup.png"
+                "name": "Vegetable Fried Rice",
+                "price": "£4.50"
             },
             {
-                "name": "Mushroom Rice",
-                "price": "£3.80",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Egg Fried Rice",
-                "price": "£3.80",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Garlic Rice",
-                "price": "£3.80",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Lemon & Cashew Rice",
-                "price": "£3.80",
-                "image": "/menu/okra-soup.png"
+                "name": "Garlic Fried Rice",
+                "price": "£4.50"
             },
             {
                 "name": "Keema Rice",
-                "price": "£3.80",
-                "image": "/menu/okra-soup.png"
+                "price": "£4.50"
             },
             {
-                "name": "Jeera Rice (Cumin)",
-                "price": "£3.80",
-                "image": "/menu/okra-soup.png"
+                "name": "Egg Fried Rice",
+                "price": "£4.50"
             },
             {
-                "name": "Special Fried Rice",
-                "price": "£4.80",
-                "image": "/menu/okra-soup.png"
+                "name": "Lemon & Cashew Nut Rice",
+                "price": "£4.50"
+            },
+            {
+                "name": "Jeera Rice",
+                "price": "£4.50"
+            },
+            {
+                "name": "Coconut Rice",
+                "price": "£4.50"
+            },
+            {
+                "name": "Spinach Rice",
+                "price": "£4.50"
             }
         ]
     },
     {
-        "id": "Sundries",
-        "title": "Sundries",
+        "id": "side_dishes",
+        "title": "SIDE DISHES",
         "subtitle": "",
         "items": [
             {
-                "name": "Green Salad",
-                "price": "£2.00",
-                "image": "/menu/okra-soup.png"
+                "name": "Chana Masala",
+                "price": "£5.95"
             },
             {
-                "name": "Chips",
-                "price": "£3.95",
-                "image": "/menu/ogbono-soup.png"
+                "name": "Mattar Paneer",
+                "price": "£5.95"
             },
             {
-                "name": "Spicy Chips",
-                "price": "£3.95",
-                "image": "/menu/okra-soup.png"
+                "name": "Saag Paneer",
+                "price": "£5.95"
             },
             {
-                "name": "Onion Raitha",
-                "price": "£1.50",
-                "image": "/menu/okra-soup.png"
+                "name": "Brinjal Aloo",
+                "price": "£5.95"
             },
             {
-                "name": "Cucumber Raitha",
-                "price": "£1.50",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Plain Poppadom",
-                "price": "£0.90",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Spicy Poppadom",
-                "price": "£1.00",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Chutney And Pickles Tray",
-                "price": "£2.50",
-                "image": "/menu/okra-soup.png"
-            }
-        ]
-    },
-    {
-        "id": "Side Dishes",
-        "title": "Side Dishes",
-        "subtitle": "",
-        "items": [
-            {
-                "name": "Saag Bhaji (Spinach)",
-                "price": "£4.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Aloo Gobi (Cauliflower & Potato)",
-                "price": "£4.95",
-                "image": "/menu/ogbono-soup.png"
-            },
-            {
-                "name": "Chana Aloo (Chick Peas & Potato)",
-                "price": "£4.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Saag Aloo (Spinach & Potato)",
-                "price": "£4.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Bhindi Bhaji (Okra)",
-                "price": "£4.95",
-                "image": "/menu/okra-soup.png"
+                "name": "Aubergines & Potatoes",
+                "price": "£5.95"
             },
             {
                 "name": "Bombay Aloo",
-                "price": "£4.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Saag Paneer (Spinach & Indian Cheese)",
-                "price": "£4.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Mutter Paneer (Peas & Indian Cheese)",
-                "price": "£4.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Cauliflower Bhaji",
-                "price": "£4.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Chana Masala",
-                "price": "£4.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Begoon Bhaji (Aubergine)",
-                "price": "£4.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Tarka Daal (Lentils)",
-                "price": "£4.95",
-                "image": "/menu/okra-soup.png"
+                "price": "£5.95"
             },
             {
                 "name": "Mixed Vegetable Bhaji",
-                "price": "£4.95",
-                "image": "/menu/okra-soup.png"
+                "price": "£5.95"
+            },
+            {
+                "name": "Tarka Daal",
+                "price": "£5.95"
             },
             {
                 "name": "Mushroom Bhaji",
-                "price": "£4.95",
-                "image": "/menu/okra-soup.png"
+                "price": "£5.95"
             },
             {
                 "name": "Curry Sauce",
-                "price": "£4.95",
-                "image": "/menu/okra-soup.png"
-            },
-            {
-                "name": "Tandoori Sauce",
-                "price": "£4.50",
-                "image": "/menu/okra-soup.png"
+                "price": "£4.95"
             }
         ]
     },
     {
-        "id": "Set Meals",
-        "title": "Set Meals",
+        "id": "appetizers",
+        "title": "APPETIZERS",
         "subtitle": "",
         "items": [
             {
-                "name": "Set meal 1",
-                "price": "£14.95",
-                "description": "poppadom & pickle tray, onion bhaji, chicken tikka bhuna masala, pilau rice, plain naan",
-                "image": "/menu/okra-soup.png"
+                "name": "Plain Papadum",
+                "price": "£1.20",
+                "image": "image_placeholder"
             },
             {
-                "name": "Set meal 2",
-                "price": "£29.95",
-                "description": "Poppadom & pickle tray, onion bhaji, sheek kebab, lamb balti, chicken tikka masala, bombay aloo, pilau rice, plain naan",
-                "image": "/menu/ogbono-soup.png"
+                "name": "Spicy Papadum",
+                "price": "£1.30",
+                "image": "image_placeholder"
             },
             {
-                "name": "Set meal 4",
-                "price": "£59.95",
-                "description": "Poppadom & pickle tray, onion bhaji, sheek kebab, chicken tikka, meat samosa, lamb bhuna, chicken dopiaza, chicken tikka masala, lamb korai, mixed vegetables, bombay aloo, 2 pilau rice, 1 garlic naan, 2 plain naan, 1 garlic naan",
-                "image": "/menu/okra-soup.png"
+                "name": "Chutney and Pickles Tray",
+                "price": "£4.50",
+                "image": "image_placeholder"
+            }
+        ]
+    },
+    {
+        "id": "drinks",
+        "title": "DRINKS",
+        "subtitle": "",
+        "items": [
+            {
+                "name": "Coke",
+                "price": "£3.50",
+                "image": "image_placeholder"
+            },
+            {
+                "name": "Diet Coke",
+                "price": "£3.50",
+                "image": "image_placeholder"
+            },
+            {
+                "name": "Sprite",
+                "price": "£3.50",
+                "image": "image_placeholder"
+            },
+            {
+                "name": "7 UP",
+                "price": "£3.50",
+                "image": "image_placeholder"
+            },
+            {
+                "name": "Fanta",
+                "price": "£3.50",
+                "image": "image_placeholder"
+            },
+            {
+                "name": "Appletizer",
+                "price": "£3.95",
+                "image": "image_placeholder"
+            }
+        ]
+    },
+    {
+        "id": "cordials_juices_j20s",
+        "title": "CORDIALS",
+        "subtitle": "",
+        "items": [
+            {
+                "name": "Orange & Cordial",
+                "price": "£2.95",
+                "image": "image_placeholder"
+            },
+            {
+                "name": "Blackcurrant Cordial",
+                "price": "£2.95",
+                "image": "image_placeholder"
+            },
+            {
+                "name": "Fruit Shoot",
+                "price": "£1.95",
+                "image": "image_placeholder"
+            },
+            {
+                "name": "Soda Water",
+                "price": "£2.95",
+                "image": "image_placeholder"
+            },
+            {
+                "name": "Tonic Water",
+                "price": "£2.95",
+                "image": "image_placeholder"
+            },
+            {
+                "name": "Still Water Bottle",
+                "price": "£5.50",
+                "image": "image_placeholder"
+            },
+            {
+                "name": "Sparkling Water Bottle",
+                "price": "£5.95",
+                "image": "image_placeholder"
+            }
+        ]
+    },
+    {
+        "id": "j20s_juices",
+        "title": "J20'S",
+        "items": [
+            {
+                "name": "J20 Apple & Mango",
+                "price": "£3.50",
+                "image": "image_placeholder"
+            },
+            {
+                "name": "J20 Apple & Raspberry",
+                "price": "£3.50",
+                "image": "image_placeholder"
+            },
+            {
+                "name": "J20 Orange & Passion Fruit",
+                "price": "£3.50",
+                "image": "image_placeholder"
+            }
+        ]
+    },
+    {
+        "id": "juices",
+        "title": "JUICES",
+        "subtitle": "",
+        "items": [
+            {
+                "name": "Orange Juice",
+                "price": "£2.95",
+                "image": "image_placeholder"
+            },
+            {
+                "name": "Pineapple Juice",
+                "price": "£2.95",
+                "image": "image_placeholder"
+            },
+            {
+                "name": "Apple Juice",
+                "price": "£2.95",
+                "image": "image_placeholder"
+            },
+            {
+                "name": "Mango Juice",
+                "price": "£2.95",
+                "image": "image_placeholder"
             }
         ]
     }
