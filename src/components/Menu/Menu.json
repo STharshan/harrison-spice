@@ -449,43 +449,35 @@
         "items": [
             {
                 "name": "Curry",
-                "price": "£6.95",
-                "image": "/menu/okra-soup.png"
+                "description": "Curry dishes are lightly spiced, basic traditional curry cooked in a relatively mild sauce."
             },
             {
                 "name": "Bhuna",
-                "price": "£6.95",
-                "image": "/menu/okra-soup.png"
+                "description": "Cooked with a combination of spice with fresh onion & tomatoes, fried together to provide a medium strength dish in consistency."
             },
             {
                 "name": "Dupiaza",
-                "price": "£6.95",
-                "image": "/menu/okra-soup.png"
+                "description": "Highly flavoured dish created with whole spices & onions. Medium in taste."
             },
             {
                 "name": "Pathia",
-                "price": "£6.95",
-                "image": "/menu/okra-soup.png"
+                "description": "Slightly hot, cooked in a specially prepared medium sauce, this dish is then given a mixed topping which consists of spicy fried onions & capsicum."
             },
             {
                 "name": "Dansak",
-                "price": "£6.95",
-                "image": "/menu/okra-soup.png"
+                "description": "Sweet, sour, & hot, this tends to be tangy yet derives a piquant richness from a blend of all the spices with pineapple & lentils."
             },
             {
                 "name": "Madras",
-                "price": "£6.95",
-                "image": "/menu/okra-soup.png"
+                "description": "Southern Indian coastal spices & ground pepper sprinkled with curry leaves & is fairly hot."
             },
             {
                 "name": "Vindaloo",
-                "price": "£6.95",
-                "image": "/menu/okra-soup.png"
+                "description": "A well spiced dish, to give it a strong fiery flavour a very hot sauce."
             },
             {
                 "name": "Korma",
-                "price": "£6.95",
-                "image": "/menu/ogbono-soup.png"
+                "description": "A preparation of mild spices flavoured with cardamom, cinnamon & cream which is used to create the delicacy of the flavour & creamy texture."
             },
             {
                 "name": "Chicken",
