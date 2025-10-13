@@ -19,7 +19,7 @@ const Hero = () => {
           {/* Heading */}
           <h1
             data-aos="fade-up"
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#00684A] mb-6 drop-shadow-md transition-colors duration-300"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#C5A265] mb-6 drop-shadow-md transition-colors duration-300"
           >
             Welcome to Harrison&apos;s Spice
           </h1>
@@ -28,7 +28,7 @@ const Hero = () => {
           <p
             data-aos="fade-up"
             data-aos-delay="200"
-            className="text-xl sm:text-2xl md:text-3xl text-[#00684A] mb-8 drop-shadow-sm transition-colors duration-300"
+            className="text-xl sm:text-2xl md:text-3xl text-[#C5A265] mb-8 drop-shadow-sm transition-colors duration-300"
           >
             Refined Indian cuisine with a modern twist in the heart of Ratby
           </p>
@@ -41,7 +41,7 @@ const Hero = () => {
           >
             {/* View Menu Button */}
             <a href="#menu">
-              <button className="group bg-[#00684A] hover:scale-105 active:scale-105 hover:shadow-lg hover:shadow-[#47e2b6] active:shadow-[#47e2b6] flex items-center text-white py-2 px-6 rounded-lg font-semibold transition-all duration-300 shadow-md">
+              <button className="group bg-[#C5A265] hover:scale-105 active:scale-105 hover:shadow-lg hover:shadow-[#47e2b6] active:shadow-[#47e2b6] flex items-center text-white py-2 px-6 rounded-lg font-semibold transition-all duration-300 shadow-md">
                 <FaUtensils className="mr-2 h-5 w-5 transform transition-all duration-300 group-hover:-translate-x-1" />
                 <span className="transform transition-all duration-300 group-hover:translate-x-1">
                   View Menu

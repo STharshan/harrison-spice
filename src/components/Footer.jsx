@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaPinterestP, FaYoutube } from "react-icons/fa";
+import { PiChefHatBold } from "react-icons/pi";
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row items-center justify-between gap-8">
         {/* Left Image */}
         <div className="flex justify-center lg:justify-start w-full lg:w-1/3">
-          <div className="rounded-full border border-yellow-600 dark:border-yellow-400 overflow-hidden w-64 h-64 flex items-center justify-center">
+          <div className="rounded-full border border-[#C5A265] dark:border-yellow-400 overflow-hidden w-64 h-64 flex items-center justify-center">
             <img
               src="/side.png"
               alt="Restaurant Interior"
@@ -20,8 +21,8 @@ const Footer = () => {
         <div className="text-center lg:text-center flex-1">
           {/* Logo */}
           <div className="flex justify-center items-center mb-4">
-            <div className="bg-yellow-600 dark:bg-yellow-400 rounded-full p-3 mr-2">
-              <span className="text-black font-bold">🍴</span>
+            <div className="bg-[#C5A265] dark:bg-yellow-400 rounded-full p-3 mr-2">
+              <PiChefHatBold className="text-black w-6 h-6" />
             </div>
             <h2 className="text-white dark:text-yellow-400 text-2xl font-semibold">
               Harrisons Spice
@@ -29,7 +30,7 @@ const Footer = () => {
           </div>
 
           {/* Visit Us */}
-          <p className="text-yellow-500 dark:text-yellow-400 font-medium mb-2">✦ VISIT US ✦</p>
+          <p className="text-[#C5A265] dark:text-yellow-400 font-medium mb-2">✦ VISIT US ✦</p>
           <p>
             <a
               href="https://maps.app.goo.gl/er1GfnFtH3k9oxV79"
@@ -54,22 +55,22 @@ const Footer = () => {
             </a>
           </p>
 
-          <div className="my-6 border-t border-yellow-600 dark:border-yellow-400 w-12 mx-auto relative">
-            <span className="absolute left-1/2 -translate-x-1/2 text-yellow-600 dark:text-yellow-400">✦</span>
+          <div className="my-6 border-t border-[#C5A265] dark:border-yellow-400 w-12 mx-auto relative">
+            <span className="absolute left-1/2 -translate-x-1/2 text-[#C5A265] dark:text-yellow-400">✦</span>
           </div>
 
           {/* Social Icons */}
           <div className="flex justify-center gap-4 mt-4">
-            <FaFacebookF className="hover:text-yellow-600 dark:hover:text-yellow-400 cursor-pointer transition-colors duration-300" />
-            <FaInstagram className="hover:text-yellow-600 dark:hover:text-yellow-400 cursor-pointer transition-colors duration-300" />
-            <FaPinterestP className="hover:text-yellow-600 dark:hover:text-yellow-400 cursor-pointer transition-colors duration-300" />
-            <FaYoutube className="hover:text-yellow-600 dark:hover:text-yellow-400 cursor-pointer transition-colors duration-300" />
+            <FaFacebookF className="hover:text-[#C5A265] dark:hover:text-yellow-400 cursor-pointer transition-colors duration-300" />
+            <FaInstagram className="hover:text-[#C5A265] dark:hover:text-yellow-400 cursor-pointer transition-colors duration-300" />
+            <FaPinterestP className="hover:text-[#C5A265] dark:hover:text-yellow-400 cursor-pointer transition-colors duration-300" />
+            <FaYoutube className="hover:text-[#C5A265] dark:hover:text-yellow-400 cursor-pointer transition-colors duration-300" />
           </div>
         </div>
 
         {/* Right Image */}
         <div className="flex justify-center lg:justify-end w-full lg:w-1/3">
-          <div className="rounded-full border border-yellow-600 dark:border-yellow-400 overflow-hidden w-64 h-64 flex items-center justify-center">
+          <div className="rounded-full border border-[#C5A265] dark:border-yellow-400 overflow-hidden w-64 h-64 flex items-center justify-center">
             <img
               src="/side.png"
               alt="Delicious Dish"
@@ -87,14 +88,14 @@ const Footer = () => {
           <div className="flex gap-4 text-gray-300 dark:text-gray-400 text-sm">
             <a
               href="/privacy-policy"
-              className="hover:text-yellow-500 dark:hover:text-yellow-400 transition hover:underline"
+              className="hover:text-[#C5A265] dark:hover:text-yellow-400 transition hover:underline"
             >
               Privacy Policy
             </a>
             <span>|</span>
             <a
               href="/terms&condition"
-              className="hover:text-yellow-500 dark:hover:text-yellow-400 transition hover:underline"
+              className="hover:text-[#C5A265] dark:hover:text-yellow-400 transition hover:underline"
             >
               Terms & Conditions
             </a>
@@ -113,7 +114,7 @@ const Footer = () => {
                 href="https://www.ansely.co.uk/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-yellow-500 dark:text-yellow-400 hover:underline"
+                className="text-[#C5A265] dark:text-yellow-400 hover:underline"
               >
                 Ansely
               </a>

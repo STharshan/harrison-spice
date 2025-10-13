@@ -16,7 +16,7 @@ const FindUs = () => {
     <section className="py-10 px-4 bg-white dark:bg-black">
       <div className="max-w-6xl mx-auto text-center">
         <h2
-          className="text-2xl md:text-3xl font-bold mb-10 text-[#00684A] dark:text-white"
+          className="text-2xl md:text-3xl font-bold mb-10 text-[#C5A265] dark:text-white"
           data-aos="fade-down"
         >
           Find Us

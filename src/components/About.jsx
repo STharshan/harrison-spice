@@ -12,21 +12,21 @@ const About = () => {
   const cards = [
     {
       id: 1,
-      icon: <FaAward className="h-10 w-10 text-[#00684A]" />,
+      icon: <FaAward className="h-10 w-10 text-[#C5A265]" />,
       title: "Premium Quality",
       description:
         "Fresh ingredients and authentic spices sourced directly from the Indian sub-continent",
     },
     {
       id: 2,
-      icon: <FaUsers className="h-10 w-10 text-[#00684A]" />,
+      icon: <FaUsers className="h-10 w-10 text-[#C5A265]" />,
       title: "Expert Chefs",
       description:
         "Our experienced chefs blend traditional techniques with modern culinary innovation",
     },
     {
       id: 3,
-      icon: <FaRegHeart className="h-10 w-10 text-[#00684A]" />,
+      icon: <FaRegHeart className="h-10 w-10 text-[#C5A265]" />,
       title: "Warm Hospitality",
       description:
         "Friendly service and welcoming atmosphere that makes every visit memorable",
@@ -70,7 +70,7 @@ const About = () => {
               </div>
               <div className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => (
-                  <FaStar key={i} className="h-5 w-5 fill-[#00684A]" />
+                  <FaStar key={i} className="h-5 w-5 fill-[#C5A265]" />
                 ))}
                 <span className="ml-2 text-white dark:text-gray-200">
                   Exceptional Service
@@ -100,7 +100,7 @@ const About = () => {
                 data-aos-delay={index * 200}
               >
                 <div className="flex justify-center mb-4">{card.icon}</div>
-                <h3 className="text-xl font-semibold text-[#00684A] mb-2">
+                <h3 className="text-xl font-semibold text-[#C5A265] mb-2">
                   {card.title}
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300">

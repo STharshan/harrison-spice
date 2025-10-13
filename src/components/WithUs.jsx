@@ -83,8 +83,8 @@ const WhyDineWithUs = () => {
               <p className="mt-3 text-sm tracking-wider text-center mb-3 text-gray-800 dark:text-gray-200">
                 {stat.title}
               </p>
-              <h3 className="text-5xl font-bold text-yellow-400">{stat.number}</h3>
-              <p className="mt-2 uppercase text-sm tracking-wide text-yellow-200">
+              <h3 className="text-5xl font-bold text-[#C5A265]">{stat.number}</h3>
+              <p className="mt-2 uppercase text-sm tracking-wide text-[#e9a736]">
                 {stat.label}
               </p>
               <p className="mt-3 text-gray-600 dark:text-gray-300 text-sm leading-relaxed">

@@ -12,7 +12,7 @@ const Contact = () => {
         {/* LEFT SIDE */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           {/* Arched Image */}
-          <div className="relative w-80 h-96 overflow-hidden rounded-t-full border border-yellow-600 p-1">
+          <div className="relative w-80 h-96 overflow-hidden rounded-t-full border border-[#C5A265] p-1">
             <img
               src="/side.png"
               alt="Restaurant Interior"
@@ -22,7 +22,7 @@ const Contact = () => {
 
           {/* Visit Info */}
           <div className="mt-8 space-y-2">
-            <h3 className="text-yellow-400 font-medium tracking-wide">
+            <h3 className="text-[#C5A265] font-medium tracking-wide">
               ✦ VISIT US ✦
             </h3>
             <p className="text-gray-300 dark:text-gray-400">
@@ -67,15 +67,15 @@ const Contact = () => {
 
         {/* CENTER DIVIDER */}
         <div className="hidden md:block absolute left-1/2 top-0 h-full">
-          <div className="h-full w-px bg-yellow-600 mx-auto relative">
-            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-yellow-600"></span>
-            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-yellow-600"></span>
+          <div className="h-full w-px bg-[#C5A265] mx-auto relative">
+            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#C5A265]"></span>
+            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#C5A265]"></span>
           </div>
         </div>
 
         {/* RIGHT SIDE (Form) */}
         <div className="md:pl-12">
-          <h3 className="text-yellow-400 text-sm tracking-wider mb-3">
+          <h3 className="text-[#C5A265] text-sm tracking-wider mb-3">
             ✦ WRITE TO US ✦
           </h3>
           <h2 className="text-4xl font-serif mb-3">Message us</h2>
@@ -87,27 +87,27 @@ const Contact = () => {
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full px-4 py-3 bg-transparent border border-gray-500 dark:border-gray-600 focus:border-yellow-400 outline-none placeholder-gray-400 dark:placeholder-gray-500"
+              className="w-full px-4 py-3 bg-transparent border border-gray-500 dark:border-gray-600 focus:border-[#C5A265] outline-none placeholder-gray-400 dark:placeholder-gray-500"
             />
             <input
               type="email"
               placeholder="Your Email"
-              className="w-full px-4 py-3 bg-transparent border border-gray-500 dark:border-gray-600 focus:border-yellow-400 outline-none placeholder-gray-400 dark:placeholder-gray-500"
+              className="w-full px-4 py-3 bg-transparent border border-gray-500 dark:border-gray-600 focus:border-[#C5A265] outline-none placeholder-gray-400 dark:placeholder-gray-500"
             />
             <input
               type="text"
               placeholder="Phone Number"
-              className="w-full px-4 py-3 bg-transparent border border-gray-500 dark:border-gray-600 focus:border-yellow-400 outline-none placeholder-gray-400 dark:placeholder-gray-500"
+              className="w-full px-4 py-3 bg-transparent border border-gray-500 dark:border-gray-600 focus:border-[#C5A265] outline-none placeholder-gray-400 dark:placeholder-gray-500"
             />
             <textarea
               rows="4"
               placeholder="Special Request"
-              className="w-full px-4 py-3 bg-transparent border border-gray-500 dark:border-gray-600 focus:border-yellow-400 outline-none placeholder-gray-400 dark:placeholder-gray-500"
+              className="w-full px-4 py-3 bg-transparent border border-gray-500 dark:border-gray-600 focus:border-[#C5A265] outline-none placeholder-gray-400 dark:placeholder-gray-500"
             ></textarea>
 
             <button
               type="submit"
-              className="bg-yellow-500 text-black px-8 py-3 font-semibold tracking-wide hover:bg-yellow-600 transition"
+              className="bg-[#C5A265] text-black px-8 py-3 font-semibold tracking-wide cursor-pointer hover:bg-[#c28927] transition "
             >
               SEND YOUR MESSAGE
             </button>
