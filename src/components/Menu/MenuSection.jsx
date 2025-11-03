@@ -57,7 +57,7 @@ const Page = forwardRef(({ children, className }, ref) => (
     }}
   >
     {/* Overlay */}
-    <div className="absolute inset-0 bg-white/40 dark:bg-black/50" />
+    <div className="absolute inset-0 bg-black/50" />
     <div className="relative h-full w-full p-4 sm:p-8 overflow-y-auto text-neutral-800 dark:text-neutral-200">
       {children}
     </div>
@@ -68,7 +68,7 @@ Page.displayName = "Page";
 // ---------- Cover Page ----------
 const CoverPage = forwardRef(({ restaurant, tagline }, ref) => (
   <Page ref={ref}>
-    <div className="flex flex-col h-full justify-center items-center text-center relative">
+    <div className="flex flex-col h-full justify-center items-center text-center relative ">
       {/* Decorative corners */}
       <div className="absolute top-4 left-4 w-12 sm:w-16 h-12 sm:h-16 border-t-2 border-l-2 border-[#981921]/40" />
       <div className="absolute top-4 right-4 w-12 sm:w-16 h-12 sm:h-16 border-t-2 border-r-2 border-[#981921]/40" />
@@ -330,9 +330,8 @@ export default function MenuFlipbook() {
 
   return (
     <div
-      className={`px-3 py-8 sm:py-12 dark:bg-black  transition-colors duration-500 ${
-        darkMode ? "bg-neutral-900 text-white" : "bg-neutral-50 text-black"
-      }`}
+      className={`px-3 py-8 sm:py-12 dark:bg-black  transition-colors duration-500 ${darkMode ? "bg-neutral-900 text-white" : "bg-neutral-50 text-black"
+        }`}
       id="menu"
     >
       {/* Header */}
@@ -407,10 +406,9 @@ export default function MenuFlipbook() {
               key={s.id}
               onClick={() => goTo(target)}
               className={`px-3 py-2 text-sm font-semibold rounded-lg transition-all
-                ${
-                  isActive
-                    ? "bg-gradient-to-r from-[#981921] to-orange-500 text-white shadow-lg"
-                    : "bg-white dark:bg-neutral-800 text-white border border-[#981921] hover:scale-105 shadow-sm"
+                ${isActive
+                  ? "bg-gradient-to-r from-[#981921] to-orange-500 text-black dark:text-white shadow-lg"
+                  : "bg-white dark:bg-neutral-800 text-black dark:text-white border border-[#981921] hover:scale-105 shadow-sm"
                 }`}
             >
               {s.title}
