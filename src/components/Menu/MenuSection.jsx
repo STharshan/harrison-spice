@@ -184,7 +184,7 @@ const InfoPage = forwardRef((_, ref) => (
         >
           About Us
         </h2>
-        <div className="w-16 h-0.5 bg-gradient-to-r from-[#981921] to-orange-500 mb-4" />
+        <div className="w-16 h-0.5 bg-linear-to-r from-[#981921] to-orange-500 mb-4" />
         <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed">
           Welcome to{" "}
           <span className="font-bold text-[#981921]">Harrison Spice</span>,
@@ -196,7 +196,7 @@ const InfoPage = forwardRef((_, ref) => (
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-5">
         {/* Location */}
         <div className="flex items-start gap-3 bg-white/80 dark:bg-neutral-800/70 p-4 rounded-xl shadow">
-          <div className="bg-gradient-to-br from-[#981921] to-orange-500 w-10 h-10 flex items-center justify-center rounded-full text-white">
+          <div className="bg-linear-to-br from-[#981921] to-orange-500 w-10 h-10 flex items-center justify-center rounded-full text-white">
             <FiMapPin size={20} />
           </div>
           <div>
@@ -209,7 +209,7 @@ const InfoPage = forwardRef((_, ref) => (
 
         {/* Contact */}
         <div className="flex items-start gap-3 bg-white/80 dark:bg-neutral-800/70 p-4 rounded-xl shadow">
-          <div className="bg-gradient-to-br from-[#981921] to-orange-500 w-10 h-10 flex items-center justify-center rounded-full text-white">
+          <div className="bg-linear-to-br from-[#981921] to-orange-500 w-10 h-10 flex items-center justify-center rounded-full text-white">
             <FiPhone size={20} />
           </div>
           <div>
@@ -353,7 +353,7 @@ export default function MenuFlipbook() {
             <div className="flex items-center gap-3 bg-white dark:bg-neutral-800 rounded-full shadow px-4 py-2">
               <button
                 onClick={goPrev}
-                className="bg-gradient-to-r from-[#981921] to-orange-500 px-3 py-1.5 text-white rounded-full flex items-center gap-1"
+                className="bg-linear-to-r from-[#981921] to-orange-500 px-3 py-1.5 text-white rounded-full flex items-center gap-1"
               >
                 <FiChevronLeft /> Prev
               </button>
@@ -362,7 +362,7 @@ export default function MenuFlipbook() {
               </span>
               <button
                 onClick={goNext}
-                className="bg-gradient-to-r from-[#981921] to-orange-500 px-3 py-1.5 text-white rounded-full flex items-center gap-1"
+                className="bg-linear-to-r from-[#981921] to-orange-500 px-3 py-1.5 text-white rounded-full flex items-center gap-1"
               >
                 Next <FiChevronRight />
               </button>
@@ -407,7 +407,7 @@ export default function MenuFlipbook() {
               onClick={() => goTo(target)}
               className={`px-3 py-2 text-sm font-semibold rounded-lg transition-all
                 ${isActive
-                  ? "bg-gradient-to-r from-[#981921] to-orange-500 text-black dark:text-white shadow-lg"
+                  ? "bg-linear-to-r from-[#981921] to-orange-500 text-black dark:text-white shadow-lg"
                   : "bg-white dark:bg-neutral-800 text-black dark:text-white border border-[#981921] hover:scale-105 shadow-sm"
                 }`}
             >

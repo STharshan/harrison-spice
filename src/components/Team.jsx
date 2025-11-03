@@ -84,12 +84,12 @@ export default function TeamSection() {
         </p>
       </div>
 
-      {/* === Top Two Gradient Cards === */}
+      {/* === Top Two linear Cards === */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
         {topTeam.map((member, idx) => (
           <div
             key={idx}
-            className="relative flex items-center justify-between bg-gradient-to-t from-[#6E2B86] via-[#D9503C] to-[#0B0B0D] dark:from-[#3b1c4b] dark:via-[#b03a2b] dark:to-[#0B0B0D] p-8 rounded-xl border border-gray-300 dark:border-gray-800 overflow-hidden transition-all duration-500"
+            className="relative flex items-center justify-between bg-linear-to-t from-[#6E2B86] via-[#D9503C] to-[#0B0B0D] dark:from-[#3b1c4b] dark:via-[#b03a2b] dark:to-[#0B0B0D] p-8 rounded-xl border border-gray-300 dark:border-gray-800 overflow-hidden transition-all duration-500"
           >
             {/* Social Icons - Vertical Left */}
             <div className="flex flex-col gap-4">
