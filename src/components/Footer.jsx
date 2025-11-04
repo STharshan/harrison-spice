@@ -4,7 +4,7 @@ import { PiChefHatBold } from "react-icons/pi";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#981921] dark:bg-black text-gray-200 dark:text-gray-300 py-5 px-4 transition-colors duration-300">
+    <footer className="bg-[#C5A265] dark:bg-black text-gray-200 dark:text-gray-300 py-5 px-4 transition-colors duration-300">
       <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row items-center justify-between gap-8">
         {/* Left Image */}
         <div className="flex justify-center lg:justify-start w-full lg:w-1/3">
@@ -24,7 +24,7 @@ const Footer = () => {
             <div className="bg-[#C5A265] dark:bg-yellow-400 rounded-full p-3 mr-2">
               <PiChefHatBold className="text-black w-6 h-6" />
             </div>
-            <h2 className="text-white dark:text-yellow-400 text-2xl font-semibold">
+            <h2 className="text-black dark:text-yellow-400 text-2xl font-semibold">
               Harrisons Spice
             </h2>
           </div>
@@ -36,7 +36,7 @@ const Footer = () => {
               href="https://maps.app.goo.gl/er1GfnFtH3k9oxV79"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-gray-200 dark:text-gray-300"
+              className="hover:underline text-black dark:text-gray-300"
             >
               23-27 Station Street, Ratby, Leicestershire, <br /> LE6 0JQ
             </a>
@@ -44,13 +44,13 @@ const Footer = () => {
           <p>
             <a
               href="mailto:reservations@harrisonsspice.co.uk"
-              className="hover:underline text-gray-200 dark:text-gray-300"
+              className="hover:underline text-black dark:text-gray-300"
             >
               reservations@harrisonsspice.co.uk
             </a>
           </p>
           <p>
-            <a href="tel:+441162395644" className="text-gray-200 dark:text-gray-300">
+            <a href="tel:+441162395644" className="text-black dark:text-gray-300">
               Booking Request : <span className="hover:underline">0116 2395 644</span>
             </a>
           </p>
@@ -61,10 +61,8 @@ const Footer = () => {
 
           {/* Social Icons */}
           <div className="flex justify-center gap-4 mt-4">
-            <FaFacebookF className="hover:text-[#C5A265] dark:hover:text-yellow-400 cursor-pointer transition-colors duration-300" />
-            <FaInstagram className="hover:text-[#C5A265] dark:hover:text-yellow-400 cursor-pointer transition-colors duration-300" />
-            <FaPinterestP className="hover:text-[#C5A265] dark:hover:text-yellow-400 cursor-pointer transition-colors duration-300" />
-            <FaYoutube className="hover:text-[#C5A265] dark:hover:text-yellow-400 cursor-pointer transition-colors duration-300" />
+            <FaFacebookF className="hover:text-blue-600 text-black dark:hover:text-yellow-400 cursor-pointer transition-colors duration-300" />
+            <FaInstagram className="hover:text-pink-600 text-black dark:hover:text-yellow-400 cursor-pointer transition-colors duration-300" />
           </div>
         </div>
 
@@ -85,36 +83,36 @@ const Footer = () => {
         <div className="container mt-2 mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-4">
 
           {/* Left - Links */}
-          <div className="flex gap-4 text-gray-300 dark:text-gray-400 text-sm">
+          <div className="flex gap-4 text-black dark:text-gray-400 text-sm">
             <a
               href="/privacy-policy"
-              className="hover:text-[#C5A265] dark:hover:text-yellow-400 transition hover:underline"
+              className="hover:text-white dark:hover:text-yellow-400 transition hover:underline"
             >
               Privacy Policy
             </a>
             <span>|</span>
             <a
               href="/terms&condition"
-              className="hover:text-[#C5A265] dark:hover:text-yellow-400 transition hover:underline"
+              className="hover:text-white dark:hover:text-yellow-400 transition hover:underline"
             >
               Terms & Conditions
             </a>
           </div>
 
           {/* Center - Copyright */}
-          <div className="text-center text-sm text-gray-300 dark:text-gray-400">
+          <div className="text-center text-sm text-black dark:text-gray-400">
             <p>© 2025 All Rights Reserved</p>
           </div>
 
           {/* Right - Powered by */}
-          <div className="text-sm font-semibold text-gray-300 dark:text-gray-400">
+          <div className="text-sm font-semibold text-black dark:text-gray-400">
             <p>
               Powered by{" "}
               <a
                 href="https://www.ansely.co.uk/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#C5A265] dark:text-yellow-400 hover:underline"
+                className="text-white dark:text-yellow-400 hover:underline"
               >
                 Ansely
               </a>

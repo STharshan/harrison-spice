@@ -36,16 +36,16 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-16 bg-[#981921] dark:bg-black transition-colors duration-500 scroll-m-10"
+      className="py-16 bg-[#C5A265] dark:bg-black transition-colors duration-500 scroll-m-10"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Heading */}
           <div className="text-center mb-12" data-aos="fade-up">
             <div className="flex justify-center mb-6">
-              <LuChefHat className="h-12 w-12 text-white dark:text-[#f5f5f5]" />
+              <LuChefHat className="h-12 w-12 text-black dark:text-[#f5f5f5]" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white dark:text-[#f5f5f5] mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-[#f5f5f5] mb-8">
               About Us
             </h2>
           </div>
@@ -54,7 +54,7 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             {/* Left Text */}
             <div className="space-y-6" data-aos="fade-right">
-              <div className="text-lg space-y-6 text-white dark:text-gray-200">
+              <div className="text-lg space-y-6 text-black dark:text-gray-200">
                 <p>
                   We provide an emphasis on refined yet creative cuisine from
                   the Indian sub-continent. Our menu incorporates both
@@ -70,9 +70,9 @@ const About = () => {
               </div>
               <div className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => (
-                  <FaStar key={i} className="h-5 w-5 fill-[#C5A265]" />
+                  <FaStar key={i} className="h-5 w-5 fill-[#981921]" />
                 ))}
-                <span className="ml-2 text-white dark:text-gray-200">
+                <span className="ml-2 text-black dark:text-gray-200">
                   Exceptional Service
                 </span>
               </div>
@@ -95,7 +95,7 @@ const About = () => {
             {cards.map((card, index) => (
               <div
                 key={card.id}
-                className="bg-white dark:bg-gray-900 text-center p-6 rounded-lg shadow-lg active:shadow-xl hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-300 dark:border-gray-700"
+                className="bg-black dark:bg-gray-900 text-center p-6 rounded-lg shadow-lg active:shadow-xl hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-300 dark:border-gray-700"
                 data-aos="zoom-in"
                 data-aos-delay={index * 200}
               >
@@ -103,7 +103,7 @@ const About = () => {
                 <h3 className="text-xl font-semibold text-[#C5A265] mb-2">
                   {card.title}
                 </h3>
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-300 dark:text-gray-300">
                   {card.description}
                 </p>
               </div>

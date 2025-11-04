@@ -95,7 +95,7 @@ const CoverPage = forwardRef(({ restaurant, tagline }, ref) => (
       </motion.h1>
 
       <motion.p
-        className="text-sm sm:text-lg text-neutral-700 dark:text-neutral-300 mt-3 max-w-md px-3"
+        className="text-sm sm:text-lg text-black dark:text-neutral-300 mt-3 max-w-md px-3"
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5 }}
@@ -103,7 +103,7 @@ const CoverPage = forwardRef(({ restaurant, tagline }, ref) => (
         {tagline}
       </motion.p>
 
-      <p className="text-xs sm:text-sm text-neutral-600 italic mt-4 dark:text-neutral-400">
+      <p className="text-xs sm:text-sm text-black italic mt-4 dark:text-neutral-400">
         Experience Authentic Indian Cuisine
       </p>
     </div>

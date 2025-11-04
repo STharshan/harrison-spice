@@ -71,14 +71,14 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <section className="bg-[#981921] dark:bg-black text-black dark:text-white py-20 px-6 md:px-12 lg:px-20 font-sans transition-colors duration-500">
+    <section className="bg-[#C5A265] dark:bg-black text-black dark:text-white py-20 px-6 md:px-12 lg:px-20 font-sans transition-colors duration-500">
       {/* === Section Heading === */}
       <div className="text-center mb-14">
-        <p className="text-[#C5A265] uppercase tracking-widest mb-3 text-sm">
+        <p className="text-black uppercase tracking-widest mb-3 text-sm">
           Our Professionals
         </p>
         <h2 className="text-4xl md:text-5xl font-semibold">Meet the Team</h2>
-        <p className="text-gray-600 dark:text-gray-400 mt-3 max-w-2xl mx-auto text-base">
+        <p className="text-gray-300 dark:text-gray-400 mt-3 max-w-2xl mx-auto text-base">
           Creative minds behind our success — passionate experts building the
           future together.
         </p>

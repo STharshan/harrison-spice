@@ -11,17 +11,17 @@ export default function EventBooking() {
         </p>
 
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal leading-tight mb-10">
-          Planning a Party or <br /> Special Event?
+          Banquet Night
         </h2>
 
         {/* Opening Hours Box */}
         <div className="relative bg-[#0D1514]/60 dark:bg-[#121212]/70 backdrop-blur-sm border border-[#1C1F1E] dark:border-[#2A2A2A] p-8 rounded-lg mb-10">
           {/* faint drink image */}
-          <img
+          {/* <img
             src="/new3.avif"
             alt="drink"
             className="absolute right-6 bottom-6 opacity-10 w-40 md:w-48 lg:w-56 select-none pointer-events-none"
-          />
+          /> */}
 
           <h3 className="text-2xl mb-6 font-normal text-white">
             Opening Hour
@@ -60,12 +60,12 @@ export default function EventBooking() {
         <img
           src="/new2.avif"
           alt="chili"
-          className="absolute -top-8 right-12 w-20 md:w-24 lg:w-28 animate-bounce"
+          className="absolute top-10 -left-40 w-20 md:w-24 lg:w-28 animate-bounce"
         />
 
         {/* Meat Dish Image */}
         <img
-          src="/new.avif"
+          src="/event.png"
           alt="dish"
           className="relative w-80 md:w-[26rem] lg:w-[30rem] object-contain"
         />

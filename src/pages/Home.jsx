@@ -5,7 +5,6 @@ import MenuFlipbook from '../components/Menu/MenuSection'
 import Contact from '../components/Contact'
 import FindUs from '../components/Findus'
 import MyStorySection from '../components/Story'
-import FeaturedMenus from '../components/FeaturedMenus'
 import WhyDineWithUs from '../components/WithUs'
 import EventBooking from '../components/Time'
 import TeamSection from '../components/Team'
@@ -17,7 +16,7 @@ const Home = () => {
       <About />
       <MyStorySection />
       <WhyDineWithUs />
-      <FeaturedMenus />
+      {/* <FeaturedMenus /> */}
       <MenuFlipbook />
       <TeamSection />
       <EventBooking />
