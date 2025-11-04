@@ -41,7 +41,7 @@ const Hero = () => {
           >
             {/* View Menu Button */}
             <a href="#menu">
-              <button className="group bg-[#C5A265] hover:scale-105 active:scale-105 hover:shadow-lg hover:shadow-[#47e2b6] active:shadow-[#47e2b6] flex items-center text-white py-2 px-6 rounded-lg font-semibold transition-all duration-300 shadow-md">
+              <button className="group bg-[#C5A265] hover:scale-105 active:scale-105 hover:shadow-lg hover:shadow-black active:shadow-black flex items-center text-white py-2 px-6 rounded-lg font-semibold transition-all duration-300 shadow-md">
                 <FaUtensils className="mr-2 h-5 w-5 transform transition-all duration-300 group-hover:-translate-x-1" />
                 <span className="transform transition-all duration-300 group-hover:translate-x-1">
                   View Menu
@@ -51,7 +51,7 @@ const Hero = () => {
 
             {/* Make Reservation Button */}
             <a href="tel:01162395644">
-              <button className="group border hover:scale-105 hover:shadow-lg active:shadow-lg active:shadow-[#e76971] hover:shadow-[#e76971] text-[#981921] hover:bg-[#981921] flex items-center hover:text-white py-2 px-6 rounded-lg font-semibold bg-transparent transition-all duration-300 shadow-md">
+              <button className="group border hover:scale-105 hover:shadow-lg active:shadow-lg active:shadow-[#C5A265] hover:shadow-[#C5A265] text-black hover:bg-black bg-white flex items-center hover:text-white py-2 px-6 rounded-lg font-semibold  transition-all duration-300 shadow-md">
                 <FiPhone className="mr-2 h-5 w-5 transform transition-all duration-300 group-hover:-translate-x-1" />
                 <span className="transform transition-all duration-300 group-hover:translate-x-1">
                   Make Reservation

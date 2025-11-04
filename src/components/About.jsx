@@ -70,7 +70,7 @@ const About = () => {
               </div>
               <div className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => (
-                  <FaStar key={i} className="h-5 w-5 fill-[#981921]" />
+                  <FaStar key={i} className="h-5 w-5 fill-yellow-700" />
                 ))}
                 <span className="ml-2 text-black dark:text-gray-200">
                   Exceptional Service

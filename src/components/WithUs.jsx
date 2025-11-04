@@ -17,13 +17,13 @@ const WhyDineWithUs = () => {
 
   const stats = [
     {
-      image: "/side.png", title: "SKILLED CHEF",
+      image: "/logo1.png", title: "Ratby Town Cricket Club",
       number: "60+",
       label: "MONTHLY VISITORS",
       text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry has been.",
     },
     {
-      image: "/side.png", title: "HYGIENIC FOOD",
+      image: "/logo2.png", title: "Kirby Muxloe Football Club",
       number: "22+",
       label: "POSITIVE REVIEWS",
       text: "Simply dummy text of the printing and typesetting industry lorem Ipsum has been.",
@@ -69,7 +69,7 @@ const WhyDineWithUs = () => {
           {stats.map((stat, i) => (
             <div
               key={i}
-              className="shadow-lg dark:shadow-gray-700 p-6 rounded-lg bg-black dark:bg-[#981921] hover:scale-105 active:scale-105 transition-all duration-300 md:col-span-2"
+              className="shadow-lg dark:shadow-gray-700 p-6 rounded-lg bg-black dark:bg-[#C5A265] hover:scale-105 active:scale-105 transition-all duration-300 md:col-span-2"
               data-aos="fade-up"
               data-aos-delay={i * 200 + 400}
             >
@@ -77,19 +77,19 @@ const WhyDineWithUs = () => {
                 <img
                   src={stat.image}
                   alt={stat.title}
-                  className="w-full h-full object-cover"
+                  className="w-40 mt-15 mx-auto h-40 object-cover"
                 />
               </div> 
-              <p className="mt-3 text-sm tracking-wider text-center mb-3 text-gray-300 dark:text-gray-200">
+              <p className="mt-3 font-semibold tracking-wider text-center mb-3 text-gray-300 dark:text-gray-200">
                 {stat.title}
               </p>
-              <h3 className="text-5xl font-bold text-[#C5A265]">{stat.number}</h3>
+              {/* <h3 className="text-5xl font-bold text-[#C5A265]">{stat.number}</h3>
               <p className="mt-2 uppercase text-sm tracking-wide text-[#e9a736]">
                 {stat.label}
               </p>
               <p className="mt-3 text-gray-300 dark:text-gray-300 text-sm leading-relaxed">
                 {stat.text}
-              </p>
+              </p> */}
             </div>
           ))}
         </div>

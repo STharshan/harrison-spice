@@ -4,11 +4,11 @@ import { PiChefHatBold } from "react-icons/pi";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#C5A265] dark:bg-black text-gray-200 dark:text-gray-300 py-5 px-4 transition-colors duration-300">
+    <footer className="bg-white dark:bg-black text-gray-200 dark:text-gray-300 py-5 px-4 transition-colors duration-300">
       <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row items-center justify-between gap-8">
         {/* Left Image */}
         <div className="flex justify-center lg:justify-start w-full lg:w-1/3">
-          <div className="rounded-full border border-[#C5A265] dark:border-yellow-400 overflow-hidden w-64 h-64 flex items-center justify-center">
+          <div className="rounded-full border border-[#C5A265] dark:border-[#C5A265] overflow-hidden w-64 h-64 flex items-center justify-center">
             <img
               src="/side.png"
               alt="Restaurant Interior"
@@ -21,16 +21,16 @@ const Footer = () => {
         <div className="text-center lg:text-center flex-1">
           {/* Logo */}
           <div className="flex justify-center items-center mb-4">
-            <div className="bg-[#C5A265] dark:bg-yellow-400 rounded-full p-3 mr-2">
+            <div className="bg-[#C5A265] dark:bg-[#C5A265] rounded-full p-3 mr-2">
               <PiChefHatBold className="text-black w-6 h-6" />
             </div>
-            <h2 className="text-black dark:text-yellow-400 text-2xl font-semibold">
+            <h2 className="text-black dark:text-[#C5A265] text-2xl font-semibold">
               Harrisons Spice
             </h2>
           </div>
 
           {/* Visit Us */}
-          <p className="text-[#C5A265] dark:text-yellow-400 font-medium mb-2">✦ VISIT US ✦</p>
+          <p className="text-[#C5A265] dark:text-[#C5A265] font-medium mb-2">✦ VISIT US ✦</p>
           <p>
             <a
               href="https://maps.app.goo.gl/er1GfnFtH3k9oxV79"
@@ -55,20 +55,20 @@ const Footer = () => {
             </a>
           </p>
 
-          <div className="my-6 border-t border-[#C5A265] dark:border-yellow-400 w-12 mx-auto relative">
-            <span className="absolute left-1/2 -translate-x-1/2 text-[#C5A265] dark:text-yellow-400">✦</span>
+          <div className="my-6 border-t border-[#C5A265] dark:border-[#C5A265] w-12 mx-auto relative">
+            <span className="absolute left-1/2 -translate-x-1/2 text-[#C5A265] dark:text-[#C5A265]">✦</span>
           </div>
 
           {/* Social Icons */}
           <div className="flex justify-center gap-4 mt-4">
-            <FaFacebookF className="hover:text-blue-600 text-black dark:hover:text-yellow-400 cursor-pointer transition-colors duration-300" />
-            <FaInstagram className="hover:text-pink-600 text-black dark:hover:text-yellow-400 cursor-pointer transition-colors duration-300" />
+            <FaFacebookF className="hover:text-blue-600 text-black dark:hover:text-[#C5A265] cursor-pointer transition-colors duration-300" />
+            <FaInstagram className="hover:text-pink-600 text-black dark:hover:text-[#C5A265] cursor-pointer transition-colors duration-300" />
           </div>
         </div>
 
         {/* Right Image */}
         <div className="flex justify-center lg:justify-end w-full lg:w-1/3">
-          <div className="rounded-full border border-[#C5A265] dark:border-yellow-400 overflow-hidden w-64 h-64 flex items-center justify-center">
+          <div className="rounded-full border border-[#C5A265] dark:border-[#C5A265] overflow-hidden w-64 h-64 flex items-center justify-center">
             <img
               src="/side.png"
               alt="Delicious Dish"
@@ -86,14 +86,14 @@ const Footer = () => {
           <div className="flex gap-4 text-black dark:text-gray-400 text-sm">
             <a
               href="/privacy-policy"
-              className="hover:text-white dark:hover:text-yellow-400 transition hover:underline"
+              className="hover:text-[#C5A265] dark:hover:text-[#C5A265] transition hover:underline"
             >
               Privacy Policy
             </a>
             <span>|</span>
             <a
               href="/terms&condition"
-              className="hover:text-white dark:hover:text-yellow-400 transition hover:underline"
+              className="hover:text-[#C5A265] dark:hover:text-[#C5A265] transition hover:underline"
             >
               Terms & Conditions
             </a>
@@ -112,7 +112,7 @@ const Footer = () => {
                 href="https://www.ansely.co.uk/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white dark:text-yellow-400 hover:underline"
+                className="text-black dark:text-[#C5A265] hover:underline"
               >
                 Ansely
               </a>

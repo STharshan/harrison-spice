@@ -3,81 +3,94 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const featuredMenus = [
+const makiItems = [
   {
-    title: "ASIAN STYLE",
-    description: "Asian style canape and bowl food menu can have any theme you like.",
-    image: "/f1.jpg",
+    name: "Lamb Shank",
+    description:
+      "A tantalizing blend of spicy tuna, cucumber, and avocado, harmoniously rolled in nori and seasoned rice.",
+    price: "$5",
+    image: "/n4.png",
   },
   {
-    title: "CANAPE",
-    description: "Asian style canape and bowl food menu can have any theme you like.",
-    image: "/f2.jpg",
+    name: "Monk Fish",
+    description:
+      "Tempura-fried shrimp, cucumber, and cream cheese embrace a center of fresh avocado, delivering a satisfying contrast of textures.",
+    price: "$5",
+    image: "/n3.png",
   },
   {
-    title: "DELUXE",
-    description: "Asian style canape and bowl food menu can have any theme you like.",
-    image: "/f3.jpg",
+    name: "Duck Meat",
+    description:
+      "Shiitake mushrooms, avocado, and pickled daikon radish nestle within a roll of seasoned rice, coated with nutty sesame seeds.",
+    price: "$5",
+    image: "/n2.png",
+  },
+  {
+    name: "King Prawn",
+    description:
+      "A vibrant assortment of julienned carrots, bell peppers, and cucumber, tightly encased in a nori-wrapped rice roll.",
+    price: "$5",
+    image: "/n1.png",
   },
 ];
 
-const FeaturedMenus = () => {
+export default function FeaturedMenu() {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 800, once: true, easing: "ease-in-out" });
   }, []);
 
   return (
-    <section className="py-16 bg-white dark:bg-black text-center px-4 transition-colors duration-500">
-      <div className="max-w-4xl mx-auto">
+    <section className="bg-white dark:bg-black py-20 px-6 font-serif transition-colors duration-500">
+      {/* Section Title */}
+      <div className="max-w-5xl mx-auto text-center mb-16">
         <h2
-          className="text-3xl font-serif mb-4 text-black dark:text-white transition-colors duration-500"
-          data-aos="fade-up"
+          className="text-4xl md:text-5xl font-light text-gray-800 dark:text-[#f5f0e1] tracking-widest"
+          data-aos="fade-down"
         >
-          My Featured Menus
+          <span className="border-b text-[#C5A265] border-gray-400 dark:border-gray-600 pb-2">
+            MAKI
+          </span>
         </h2>
-        <p
-          className="text-gray-500 dark:text-gray-300 text-lg font-semibold max-w-md mx-auto mb-12 transition-colors duration-500"
-          data-aos="fade-up"
-          data-aos-delay={100}
-        >
-          My passion for food has brought many new, fun and delicious dishes to the table.
-        </p>
+      </div>
 
-        <div className="grid gap-8 md:grid-cols-3 sm:grid-cols-1">
-          {featuredMenus.map((menu, index) => (
-            <div
-              key={index}
-              className="relative rounded-lg overflow-hidden shadow-lg dark:shadow-gray-700 hover:scale-105 transform transition-all duration-300"
-              data-aos="fade-up"
-              data-aos-delay={index * 200} // Stagger animation
-            >
-              {/* Background image */}
+      {/* Menu Items */}
+      <div className="space-y-10 max-w-5xl mx-auto">
+        {makiItems.map((item, index) => (
+          <div
+            key={index}
+            data-aos="fade-up"
+            data-aos-delay={index * 150}
+            className="flex flex-col sm:flex-row items-center sm:items-start gap-6 
+                       bg-gray-100 dark:bg-[#151515]/60 rounded-2xl p-6 
+                       hover:bg-gray-200 dark:hover:bg-[#1c1c1c]/80 
+                       transition-all duration-300 shadow-md dark:shadow-none"
+          >
+            {/* Image */}
+            <div className="flex-shrink-0 w-full sm:w-48">
               <img
-                src={menu.image}
-                alt={menu.title}
-                className="w-full h-64 object-cover"
+                src={item.image}
+                alt={item.name}
+                className="w-full h-40 object-cover rounded-lg shadow-md"
               />
-
-              {/* Dark overlay */}
-              <div className="absolute inset-0 bg-black/40 dark:bg-black/60 transition-colors duration-500"></div>
-
-              {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-center items-center p-6 text-white font-semibold">
-                <h3 className="text-xl font-serif mb-2">{menu.title}</h3>
-                <p className="text-md mb-4">{menu.description}</p>
-                <a
-                  href="#"
-                  className="underline hover:text-gray-300 transition-colors duration-500"
-                >
-                  Continue Reading ...
-                </a>
-              </div>
             </div>
-          ))}
-        </div>
+
+            {/* Text */}
+            <div className="flex-1 text-center sm:text-left">
+              <div className="flex items-center justify-between flex-wrap gap-2 mb-2">
+                <h3 className="text-xl md:text-2xl text-gray-800 dark:text-[#f5f0e1] font-light uppercase tracking-widest">
+                  {item.name}
+                </h3>
+                <span className="text-gray-700 dark:text-[#f5f0e1] text-lg">
+                  {item.price}
+                </span>
+              </div>
+              <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
+                {item.description}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
-};
-
-export default FeaturedMenus;
+}

@@ -13,17 +13,17 @@ const FindUs = () => {
   }, []);
 
   return (
-    <section className="py-10 px-4 bg-white dark:bg-black">
+    <section className="py-10 px-4 bg-[#C7A46B] dark:bg-black">
       <div className="max-w-6xl mx-auto text-center">
         <h2
-          className="text-2xl md:text-3xl font-bold mb-10 text-[#C5A265] dark:text-white"
+          className="text-2xl md:text-3xl font-bold mb-10 text-black dark:text-white"
           data-aos="fade-down"
         >
           Find Us
         </h2>
 
         <div
-          className="rounded-lg overflow-hidden shadow-lg w-full h-[400px] border-2 border-[#981921] dark:border-yellow-400"
+          className="rounded-lg overflow-hidden shadow-lg w-full h-[400px]"
           data-aos="fade-up"
           data-aos-delay="100"
         >

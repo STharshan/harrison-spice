@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <div>
       {/* Header */}
-      <header className="bg-[#981921] dark:bg-[#1a1a1a] border-b border-gray-300 dark:border-gray-700 shadow-sm fixed top-0 left-0 w-full z-50 transition-colors duration-300">
+      <header className="bg-black border-b border-gray-300 dark:border-gray-700 shadow-sm fixed top-0 left-0 w-full z-50 transition-colors duration-300">
         <div className="px-4 py-2 flex items-center justify-between max-w-7xl mx-auto">
           {/* Logo */}
           <div className="flex items-center space-x-4">
@@ -38,28 +38,28 @@ const Navbar = () => {
             <HashLink
               smooth
               to="/#home"
-              className="hover:text-[#C5A265] dark:hover:text-[#981921] transition-colors"
+              className="hover:text-[#C5A265] transition-colors"
             >
               Home
             </HashLink>
             <HashLink
               smooth
               to="/#about"
-              className="hover:text-[#C5A265] dark:hover:text-[#981921] transition-colors"
+              className="hover:text-[#C5A265] transition-colors"
             >
               About
             </HashLink>
             <HashLink
               smooth
               to="/#menu"
-              className="hover:text-[#C5A265] dark:hover:text-[#981921] transition-colors"
+              className="hover:text-[#C5A265] transition-colors"
             >
               Menu
             </HashLink>
             <HashLink
               smooth
               to="/#contact"
-              className="hover:text-[#C5A265] dark:hover:text-[#981921] transition-colors"
+              className="hover:text-[#C5A265] transition-colors"
             >
               Contact
             </HashLink>
@@ -67,9 +67,13 @@ const Navbar = () => {
 
           {/* Right Section (Reservation + Theme Toggle) */}
           <div className="hidden md:flex items-center space-x-3">
-            <button className="bg-[#C5A265] dark:bg-[#981921] transition-transform duration-300 hover:scale-105 active:scale-105 py-2 px-3 rounded-lg font-semibold text-white hover:bg-[#00563d]">
+            <button className="bg-[#C5A265] transition-transform duration-300 hover:scale-105 active:scale-105 py-2 px-3 rounded-lg font-semibold text-white hover:bg-white hover:text-black">
               Make Reservation
             </button>
+          </div>
+
+          {/* ✅ Theme toggle in mobile menu */}
+          <div className="ml-2">
             <ThemeToggle />
           </div>
 
@@ -80,7 +84,7 @@ const Navbar = () => {
           >
             {isMenuOpen ? (
               <svg
-                className="w-6 h-6"
+                className="w-6 h-6 hover:text-[#C5A265]"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 stroke="currentColor"
@@ -95,7 +99,7 @@ const Navbar = () => {
               </svg>
             ) : (
               <svg
-                className="w-6 h-6"
+                className="w-6 h-6 hover:text-[#C5A265]"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 stroke="currentColor"
@@ -115,46 +119,42 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`${
-          isMenuOpen ? "block" : "hidden"
-        } md:hidden top-20 fixed left-0 w-full bg-[#981921] dark:bg-[#1a1a1a] py-4 z-40 transition-colors duration-300`}
+        className={`${isMenuOpen ? "block" : "hidden"
+          } md:hidden top-20 fixed left-0 w-full bg-[#1a1a1a] py-4 z-40 transition-colors duration-300`}
       >
         <div className="flex flex-col items-center space-y-4 font-semibold text-white dark:text-gray-100">
           <HashLink
             smooth
             to="/#home"
-            className="hover:text-[#F2F0EB] dark:hover:text-[#981921] transition-colors"
+            className="hover:text-[#C5A265] transition-colors"
           >
             Home
           </HashLink>
           <HashLink
             smooth
             to="/#menu"
-            className="hover:text-[#C5A265] dark:hover:text-[#981921] transition-colors"
+            className="hover:text-[#C5A265] transition-colors"
           >
             Menu
           </HashLink>
           <HashLink
             smooth
             to="/#about"
-            className="hover:text-[#C5A265] dark:hover:text-[#981921] transition-colors"
+            className="hover:text-[#C5A265]transition-colors"
           >
             About
           </HashLink>
           <HashLink
             smooth
             to="/#contact"
-            className="hover:text-[#C5A265] dark:hover:text-[#981921] transition-colors"
+            className="hover:text-[#C5A265] transition-colors"
           >
             Contact
           </HashLink>
 
-          <button className="bg-[#C5A265] dark:bg-[#981921] py-2 px-3 rounded-lg font-semibold transition-transform duration-300 hover:scale-105 active:scale-105 text-white hover:bg-[#00563d]">
+          <button className="bg-[#C5A265] py-2 px-3 rounded-lg font-semibold transition-transform duration-300 hover:scale-105 active:scale-105 text-white hover:bg-black hover:text-white">
             Make Reservation
           </button>
-
-          {/* ✅ Theme toggle in mobile menu */}
-          <ThemeToggle />
         </div>
       </div>
     </div>

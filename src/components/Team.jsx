@@ -71,14 +71,14 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <section className="bg-[#C5A265] dark:bg-black text-black dark:text-white py-20 px-6 md:px-12 lg:px-20 font-sans transition-colors duration-500">
+    <section className="bg-white dark:bg-black text-black dark:text-white py-20 px-6 md:px-12 lg:px-20 font-sans transition-colors duration-500">
       {/* === Section Heading === */}
       <div className="text-center mb-14">
         <p className="text-black uppercase tracking-widest mb-3 text-sm">
           Our Professionals
         </p>
         <h2 className="text-4xl md:text-5xl font-semibold">Meet the Team</h2>
-        <p className="text-gray-300 dark:text-gray-400 mt-3 max-w-2xl mx-auto text-base">
+        <p className="text-black dark:text-gray-400 mt-3 max-w-2xl mx-auto text-base">
           Creative minds behind our success — passionate experts building the
           future together.
         </p>
@@ -89,7 +89,7 @@ export default function TeamSection() {
         {topTeam.map((member, idx) => (
           <div
             key={idx}
-            className="relative flex items-center justify-between bg-linear-to-t from-[#6E2B86] via-[#D9503C] to-[#0B0B0D] dark:from-[#3b1c4b] dark:via-[#b03a2b] dark:to-[#0B0B0D] p-8 rounded-xl border border-gray-300 dark:border-gray-800 overflow-hidden transition-all duration-500"
+            className="relative flex items-center justify-between bg-[#C5A265] p-8 rounded-xl border border-gray-300 dark:border-gray-800 overflow-hidden transition-all duration-500"
           >
             {/* Social Icons - Vertical Left */}
             <div className="flex flex-col gap-4">
@@ -142,13 +142,13 @@ export default function TeamSection() {
         {teamMembers.map((member, idx) => (
           <div
             key={idx}
-            className="relative group border border-gray-300 dark:border-[#2B2B2B] rounded-md overflow-hidden p-6 text-center bg-gray-100 dark:bg-[#0B0B0D] hover:border-[#C5A265] transition duration-300"
+            className="relative group border border-gray-300 dark:border-[#2B2B2B] rounded-lg overflow-hidden p-6 text-center bg-black dark:bg-[#0B0B0D] hover:border-[#C5A265] transition duration-300"
           >
             {/* Corner Lines */}
-            <span className="absolute top-0 left-0 w-6 h-[1px] bg-black dark:bg-white"></span>
-            <span className="absolute top-0 left-0 h-6 w-[1px] bg-black dark:bg-white"></span>
-            <span className="absolute bottom-0 right-0 w-6 h-[1px] bg-black dark:bg-white"></span>
-            <span className="absolute bottom-0 right-0 h-6 w-[1px] bg-black dark:bg-white"></span>
+            <span className="absolute top-0 left-0 w-6 h-[1px] bg-white"></span>
+            <span className="absolute top-0 left-0 h-6 w-[1px] bg-white"></span>
+            <span className="absolute bottom-0 right-0 w-6 h-[1px] bg-white"></span>
+            <span className="absolute bottom-0 right-0 h-6 w-[1px] bg-white"></span>
 
             {/* Profile Image */}
             <div className="w-full flex justify-center mb-6">
@@ -160,13 +160,13 @@ export default function TeamSection() {
             </div>
 
             {/* Name & Role */}
-            <h3 className="text-lg font-semibold mb-1">{member.name}</h3>
-            <p className="text-gray-700 dark:text-gray-400 text-sm mb-6">
+            <h3 className="text-lg text-gray-300 font-semibold mb-1">{member.name}</h3>
+            <p className="text-gray-300 dark:text-gray-400 text-sm mb-6">
               {member.role}
             </p>
 
             {/* Social Icons */}
-            <div className="flex justify-center gap-3">
+            <div className="flex justify-center gap-3 text-white">
               <a
                 href={member.socials.instagram}
                 target="_blank"

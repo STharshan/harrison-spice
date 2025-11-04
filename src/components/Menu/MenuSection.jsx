@@ -70,10 +70,10 @@ const CoverPage = forwardRef(({ restaurant, tagline }, ref) => (
   <Page ref={ref}>
     <div className="flex flex-col h-full justify-center items-center text-center relative ">
       {/* Decorative corners */}
-      <div className="absolute top-4 left-4 w-12 sm:w-16 h-12 sm:h-16 border-t-2 border-l-2 border-[#981921]/40" />
-      <div className="absolute top-4 right-4 w-12 sm:w-16 h-12 sm:h-16 border-t-2 border-r-2 border-[#981921]/40" />
-      <div className="absolute bottom-4 left-4 w-12 sm:w-16 h-12 sm:h-16 border-b-2 border-l-2 border-[#981921]/40" />
-      <div className="absolute bottom-4 right-4 w-12 sm:w-16 h-12 sm:h-16 border-b-2 border-r-2 border-[#981921]/40" />
+      <div className="absolute top-4 left-4 w-12 sm:w-16 h-12 sm:h-16 border-t-2 border-l-2 border-[#C5A265]/40" />
+      <div className="absolute top-4 right-4 w-12 sm:w-16 h-12 sm:h-16 border-t-2 border-r-2 border-[#C5A265]/40" />
+      <div className="absolute bottom-4 left-4 w-12 sm:w-16 h-12 sm:h-16 border-b-2 border-l-2 border-[#C5A265]/40" />
+      <div className="absolute bottom-4 right-4 w-12 sm:w-16 h-12 sm:h-16 border-b-2 border-r-2 border-[#C5A265]/40" />
 
       <motion.img
         src="/logo.png"
@@ -85,7 +85,7 @@ const CoverPage = forwardRef(({ restaurant, tagline }, ref) => (
       />
 
       <motion.h1
-        className="text-3xl sm:text-5xl font-bold text-[#981921]"
+        className="text-3xl sm:text-5xl font-bold text-[#C5A265]"
         style={{ fontFamily: "serif" }}
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -103,11 +103,11 @@ const CoverPage = forwardRef(({ restaurant, tagline }, ref) => (
         {tagline}
       </motion.p>
 
-      <p className="text-xs sm:text-sm text-black italic mt-4 dark:text-neutral-400">
+      <p className="text-xs sm:text-sm text-black italic mt-4 ">
         Experience Authentic Indian Cuisine
       </p>
     </div>
-    <div className="absolute bottom-5 right-5 text-xs text-[#981921] bg-white/70 dark:bg-black/50 px-3 py-1 rounded-full">
+    <div className="absolute bottom-5 right-5 text-xs text-[#C5A265] bg-white/70 dark:bg-black/50 px-3 py-1 rounded-full">
       Swipe to explore →
     </div>
   </Page>
@@ -120,7 +120,7 @@ const SectionPage = forwardRef(({ title, subtitle, items }, ref) => (
     <div className="flex flex-col h-full">
       <div className="mb-4">
         <h2
-          className="text-lg sm:text-2xl font-bold text-[#981921]"
+          className="text-lg sm:text-2xl font-bold text-[#C5A265]"
           style={{ fontFamily: "serif" }}
         >
           {title}
@@ -146,7 +146,7 @@ const SectionPage = forwardRef(({ title, subtitle, items }, ref) => (
               />
             )}
             <div className="flex-1">
-              <p className="text-[#981921] font-semibold text-sm sm:text-base">
+              <p className="text-[#C5A265] font-semibold text-sm sm:text-base">
                 {item.name}
               </p>
               {item.description && (
@@ -179,15 +179,15 @@ const InfoPage = forwardRef((_, ref) => (
     <div className="flex flex-col justify-between h-full">
       <div>
         <h2
-          className="text-xl sm:text-3xl font-bold text-[#981921] mb-3"
+          className="text-xl sm:text-3xl font-bold text-[#C5A265] mb-3"
           style={{ fontFamily: "serif" }}
         >
           About Us
         </h2>
-        <div className="w-16 h-0.5 bg-linear-to-r from-[#981921] to-orange-500 mb-4" />
+        <div className="w-16 h-0.5 bg-linear-to-r from-[#C5A265] to-orange-500 mb-4" />
         <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed">
           Welcome to{" "}
-          <span className="font-bold text-[#981921]">Harrison Spice</span>,
+          <span className="font-bold text-[#C5A265]">Harrison Spice</span>,
           where authentic Indian flavors meet modern dining excellence. Every
           dish is crafted using the finest ingredients and time-honored recipes.
         </p>
@@ -196,11 +196,11 @@ const InfoPage = forwardRef((_, ref) => (
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-5">
         {/* Location */}
         <div className="flex items-start gap-3 bg-white/80 dark:bg-neutral-800/70 p-4 rounded-xl shadow">
-          <div className="bg-linear-to-br from-[#981921] to-orange-500 w-10 h-10 flex items-center justify-center rounded-full text-white">
+          <div className="bg-linear-to-br from-[#C5A265] to-orange-500 w-10 h-10 flex items-center justify-center rounded-full text-white">
             <FiMapPin size={20} />
           </div>
           <div>
-            <p className="text-sm font-bold text-[#981921]">Location</p>
+            <p className="text-sm font-bold text-[#C5A265]">Location</p>
             <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-snug">
               23-27 Station Street, Ratby<br />Leicestershire, LE6 0JQ
             </p>
@@ -209,11 +209,11 @@ const InfoPage = forwardRef((_, ref) => (
 
         {/* Contact */}
         <div className="flex items-start gap-3 bg-white/80 dark:bg-neutral-800/70 p-4 rounded-xl shadow">
-          <div className="bg-linear-to-br from-[#981921] to-orange-500 w-10 h-10 flex items-center justify-center rounded-full text-white">
+          <div className="bg-linear-to-br from-[#C5A265] to-orange-500 w-10 h-10 flex items-center justify-center rounded-full text-white">
             <FiPhone size={20} />
           </div>
           <div>
-            <p className="text-sm font-bold text-[#981921]">Contact</p>
+            <p className="text-sm font-bold text-[#C5A265]">Contact</p>
             <p className="text-xs text-neutral-600 dark:text-neutral-400">
               0116 2395 644
             </p>
@@ -228,7 +228,7 @@ const InfoPage = forwardRef((_, ref) => (
         <img src="/logo.png" alt="Logo" className="w-24 sm:w-32 opacity-90" />
       </div>
 
-      <p className="text-center text-[10px] sm:text-xs text-neutral-500 dark:text-neutral-400 mt-4 border-t border-[#981921]/10 pt-3">
+      <p className="text-center text-[10px] sm:text-xs text-neutral-500 dark:text-neutral-400 mt-4 border-t border-[#C5A265]/10 pt-3">
         © {new Date().getFullYear()} Harrison Spice. All rights reserved.
       </p>
     </div>
@@ -242,7 +242,7 @@ const BackCoverPage = forwardRef((_, ref) => (
     <div className="flex flex-col h-full items-center justify-center text-center">
       <img src="/logo.png" alt="Logo" className="w-36 sm:w-48 mb-6" />
       <h3
-        className="text-2xl sm:text-3xl font-bold text-[#981921]"
+        className="text-2xl sm:text-3xl font-bold text-[#C5A265]"
         style={{ fontFamily: "serif" }}
       >
         Thank You
@@ -330,7 +330,7 @@ export default function MenuFlipbook() {
 
   return (
     <div
-      className={`px-3 py-8 sm:py-12 dark:bg-black  transition-colors duration-500 ${darkMode ? "bg-neutral-900 text-white" : "bg-neutral-50 text-black"
+      className={`px-3 py-8 sm:py-12 bg-[#C5A265]  dark:bg-black  transition-colors duration-500"
         }`}
       id="menu"
     >
@@ -341,7 +341,7 @@ export default function MenuFlipbook() {
       >
         <div>
           <h1
-            className="text-3xl sm:text-4xl font-bold text-[#981921]"
+            className="text-3xl sm:text-4xl font-bold text-black dark:text-white"
             style={{ fontFamily: "serif" }}
           >
             Our Menu
@@ -353,16 +353,16 @@ export default function MenuFlipbook() {
             <div className="flex items-center gap-3 bg-white dark:bg-neutral-800 rounded-full shadow px-4 py-2">
               <button
                 onClick={goPrev}
-                className="bg-linear-to-r from-[#981921] to-orange-500 px-3 py-1.5 text-white rounded-full flex items-center gap-1"
+                className="bg-[#C5A265] px-3 py-1.5 text-white rounded-full flex items-center gap-1"
               >
                 <FiChevronLeft /> Prev
               </button>
-              <span className="text-sm font-bold text-[#981921] dark:text-white">
+              <span className="text-sm font-bold text-[#C5A265] dark:text-white">
                 {String(page + 1).padStart(2, "0")} / {pages.length}
               </span>
               <button
                 onClick={goNext}
-                className="bg-linear-to-r from-[#981921] to-orange-500 px-3 py-1.5 text-white rounded-full flex items-center gap-1"
+                className="bg-[#C5A265] px-3 py-1.5 text-white rounded-full flex items-center gap-1"
               >
                 Next <FiChevronRight />
               </button>
@@ -407,8 +407,8 @@ export default function MenuFlipbook() {
               onClick={() => goTo(target)}
               className={`px-3 py-2 text-sm font-semibold rounded-lg transition-all
                 ${isActive
-                  ? "bg-linear-to-r from-[#981921] to-orange-500 text-black dark:text-white shadow-lg"
-                  : "bg-white dark:bg-neutral-800 text-black dark:text-white border border-[#981921] hover:scale-105 shadow-sm"
+                  ? "bg-[#C5A265] text-black dark:text-white shadow-lg"
+                  : "bg-white dark:bg-neutral-800 text-black dark:text-white border border-[#C5A265] hover:scale-105 shadow-sm"
                 }`}
             >
               {s.title}
