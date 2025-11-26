@@ -9,12 +9,14 @@ import FeaturedMenus from '../components/FeaturedMenus'
 import WhyDineWithUs from '../components/WithUs'
 import EventBooking from '../components/Time'
 import TeamSection from '../components/Team'
+import WhatWeOffer from '../components/UnderAbout'
 
 const Home = () => {
   return (
     <div>
       <Hero />
       <About />
+      <WhatWeOffer />
       <MyStorySection />
       <WhyDineWithUs />
       <FeaturedMenus />

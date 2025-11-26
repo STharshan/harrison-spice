@@ -91,7 +91,7 @@ const About = () => {
           </div>
 
           {/* Card Section */}
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* <div className="grid md:grid-cols-3 gap-8">
             {cards.map((card, index) => (
               <div
                 key={card.id}
@@ -108,7 +108,7 @@ const About = () => {
                 </p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

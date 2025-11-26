@@ -7,7 +7,7 @@ const topTeam = [
   {
     name: "Marvin McKinney",
     role: "CEO & Chairman at, Zocor",
-    image: "/team-lead1.png",
+    image: "/p1.jpg",
     socials: {
       instagram: "#",
       twitter: "#",
@@ -17,7 +17,7 @@ const topTeam = [
   {
     name: "Darrel Steward",
     role: "Managing Director at, Zocor",
-    image: "/team-lead2.png",
+    image: "/p7.jpg",
     socials: {
       instagram: "#",
       twitter: "#",
@@ -30,7 +30,7 @@ const teamMembers = [
   {
     name: "William Joseph",
     role: "Product Designer",
-    image: "/team1.png",
+    image: "/p6.jpg",
     socials: {
       instagram: "#",
       twitter: "#",
@@ -40,7 +40,7 @@ const teamMembers = [
   {
     name: "Charlotte Rose",
     role: "Product Designer",
-    image: "/team2.png",
+    image: "/p2.jpg",
     socials: {
       instagram: "#",
       twitter: "#",
@@ -50,7 +50,7 @@ const teamMembers = [
   {
     name: "Michael James",
     role: "Marketing Leader",
-    image: "/team3.png",
+    image: "/p3.jpg",
     socials: {
       instagram: "#",
       twitter: "#",
@@ -60,7 +60,17 @@ const teamMembers = [
   {
     name: "Jennifer Ann",
     role: "Project Manager",
-    image: "/team4.png",
+    image: "/p9.jpg",
+    socials: {
+      instagram: "#",
+      twitter: "#",
+      linkedin: "#",
+    },
+  },
+  {
+    name: "Jennifer Ann",
+    role: "Project Manager",
+    image: "/p8.jpg",
     socials: {
       instagram: "#",
       twitter: "#",
@@ -128,9 +138,9 @@ export default function TeamSection() {
                 </p>
               </div>
               <img
-                src="/logo.png"
+                src={member.image}
                 alt={member.name}
-                className="w-90 h-62 object-cover rounded-md"
+                className="w-90 h-105 object-cover rounded-md"
               />
             </div>
           </div>
@@ -138,7 +148,7 @@ export default function TeamSection() {
       </div>
 
       {/* === Lower Team Grid === */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-5">
         {teamMembers.map((member, idx) => (
           <div
             key={idx}
@@ -153,9 +163,9 @@ export default function TeamSection() {
             {/* Profile Image */}
             <div className="w-full flex justify-center mb-6">
               <img
-                src="/logo.png"
+                src={member.image}
                 alt={member.name}
-                className="w-55 h-35 object-cover rounded-full"
+                className="w-50 h-50 object-cover rounded-full"
               />
             </div>
 
