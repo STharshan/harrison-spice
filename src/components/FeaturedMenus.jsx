@@ -8,28 +8,28 @@ const makiItems = [
     name: "Lamb Shank",
     description:
       "A tantalizing blend of spicy tuna, cucumber, and avocado, harmoniously rolled in nori and seasoned rice.",
-    price: "$5",
+    price: "£x",
     image: "/n4.png",
   },
   {
     name: "Monk Fish",
     description:
       "Tempura-fried shrimp, cucumber, and cream cheese embrace a center of fresh avocado, delivering a satisfying contrast of textures.",
-    price: "$5",
+    price: "£x",
     image: "/n3.png",
   },
   {
     name: "Duck Meat",
     description:
       "Shiitake mushrooms, avocado, and pickled daikon radish nestle within a roll of seasoned rice, coated with nutty sesame seeds.",
-    price: "$5",
+    price: "£x",
     image: "/n2.png",
   },
   {
     name: "King Prawn",
     description:
       "A vibrant assortment of julienned carrots, bell peppers, and cucumber, tightly encased in a nori-wrapped rice roll.",
-    price: "$5",
+    price: "£x",
     image: "/n1.png",
   },
 ];

@@ -1,118 +1,136 @@
-import React, { useEffect } from "react";
-import { FaAward, FaRegHeart, FaStar, FaUsers } from "react-icons/fa";
-import { LuChefHat } from "react-icons/lu";
+"use client";
+import React, { useEffect, useState } from "react";
+import {
+  GiKnifeFork,
+  GiMeal,
+  GiChefToque,
+} from "react-icons/gi"; // Restaurant/Food Icons
+import { FiArrowRight, FiX } from "react-icons/fi";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const About = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
+const items = [
+  {
+    title: "Refined Indian Sub-Continental Cuisine",
+    short:
+      "A carefully curated menu blending traditional classics with innovative signature dishes, combining rich Eastern flavours with a modern Western touch.",
+    img: "/w3.jpeg",
+    icon: <GiMeal className="w-6 h-6 text-white" />,
+  },
+  {
+    title: "Creative Culinary Excellence",
+    short:
+      "Every dish is crafted with precision, creativity, and authenticity - delivering a unique dining experience that celebrates both heritage and innovation.",
+    img: "/w2.jpg",
+    icon: <GiChefToque className="w-6 h-6 text-white" />,
+  },
+  {
+    title: "Service Beyond Expectations",
+    short:
+      "Our courteous, knowledgeable team is trained to provide warm, attentive, and impeccable service that elevates your entire dining experience.",
+    img: "/w1.jpg",
+    icon: <GiKnifeFork className="w-6 h-6 text-white" />,
+  },
+];
 
-  const cards = [
-    {
-      id: 1,
-      icon: <FaAward className="h-10 w-10 text-[#C5A265]" />,
-      title: "Premium Quality",
-      description:
-        "Fresh ingredients and authentic spices sourced directly from the Indian sub-continent",
-    },
-    {
-      id: 2,
-      icon: <FaUsers className="h-10 w-10 text-[#C5A265]" />,
-      title: "Expert Chefs",
-      description:
-        "Our experienced chefs blend traditional techniques with modern culinary innovation",
-    },
-    {
-      id: 3,
-      icon: <FaRegHeart className="h-10 w-10 text-[#C5A265]" />,
-      title: "Warm Hospitality",
-      description:
-        "Friendly service and welcoming atmosphere that makes every visit memorable",
-    },
-  ];
+export default function About() {
+  const [selected, setSelected] = useState(null);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: false, mirror: true });
+  }, []);
 
   return (
     <section
       id="about"
-      className="py-16 bg-[#C5A265] dark:bg-black transition-colors duration-500 scroll-m-10"
+      className="relative py-20 overflow-hidden bg-[#C5A265] dark:bg-black"
     >
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          {/* Section Heading */}
-          <div className="text-center mb-12" data-aos="fade-up">
-            <div className="flex justify-center mb-6">
-              <LuChefHat className="h-12 w-12 text-black dark:text-[#f5f5f5]" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-[#f5f5f5] mb-8">
-              About Us
-            </h2>
-          </div>
+      {/* Content */}
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Heading */}
+        <div className="text-center mb-16" data-aos="fade-up">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-white dark:text-white">
+            About Us
+          </h2>
+          <p className="text-lg text-white/90 dark:text-gray-300 max-w-3xl mx-auto">
+            We deliver exceptional food, service, and ambiance for an unforgettable dining experience.
+          </p>
+        </div>
 
-          {/* Text + Image */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            {/* Left Text */}
-            <div className="space-y-6" data-aos="fade-right">
-              <div className="text-lg space-y-6 text-black dark:text-gray-200">
-                <p>
-                  We provide an emphasis on refined yet creative cuisine from
-                  the Indian sub-continent. Our menu incorporates both
-                  traditional classics and signature dishes that apply Eastern
-                  flavours with a Western twist.
-                </p>
-                <p>
-                  Yet we believe that providing a quality dining experience is
-                  so much more than just inspired cuisine. Our courteous,
-                  friendly and informed staff are trained to exceed expectations
-                  and redefine the concept of impeccable service.
-                </p>
+        {/* Feature Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {items.map((item, idx) => (
+            <div
+              key={idx}
+              className="group relative flex flex-col items-center"
+              data-aos="fade-up"
+              data-aos-delay={idx * 150}
+            >
+              {/* Image */}
+              <div className="w-full h-[280px] rounded-2xl overflow-hidden">
+                <img src={item.img} className="w-full h-full object-cover" />
               </div>
-              <div className="flex items-center space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <FaStar key={i} className="h-5 w-5 fill-yellow-700" />
-                ))}
-                <span className="ml-2 text-black dark:text-gray-200">
-                  Exceptional Service
-                </span>
+
+              {/* Overlay Card */}
+              <div className=" -mt-10 w-[90%] rounded-2xl shadow-md p-6 relative h-[200px] flex flex-col justify-between dark:bg-[#C5A265] text-white bg-black dark:text-white">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center dark:bg-black/20">
+                    {item.icon}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
+                    <p className="text-sm leading-relaxed line-clamp-3">{item.short}</p>
+                  </div>
+                </div>
+
+                {/* Arrow button */}
+                <div className="flex justify-end">
+                  <button
+                    onClick={() => setSelected(item)}
+                    className="w-10 h-10 rounded-full bg-white text-[#C5A265] flex items-center justify-center shadow-md hover:scale-110 transition dark:bg-black dark:text-[#C5A265]"
+                  >
+                    <FiArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
               </div>
             </div>
-
-            {/* Right Image */}
-            <div className="relative" data-aos="fade-left">
-              <img
-                src="/side.png"
-                alt="Restaurant Interior"
-                width={600}
-                height={400}
-                className="rounded-lg shadow-lg h-110"
-              />
-            </div>
-          </div>
-
-          {/* Card Section */}
-          {/* <div className="grid md:grid-cols-3 gap-8">
-            {cards.map((card, index) => (
-              <div
-                key={card.id}
-                className="bg-black dark:bg-gray-900 text-center p-6 rounded-lg shadow-lg active:shadow-xl hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-300 dark:border-gray-700"
-                data-aos="zoom-in"
-                data-aos-delay={index * 200}
-              >
-                <div className="flex justify-center mb-4">{card.icon}</div>
-                <h3 className="text-xl font-semibold text-[#C5A265] mb-2">
-                  {card.title}
-                </h3>
-                <p className="text-gray-300 dark:text-gray-300">
-                  {card.description}
-                </p>
-              </div>
-            ))}
-          </div> */}
+          ))}
         </div>
       </div>
+
+      {/* MODAL */}
+      {selected && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          {/* Overlay */}
+          <div
+            onClick={() => setSelected(null)}
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm animate-fadeIn"
+          ></div>
+
+          {/* Modal */}
+          <div className="relative rounded-2xl max-w-2xl w-full p-8 shadow-2xl bg-white text-black dark:bg-[#1A1A1A] dark:text-white transform transition-all animate-slideUp">
+            {/* Close button */}
+            <button
+              onClick={() => setSelected(null)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+            >
+              <FiX className="w-6 h-6" />
+            </button>
+
+            {/* Title */}
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 rounded-lg bg-[#C5A265] flex items-center justify-center text-white">
+                {selected.icon}
+              </div>
+              <h3 className="text-2xl font-bold">{selected.title}</h3>
+            </div>
+
+            <p className="whitespace-pre-line leading-relaxed text-black dark:text-gray-300">
+              {selected.full || "Delightful dining experience awaits!"}
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   );
-};
-
-export default About;
+}

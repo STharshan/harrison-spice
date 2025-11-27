@@ -165,7 +165,7 @@ export default function TeamSection() {
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-50 h-50 object-cover rounded-full"
+                className="w-50 h-60 object-cover rounded-full"
               />
             </div>
 

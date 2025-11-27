@@ -10,6 +10,7 @@ import WhyDineWithUs from '../components/WithUs'
 import EventBooking from '../components/Time'
 import TeamSection from '../components/Team'
 import WhatWeOffer from '../components/UnderAbout'
+import Review from '../components/Review'
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <MenuFlipbook />
       <TeamSection />
       <EventBooking />
+      <Review />
       <Contact />
       <FindUs />
     </div>
