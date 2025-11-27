@@ -68,13 +68,12 @@ export default function Review() {
       id="testimonials"
     >
       {/* Background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 flex items-center justify-center">
         <img
-          src="side.png"
+          src="logo.png"
           alt="Hear it from our clients"
-          className="w-full h-full object-cover"
+          className="w-[100%]  max-w-6xl object-contain "
         />
-        <div className="absolute inset-0 bg-black/60" />
       </div>
 
       {/* Heading */}
@@ -114,7 +113,7 @@ export default function Review() {
       {/* === CTA BUTTON TO GOOGLE REVIEWS === */}
       <div className="relative z-10 pb-28 text-center">
         <a
-          href="https://www.google.com/search?sca_esv=cb427c73f925e7d3&rlz=1C5CHFA_enCA1132CA1132&sxsrf=AE3TifNP1hfnOUI-vDbstuSqJ_1SgFsKWA:1764250864617&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E5UMQSIpzR6CcUH4NJtD0qduShT0hwUWz22zNi5zwvrrL9rGE4VMMjyk4LFbaG_SBI1HGyIDoRbuBHyHKOQzEwxE9Png&q=Harrisons+Spice+Reviews&sa=X&ved=2ahUKEwja7dHQupKRAxUdQPUHHWCMAC8Q0bkNegQIIRAE&biw=1366&bih=633&dpr=1" 
+          href="https://www.google.com/search?sca_esv=cb427c73f925e7d3&rlz=1C5CHFA_enCA1132CA1132&sxsrf=AE3TifNP1hfnOUI-vDbstuSqJ_1SgFsKWA:1764250864617&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E5UMQSIpzR6CcUH4NJtD0qduShT0hwUWz22zNi5zwvrrL9rGE4VMMjyk4LFbaG_SBI1HGyIDoRbuBHyHKOQzEwxE9Png&q=Harrisons+Spice+Reviews&sa=X&ved=2ahUKEwja7dHQupKRAxUdQPUHHWCMAC8Q0bkNegQIIRAE&biw=1366&bih=633&dpr=1"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-10 py-3 text-lg font-semibold rounded-full 

@@ -11,6 +11,7 @@ import EventBooking from '../components/Time'
 import TeamSection from '../components/Team'
 import WhatWeOffer from '../components/UnderAbout'
 import Review from '../components/Review'
+import Timeline from '../components/Timeline'
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <About />
       <WhatWeOffer />
       <MyStorySection />
+      <Timeline />
       <WhyDineWithUs />
       <FeaturedMenus />
       <MenuFlipbook />
