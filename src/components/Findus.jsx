@@ -29,7 +29,7 @@ const FindUs = () => {
         >
           <iframe
             title="Google Map - 23-27 Station Rd, Ratby, Leicester LE6 0JQ, UK"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2420.740365125066!2d-1.2465065241078574!3d52.64660362684948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48775efbc36c8d07%3A0xe0828581570217f0!2s23-27%20Station%20Rd%2C%20Ratby%2C%20Leicester%20LE6%200JQ%2C%20UK!5e0!3m2!1sen!2slk!4v1758021041283!5m2!1sen!2slk"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d151.2963491493174!2d-1.2439683728261592!3d52.64658156397697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487761550ffa0049%3A0xc4c06f785307435a!2sHarrisons%20Spice!5e0!3m2!1sen!2slk!4v1764337675815!5m2!1sen!2slk"
             width="100%"
             height="100%"
             allowFullScreen

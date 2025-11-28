@@ -33,7 +33,7 @@ const Footer = () => {
           <p className="text-[#C5A265] dark:text-[#C5A265] font-medium mb-2">✦ VISIT US ✦</p>
           <p>
             <a
-              href="https://maps.app.goo.gl/er1GfnFtH3k9oxV79"
+              href="https://maps.app.goo.gl/mw462tj8uVG1w7T9A"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline text-black dark:text-gray-300"
