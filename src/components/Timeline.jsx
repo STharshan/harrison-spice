@@ -7,14 +7,14 @@ const TimelineEvent = ({ year, title, description, icon: Icon, isLeft }) => {
             
             {/* Card */}
             <div className={`w-full md:w-5/12 ${isLeft ? 'md:text-right md:pr-8' : 'md:pl-8'}`}>
-                <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-6 md:p-8 transition-all hover:shadow-xl dark:hover:shadow-gray-800/50">
-                    <div className={`text-gray-500 dark:text-gray-300 text-sm md:text-base text-right font-medium mb-2 ${isLeft ? 'md:text-left' : ''}`}>
+                <div className="bg-[#C5A265] rounded-2xl shadow-lg p-6 md:p-8 transition-all hover:shadow-xl dark:hover:shadow-gray-800/50">
+                    <div className={`text-white text-sm md:text-base text-right font-medium mb-2 ${isLeft ? 'md:text-left' : ''}`}>
                         {year}
                     </div>
-                    <h3 className={`text-xl md:text-2xl font-bold text-gray-900 dark:text-white text-right mb-3 ${isLeft ? 'md:text-left' : ''}`}>
+                    <h3 className={`text-xl md:text-2xl font-bold text-white text-right mb-3 ${isLeft ? 'md:text-left' : ''}`}>
                         {title}
                     </h3>
-                    <p className={`text-gray-600 dark:text-gray-300 text-sm md:text-base text-right leading-relaxed ${isLeft ? 'md:text-left' : ''}`}>
+                    <p className={`text-white text-sm md:text-base text-right leading-relaxed ${isLeft ? 'md:text-left' : ''}`}>
                         {description}
                     </p>
                 </div>
@@ -22,7 +22,7 @@ const TimelineEvent = ({ year, title, description, icon: Icon, isLeft }) => {
 
             {/* Icon in center */}
             <div className="hidden md:flex w-2/12 justify-center">
-                <div className="relative z-10 flex items-center justify-center w-14 h-14 bg-[#C5A265] dark:bg-[#AD8B3D] rounded-full shadow-lg">
+                <div className="relative z-10 flex items-center justify-center w-14 h-14 bg-[#C5A265] dark:bg-[#C5A265] rounded-full shadow-lg">
                     <Icon className="w-7 h-7 text-white" />
                 </div>
             </div>
@@ -37,7 +37,7 @@ const MobileTimelineEvent = ({ year, title, description, icon: Icon }) => {
     return (
         <div className="flex mb-8 md:hidden">
             <div className="flex flex-col items-center mr-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-[#C5A265] dark:bg-[#AD8B3D] rounded-full shadow-lg flex-shrink-0">
+                <div className="flex items-center justify-center w-12 h-12 bg-[#C5A265] dark:bg-[#C5A265] rounded-full shadow-lg flex-shrink-0">
                     <Icon className="w-6 h-6 text-white" />
                 </div>
                 <div className="w-0.5 h-full bg-gray-200 dark:bg-gray-700 mt-2"></div>
@@ -45,7 +45,7 @@ const MobileTimelineEvent = ({ year, title, description, icon: Icon }) => {
 
             {/* Content */}
             <div className="flex-1 pb-8">
-                <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-5 transition-all hover:shadow-xl dark:hover:shadow-gray-800/50">
+                <div className="bg-white dark:bg-[#C5A265] rounded-2xl shadow-lg p-5 transition-all hover:shadow-xl dark:hover:shadow-gray-800/50">
                     <div className="text-gray-500 dark:text-gray-300 text-sm font-medium mb-2">{year}</div>
                     <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{title}</h3>
                     <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{description}</p>
@@ -118,12 +118,12 @@ export default function JourneyTimeline() {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 py-8 md:py-16 px-4">
+       <div className={`${showTimeline ? "min-h-screen" : "h-[60vh]"} bg-white dark:bg-black py-8 md:py-16 px-4 transition-all duration-700`}>
             <div className="max-w-6xl mx-auto">
                 
                 {/* Header */}
                 <div className="text-center mb-12 md:mb-20">
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6">
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#C5A265] dark:text-[#C5A265] mb-4 md:mb-6">
                         My Journey
                     </h1>
                     <p className="text-base md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
@@ -133,7 +133,7 @@ export default function JourneyTimeline() {
                     {/* Down Button */}
                     <button
                         onClick={toggleTimeline}
-                        className={`mt-8 md:mt-12 inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-[#C5A265] dark:bg-[#AD8B3D] hover:bg-[#B8942E] dark:hover:bg-[#9C7A2F] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 ${!showTimeline ? 'animate-bounce' : ''}`}
+                        className={`mt-8 md:mt-12 inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-[#C5A265] dark:bg-[#C5A265] hover:bg-[#9C7A2F] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 ${!showTimeline ? 'animate-bounce' : ''}`}
                     >
                         <svg
                             className="w-6 h-6 md:w-8 md:h-8 text-white transition-transform duration-300"
@@ -163,7 +163,7 @@ export default function JourneyTimeline() {
                     style={{ maxHeight: showTimeline ? '10000px' : '0' }}
                 >
                     {/* Vertical line for desktop */}
-                    <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-200 dark:bg-gray-700"></div>
+                    <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-700"></div>
 
                     {/* Desktop List */}
                     <div className="hidden md:block">
@@ -196,7 +196,7 @@ export default function JourneyTimeline() {
                 {/* Closing Message */}
                 {showTimeline && (
                     <div className="mt-16 transition-all duration-700 ease-in-out">
-                        <div className="bg-[#C5A265] dark:bg-[#AD8B3D] rounded-2xl shadow-2xl p-2 text-center">
+                        <div className="bg-[#C5A265] dark:bg-[#C5A265] rounded-2xl shadow-2xl p-2 text-center">
                             <p className="text-xl md:text-2xl lg:text-3xl font-bold text-white leading-relaxed">
                                 From dreams to reality – every step was worth it! ✨
                             </p>

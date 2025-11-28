@@ -341,7 +341,7 @@ export default function MenuFlipbook() {
       >
         <div>
           <h1
-            className="text-3xl sm:text-4xl font-bold text-black dark:text-white"
+            className="text-3xl sm:text-4xl font-bold text-white dark:text-[#C5A265]"
             style={{ fontFamily: "serif" }}
           >
             Our Menu

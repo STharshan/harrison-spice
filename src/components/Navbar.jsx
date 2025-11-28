@@ -58,6 +58,13 @@ const Navbar = () => {
             </HashLink>
             <HashLink
               smooth
+              to="/#review"
+              className="hover:text-[#C5A265] transition-colors"
+            >
+              Review
+            </HashLink>
+            <HashLink
+              smooth
               to="/#contact"
               className="hover:text-[#C5A265] transition-colors"
             >
@@ -143,6 +150,13 @@ const Navbar = () => {
             className="hover:text-[#C5A265]transition-colors"
           >
             About
+          </HashLink>
+          <HashLink
+            smooth
+            to="/#review"
+            className="hover:text-[#C5A265]transition-colors"
+          >
+            Review
           </HashLink>
           <HashLink
             smooth

@@ -46,7 +46,7 @@ const WhyDineWithUs = () => {
     <section className="bg-[#C5A265] dark:bg-black text-black dark:text-gray-200 py-16 px-6 lg:px-20 transition-colors duration-500">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12" data-aos="fade-down">
-          <h2 className="text-3xl md:text-4xl font-semibold text-black dark:text-white transition-colors duration-500">
+          <h2 className="text-3xl md:text-4xl font-semibold text-white dark:text-[#C5A265] transition-colors duration-500">
             Proud Sponsors Of
           </h2>
         </div>

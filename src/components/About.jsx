@@ -49,7 +49,7 @@ export default function About() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-white dark:text-white">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-white dark:text-[#C5A265]">
             About Us
           </h2>
           <p className="text-lg text-white/90 dark:text-gray-300 max-w-3xl mx-auto">

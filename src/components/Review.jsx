@@ -65,7 +65,7 @@ export default function Review() {
     <section
       ref={sectionRef}
       className="relative bg-black text-white overflow-hidden"
-      id="testimonials"
+      id="review"
     >
       {/* Background */}
       <div className="absolute inset-0 flex items-center justify-center">
@@ -78,7 +78,7 @@ export default function Review() {
 
       {/* Heading */}
       <div className="relative z-10 text-center pt-32 pb-12">
-        <h2 className="text-4xl md:text-5xl font-semibold text-white">
+        <h2 className="text-4xl md:text-5xl font-semibold text-[#C5A265]">
           Hear it from our clients
         </h2>
       </div>

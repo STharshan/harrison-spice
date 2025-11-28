@@ -70,7 +70,7 @@ export default function WhatWeOffer() {
                         >
                             <div className="rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-500 h-[380px] sm:h-[400px] md:h-[420px] flex flex-col 
                                 border border-[#E8D9A8]/70 bg-white dark:bg-zinc-900 shadow-[0_8px_24px_rgba(0,0,0,0.1)] 
-                                dark:shadow-[0_12px_40px_rgba(255,215,0,0.1)] dark:border-yellow-600/40"
+                                dark:shadow-[0_12px_40px_rgba(255,215,0,0.1)] dark:border-[#C5A265]"
                             >
                                 {/* VIDEO */}
                                 <div className="relative h-[200px] sm:h-[220px] md:h-[240px] overflow-hidden">
@@ -136,8 +136,8 @@ export default function WhatWeOffer() {
                             className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 
                             ${
                                 i === activeIndex
-                                    ? "bg-yellow-500 dark:bg-yellow-400 w-6 sm:w-8"
-                                    : "bg-yellow-500/30 dark:bg-yellow-400/30"
+                                    ? "bg-[#C5A265] dark:bg-[#C5A265] w-6 sm:w-8"
+                                    : "bg-[#C5A265] dark:bg-[#C5A265]"
                             }`}
                         />
                     ))}
