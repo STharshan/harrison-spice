@@ -5,8 +5,8 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const topTeam = [
   {
-    name: "Marvin McKinney",
-    role: "CEO & Chairman at, Zocor",
+    name: " Kolilur ",
+    role: "Head Chef",
     image: "/p1.jpg",
     socials: {
       instagram: "#",
@@ -15,8 +15,8 @@ const topTeam = [
     },
   },
   {
-    name: "Darrel Steward",
-    role: "Managing Director at, Zocor",
+    name: "Kabir ",
+    role: "Front Of House",
     image: "/p7.jpg",
     socials: {
       instagram: "#",
@@ -28,8 +28,8 @@ const topTeam = [
 
 const teamMembers = [
   {
-    name: "William Joseph",
-    role: "Product Designer",
+    name: "Abhijit ",
+    role: "Waiter",
     image: "/p6.jpg",
     socials: {
       instagram: "#",
@@ -38,8 +38,8 @@ const teamMembers = [
     },
   },
   {
-    name: "Charlotte Rose",
-    role: "Product Designer",
+    name: " Katie ",
+    role: "Waiter",
     image: "/p2.jpg",
     socials: {
       instagram: "#",
@@ -48,8 +48,8 @@ const teamMembers = [
     },
   },
   {
-    name: "Michael James",
-    role: "Marketing Leader",
+    name: " Kasrul",
+    role: "Second Chef",
     image: "/p3.jpg",
     socials: {
       instagram: "#",
@@ -58,8 +58,8 @@ const teamMembers = [
     },
   },
   {
-    name: "Jennifer Ann",
-    role: "Project Manager",
+    name: "Mahibub",
+    role: "Kitchen assistant",
     image: "/p9.jpg",
     socials: {
       instagram: "#",
@@ -68,8 +68,8 @@ const teamMembers = [
     },
   },
   {
-    name: "Jennifer Ann",
-    role: "Project Manager",
+    name: "Jamil ",
+    role: "Waiter",
     image: "/p8.jpg",
     socials: {
       instagram: "#",

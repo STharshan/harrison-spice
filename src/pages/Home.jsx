@@ -19,7 +19,7 @@ const Home = () => {
       <Hero />
       <About />
       <WhatWeOffer />
-      <MyStorySection />
+      {/* <MyStorySection /> */}
       <Timeline />
       <WhyDineWithUs />
       <FeaturedMenus />

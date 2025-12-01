@@ -74,44 +74,44 @@ export default function JourneyTimeline() {
 
     const events = [
         {
-            year: '1990',
-            title: 'A New Beginning',
-            description: 'Arrived in the UK with dreams and determination',
+            year: '1996 age 15',
+            title: 'Started learning tradional',
+            description: 'From bangladesh - however the true history began at birth being born into a testurant family. at 15 i went on to really start understanding the trade. came to the uk at this age too.',
             icon: Plane,
             isLeft: false
         },
         {
-            year: '1992',
-            title: 'Starting from the Ground Up',
-            description: 'Kitchen cleaner - learning the restaurant business from every angle',
+            year: '2003',
+            // 'Starting from the Ground Up',
+            title: 'after years of learning the trade accross multiple resturants i opened my first resturant in loughborugh town.',
             icon: Sparkles,
             isLeft: true
         },
         {
-            year: '1994',
-            title: 'Moving Up',
-            description: 'Promoted to second chef - mastering culinary skills',
+            year: '2005',
+            // 'Moving Up',
+            title: 'I got invited to the house of commons to cook this was proud moment for myself and family.',
             icon: ChefHat,
             isLeft: false
         },
         {
-            year: '1998',
-            title: 'Leading the Kitchen',
-            description: 'Became main chef - creating signature dishes and leading teams',
+            year: '2009',
+            title: 'Nottingham second restaunt',
+            //description: 'Became main chef - creating signature dishes and leading teams',
             icon: TrendingUp,
             isLeft: true
         },
         {
-            year: '2002',
-            title: 'Dream Realised',
-            description: 'Opened first restaurant - from employee to entrepreneur',
+            year: '2011',
+            title: 'Thurmuston new indian take away',
+            //description: 'Opened first restaurant - from employee to entrepreneur',
             icon: Award,
             isLeft: false
         },
         {
-            year: '2010',
-            title: 'Growing Success',
-            description: 'Second restaurant opened - expanding the vision',
+            year: '2014',
+            title: 'Harrison spice was born.',
+            //description: 'Second restaurant opened - expanding the vision',
             icon: Building,
             isLeft: true
         }
