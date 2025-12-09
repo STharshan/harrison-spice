@@ -4,7 +4,7 @@ import { Plane, Sparkles, ChefHat, TrendingUp, Award, Building } from 'lucide-re
 const TimelineEvent = ({ year, title, description, icon: Icon, isLeft }) => {
     return (
         <div className={`flex items-center w-full mb-8 md:mb-16 ${isLeft ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
-            
+
             {/* Card */}
             <div className={`w-full md:w-5/12 ${isLeft ? 'md:text-right md:pr-8' : 'md:pl-8'}`}>
                 <div className="bg-[#C5A265] rounded-2xl shadow-lg p-6 md:p-8 transition-all hover:shadow-xl dark:hover:shadow-gray-800/50">
@@ -74,53 +74,67 @@ export default function JourneyTimeline() {
 
     const events = [
         {
-            year: '1996 age 15',
-            title: 'Started learning tradional',
-            description: 'From bangladesh - however the true history began at birth being born into a testurant family. at 15 i went on to really start understanding the trade. came to the uk at this age too.',
+            year: "1996 age 15",
+            title: "A New Beginning",
+            description:
+                "At just 15, I began formally learning the craft of traditional cooking. This was also the year I moved to the UK, where my passion for the industry truly began to take shape.",
             icon: Plane,
             isLeft: false
         },
         {
-            year: '2003',
-            // 'Starting from the Ground Up',
-            title: 'after years of learning the trade accross multiple resturants i opened my first resturant in loughborugh town.',
+            year: "1998",
+            title: "Building Experience",
+            description:
+                "I continued refining my skills, working across a variety of restaurants and absorbing different culinary styles and techniques.",
             icon: Sparkles,
             isLeft: true
         },
         {
-            year: '2005',
-            // 'Moving Up',
-            title: 'I got invited to the house of commons to cook this was proud moment for myself and family.',
-            icon: ChefHat,
+            year: "2003",
+            title: "First Restaurant Opens",
+            description:
+                "After years of hands-on learning, I opened my first restaurant in Loughborough town — a major milestone in turning passion into a real business.",
+            icon: TrendingUp,
             isLeft: false
         },
         {
-            year: '2009',
-            title: 'Nottingham second restaunt',
-            //description: 'Became main chef - creating signature dishes and leading teams',
-            icon: TrendingUp,
+            year: "2005",
+            title: "A Proud Honour",
+            description:
+                "I was invited to the House of Commons to cook — one of the proudest moments for myself and my family, recognising years of dedication to the craft.",
+            icon: ChefHat,
             isLeft: true
         },
         {
-            year: '2011',
-            title: 'Thurmuston new indian take away',
-            //description: 'Opened first restaurant - from employee to entrepreneur',
+            year: "2009",
+            title: "Expansion to Nottingham",
+            description:
+                "The second restaurant opened in Nottingham, marking continued growth and a stronger presence in the Midlands.",
             icon: Award,
             isLeft: false
         },
         {
-            year: '2014',
-            title: 'Harrison spice was born.',
-            //description: 'Second restaurant opened - expanding the vision',
+            year: "2011",
+            title: "Thurmuston Takeaway Launched",
+            description:
+                "A new Indian takeaway was opened in Thurmuston, bringing authentic flavours to a wider community.",
             icon: Building,
             isLeft: true
+        },
+        {
+            year: "2014",
+            title: "Harrison Spice Was Born",
+            description:
+                "With years of experience, tradition, and innovation behind us, the Harrison Spice brand was officially launched — representing everything we stand for today.",
+            icon: Sparkles,
+            isLeft: false
         }
     ];
 
     return (
-       <div className={`${showTimeline ? "min-h-screen" : "h-[60vh]"} bg-white dark:bg-black py-8 md:py-16 px-4 transition-all duration-700`}>
+        <div className={`${showTimeline ? "min-h-screen" : "h-[60vh]"} bg-white dark:bg-black py-8 md:py-16 px-4 transition-all duration-700`}>
             <div className="max-w-6xl mx-auto">
-                
+
                 {/* Header */}
                 <div className="text-center mb-12 md:mb-20">
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#C5A265] dark:text-[#C5A265] mb-4 md:mb-6">
@@ -155,11 +169,10 @@ export default function JourneyTimeline() {
                 {/* Timeline */}
                 <div
                     id="timeline-section"
-                    className={`relative transition-all scroll-m-20 duration-700 ease-in-out ${
-                        showTimeline
+                    className={`relative transition-all scroll-m-20 duration-700 ease-in-out ${showTimeline
                             ? 'opacity-100 translate-y-0'
                             : 'opacity-0 -translate-y-10 pointer-events-none overflow-hidden'
-                    }`}
+                        }`}
                     style={{ maxHeight: showTimeline ? '10000px' : '0' }}
                 >
                     {/* Vertical line for desktop */}
