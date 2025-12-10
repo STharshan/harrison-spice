@@ -48,7 +48,7 @@ export default function FeaturedMenu() {
           data-aos="fade-down"
         >
           <span className="border-b text-[#C5A265] border-gray-400 dark:border-gray-600 pb-2">
-            MAKI
+            Our Specials
           </span>
         </h2>
       </div>
