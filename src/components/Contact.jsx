@@ -1,17 +1,83 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
-const Contact = () => {
+export default function Contact() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  // Live validation function for each field
+  const validateField = (name, value) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^\+?\d{7,15}$/;
+    let error = "";
+
+    if (name === "name" && value.trim().length < 2) {
+      error = "Please enter a valid name";
+    }
+    if (name === "email" && !emailRegex.test(value)) {
+      error = "Please enter a valid email";
+    }
+    if (name === "phone" && !phoneRegex.test(value.replace(/\s/g, ""))) {
+      error = "Please enter a valid phone number";
+    }
+    if (name === "message" && value.trim().length < 10) {
+      error = "Message must be at least 10 characters";
+    }
+
+    setErrors((prev) => ({ ...prev, [name]: error }));
+    return error === "";
+  };
+
+  // Form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Validate all fields before sending
+    const isValid = Object.keys(form).every((key) => validateField(key, form[key]));
+    if (!isValid) return;
+
+    const whatsappNumber = "447368384136"; // full number, no spaces, country code included
+    const whatsappMessage = `
+Name: ${form.name}
+Email: ${form.email}
+Phone: ${form.phone}
+Message: ${form.message}
+    `.trim();
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const url = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(url, "_blank");
+  };
+
+  const inputClass =
+    "w-full px-4 py-3 bg-transparent border rounded-md outline-none transition-colors duration-300";
+
+  // Handler for input change with live validation
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+    validateField(name, value); // validate as user types
+  };
+
   return (
     <section
       className="bg-white dark:bg-black text-black dark:text-gray-200 py-20 px-6 lg:px-20 scroll-m-15"
       id="contact"
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 relative">
-        
+
         {/* LEFT SIDE */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          {/* Arched Image */}
           <div className="relative w-80 h-96 overflow-hidden rounded-t-full border border-black p-1">
             <img
               src="/side.png"
@@ -20,11 +86,8 @@ const Contact = () => {
             />
           </div>
 
-          {/* Visit Info */}
           <div className="mt-8 space-y-2">
-            <h3 className="text-black font-medium tracking-wide">
-              ✦ VISIT US ✦
-            </h3>
+            <h3 className="text-black font-medium tracking-wide">✦ VISIT US ✦</h3>
             <p className="text-black dark:text-gray-400">
               <a
                 href="https://maps.app.goo.gl/er1GfnFtH3k9oxV79"
@@ -65,58 +128,78 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* CENTER DIVIDER */}
-        <div className="hidden md:block absolute left-1/2 top-0 h-full">
-          <div className="h-full w-px bg-black mx-auto relative">
-            <span className="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-black"></span>
-            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-black"></span>
-          </div>
-        </div>
-
-        {/* RIGHT SIDE (Form) */}
+        {/* RIGHT SIDE FORM */}
         <div className="md:pl-12">
-          <h3 className="text-black text-sm tracking-wider mb-3">
-            ✦ WRITE TO US ✦
-          </h3>
+          <h3 className="text-black text-sm tracking-wider mb-3">✦ WRITE TO US ✦</h3>
           <h2 className="text-4xl font-serif mb-3">Message us</h2>
           <p className="text-black dark:text-gray-400 mb-8">
             Contact us — we aim to reply within 24 hours and are happy to help!
           </p>
 
-          <form className="space-y-5">
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full px-4 py-3 bg-transparent border border-black dark:border-gray-600 focus:border-black outline-none placeholder-black dark:placeholder-gray-500"
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full px-4 py-3 bg-transparent border border-black dark:border-gray-600 focus:border-black outline-none placeholder-black dark:placeholder-gray-500"
-            />
-            <input
-              type="text"
-              placeholder="Phone Number"
-              className="w-full px-4 py-3 bg-transparent border border-black dark:border-gray-600 focus:border-black outline-none placeholder-black dark:placeholder-gray-500"
-            />
-            <textarea
-              rows="4"
-              placeholder="Special Request"
-              className="w-full px-4 py-3 bg-transparent border border-black dark:border-gray-600 focus:border-black outline-none placeholder-black dark:placeholder-gray-500"
-            ></textarea>
+          <form className="space-y-5" onSubmit={handleSubmit}>
+            <div>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={form.name}
+                onChange={handleChange}
+                className={`${inputClass} border-black dark:border-gray-600 placeholder-black dark:placeholder-gray-500`}
+              />
+              {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+            </div>
+
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value={form.email}
+                onChange={handleChange}
+                className={`${inputClass} border-black dark:border-gray-600 placeholder-black dark:placeholder-gray-500`}
+              />
+              {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+            </div>
+
+            <div>
+              <input
+                type="text"
+                name="phone"
+                placeholder="Phone Number"
+                value={form.phone}
+                onChange={handleChange}
+                className={`${inputClass} border-black dark:border-gray-600 placeholder-black dark:placeholder-gray-500`}
+              />
+              {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
+            </div>
+
+            <div>
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="Special Request"
+                value={form.message}
+                onChange={handleChange}
+                className={`${inputClass} border-black dark:border-gray-600 placeholder-black dark:placeholder-gray-500`}
+              ></textarea>
+              {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+            </div>
 
             <button
               type="submit"
-              className="bg-black text-white px-8 py-3 font-semibold tracking-wide cursor-pointer dark:bg-[#C5A265] rounded-lg hover:bg-[#c28927] transition "
+              className="bg-black text-white px-8 py-3 font-semibold tracking-wide cursor-pointer dark:bg-[#C5A265] rounded-lg hover:bg-[#c28927] transition"
             >
               SEND YOUR MESSAGE
             </button>
-              <p className="text-xs text-center dark:text-gray-300">By submitting this form, you agree to us processing your details to respond to your enquiry. Your information is handled securely and in line with our Privacy Policy.</p>
+
+            <p className="text-xs text-center dark:text-gray-300 mt-3">
+              By submitting this form, you agree to us processing your details
+              to respond to your enquiry. Your information is handled securely
+              and in line with our Privacy Policy.
+            </p>
           </form>
         </div>
       </div>
     </section>
   );
-};
-
-export default Contact;
+}

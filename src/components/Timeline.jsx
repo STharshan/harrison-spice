@@ -1,5 +1,5 @@
 import React from 'react';
-import { Plane, Sparkles, ChefHat, TrendingUp, Award, Building } from 'lucide-react';
+import { Plane, Sparkles, ChefHat, TrendingUp, Award, Building, Star } from 'lucide-react';
 
 const TimelineEvent = ({ year, title, description, icon: Icon, isLeft }) => {
     return (
@@ -170,8 +170,8 @@ export default function JourneyTimeline() {
                 <div
                     id="timeline-section"
                     className={`relative transition-all scroll-m-20 duration-700 ease-in-out ${showTimeline
-                            ? 'opacity-100 translate-y-0'
-                            : 'opacity-0 -translate-y-10 pointer-events-none overflow-hidden'
+                        ? 'opacity-100 translate-y-0'
+                        : 'opacity-0 -translate-y-10 pointer-events-none overflow-hidden'
                         }`}
                     style={{ maxHeight: showTimeline ? '10000px' : '0' }}
                 >
@@ -209,9 +209,9 @@ export default function JourneyTimeline() {
                 {/* Closing Message */}
                 {showTimeline && (
                     <div className="mt-16 transition-all duration-700 ease-in-out">
-                        <div className="bg-[#C5A265] dark:bg-[#C5A265] rounded-2xl shadow-2xl p-2 text-center">
+                        <div className="bg-[#C5A265] dark:bg-[#C5A265] rounded-2xl shadow-2xl p-4 text-center flex items-center justify-center gap-2">
                             <p className="text-xl md:text-2xl lg:text-3xl font-bold text-white leading-relaxed">
-                                From dreams to reality – every step was worth it! ✨
+                                From dreams to reality – every step was worth it!
                             </p>
                         </div>
                     </div>

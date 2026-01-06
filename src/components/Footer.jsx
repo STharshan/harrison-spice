@@ -1,3 +1,4 @@
+import { Star } from "lucide-react";
 import React from "react";
 import { FaFacebookF, FaInstagram, FaPinterestP, FaYoutube } from "react-icons/fa";
 import { PiChefHatBold } from "react-icons/pi";
@@ -30,7 +31,9 @@ const Footer = () => {
           </div>
 
           {/* Visit Us */}
-          <p className="text-[#C5A265] dark:text-[#C5A265] font-medium mb-2">✦ VISIT US ✦</p>
+          <p className="text-[#C5A265] dark:text-[#C5A265] font-medium mb-2 flex items-center justify-center gap-2">
+            <Star className="w-5 h-5" /> VISIT US <Star className="w-5 h-5" />
+          </p>
           <p>
             <a
               href="https://maps.app.goo.gl/mw462tj8uVG1w7T9A"
@@ -56,7 +59,7 @@ const Footer = () => {
           </p>
 
           <div className="my-6 border-t border-[#C5A265] dark:border-[#C5A265] w-12 mx-auto relative">
-            <span className="absolute left-1/2 -translate-x-1/2 text-[#C5A265] dark:text-[#C5A265]">✦</span>
+            <span className="absolute left-1/2 -translate-x-1/2 text-[#C5A265] dark:text-[#C5A265] mt-2"><Star className="w-5 h-5"/></span>
           </div>
 
           {/* Social Icons */}

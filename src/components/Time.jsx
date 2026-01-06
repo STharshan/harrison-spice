@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 
 export default function EventBooking() {
   return (
@@ -14,44 +15,26 @@ export default function EventBooking() {
           Banquet Night
         </h2>
 
-        {/* Opening Hours Box */}
-        <div className="relative bg-[#0D1514]/60 dark:bg-[#121212]/70 backdrop-blur-sm border border-[#1C1F1E] dark:border-[#2A2A2A] p-8 rounded-lg mb-10">
-          {/* faint drink image */}
-          {/* <img
-            src="/new3.avif"
-            alt="drink"
-            className="absolute right-6 bottom-6 opacity-10 w-40 md:w-48 lg:w-56 select-none pointer-events-none"
-          /> */}
-
-          <h3 className="text-2xl mb-6 font-normal text-white">
+        <div className="relative max-w-xs w-full bg-[#0D1514]/60 dark:bg-[#121212]/70 backdrop-blur-md border border-[#1C1F1E] dark:border-[#2A2A2A] p-6 rounded-xl mb-10 shadow-lg hover:scale-105 transition-transform duration-300">
+          <h3 className="text-xl sm:text-2xl font-semibold text-white text-center">
             Every Tuesday
           </h3>
-
-          {/* <div className="space-y-3 text-base md:text-lg text-gray-300">
-            <div className="flex justify-between">
-              <span className="text-[#C5A265]">Monday - Thursday</span>
-              <span>5.00 pm – 10.30 pm</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-[#C5A265]">Friday - Saturday</span>
-              <span>5.00 pm – 11.00 pm</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-[#C5A265]">Sunday</span>
-              <span>5.00 pm – 9.30 pm</span>
-            </div>
-          </div> */}
         </div>
 
         {/* Reservation */}
         <p className="text-lg mb-6 text-gray-700 dark:text-gray-300">
-          Just Call for Reservation{" "}
-          <span className="text-[#C5A265] font-medium">0116 2395 644</span>
+          Just Call for Reservation:{" "}
+          <a href="tel:01162395644" className="text-[#C5A265] font-sans font-medium hover:underline">
+            0116 2395 644
+          </a>
         </p>
 
-        <button className="bg-black text-[#C7A46B] font-semibold px-6 py-3 rounded-md shadow-md hover:bg-[#d7b784] hover:text-black transition">
+        <HashLink 
+          to="/#contact"
+          smooth
+          className="bg-[#C7A46B] font-semibold px-6 py-3 rounded-md shadow-md hover:bg-[#d7b784] hover:text-black transition">
           BOOK YOUR TABLE
-        </button>
+        </HashLink>
       </div>
 
       {/* === RIGHT IMAGE === */}
