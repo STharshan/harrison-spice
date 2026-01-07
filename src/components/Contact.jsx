@@ -111,7 +111,7 @@ Message: ${form.message}
               Friday - Saturday — 5.00 pm – 11.00 pm
             </p>
             <p className="text-black dark:text-gray-400">
-              Sunday — 5.00 pm – 9.30 pm
+              Sunday — 5.00 pm – 9.00 pm
             </p>
 
             <p className="text-black dark:text-gray-400 mt-4">

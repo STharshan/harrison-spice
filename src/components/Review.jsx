@@ -57,21 +57,15 @@ export default function Review() {
   }, [isAutoPlaying, currentIndex]);
 
   return (
-    <section
-      className="relative bg-black text-white overflow-hidden"
-      id="review"
-    >
-      {/* Background */}
-      <div className="absolute inset-0 flex items-center justify-center">
+    <section className="relative bg-black text-white overflow-hidden" id="review">
+      
+      {/* Heading with Logo */}
+      <div className="relative z-10 text-center pt-16 pb-12 flex flex-col items-center">
         <img
           src="logo.png"
-          alt="Hear it from our clients"
-          className="w-[100%] max-w-6xl object-contain"
+          alt="Harrisons Spice Logo"
+          className="w-32 md:w-40 mb-6 object-contain"
         />
-      </div>
-
-      {/* Heading */}
-      <div className="relative z-10 text-center pt-32 pb-12">
         <h2 className="text-4xl md:text-5xl font-semibold text-[#C5A265]">
           Hear it from our clients
         </h2>
@@ -114,10 +108,7 @@ export default function Review() {
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {testimonials.map((item, i) => (
-                <div
-                  key={i}
-                  className="w-full flex-shrink-0 px-2"
-                >
+                <div key={i} className="w-full flex-shrink-0 px-2">
                   <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 
                   shadow-[0_0_20px_rgba(0,0,0,0.3)] p-6 md:p-8">
                     <p className="text-sm md:text-base opacity-80 mb-6 leading-relaxed">
