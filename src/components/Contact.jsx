@@ -1,4 +1,5 @@
 "use client";
+import { Star } from "lucide-react";
 import React, { useState } from "react";
 
 export default function Contact() {
@@ -80,14 +81,18 @@ Message: ${form.message}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <div className="relative w-80 h-96 overflow-hidden rounded-t-full border border-black p-1">
             <img
-              src="/side.png"
+              src="/c1.png"
               alt="Restaurant Interior"
               className="w-full h-full object-cover rounded-t-full"
             />
           </div>
 
           <div className="mt-8 space-y-2">
-            <h3 className="text-black font-medium tracking-wide">✦ VISIT US ✦</h3>
+            <h3 className="flex items-center gap-2 text-black font-medium tracking-wide">
+              <Star className="w-5 h-5 text-[#C5A265]" />
+              VISIT US
+              <Star className="w-5 h-5 text-[#C5A265]" />
+            </h3>
             <p className="text-black dark:text-gray-400">
               <a
                 href="https://maps.app.goo.gl/er1GfnFtH3k9oxV79"
@@ -130,7 +135,11 @@ Message: ${form.message}
 
         {/* RIGHT SIDE FORM */}
         <div className="md:pl-12">
-          <h3 className="text-black text-sm tracking-wider mb-3">✦ WRITE TO US ✦</h3>
+          <h3 className="flex items-center gap-2 text-black text-sm tracking-wider mb-3">
+            <Star className="w-4 h-4 text-[#C5A265]" />
+            WRITE TO US
+            <Star className="w-4 h-4 text-[#C5A265]" />
+          </h3>
           <h2 className="text-4xl font-serif mb-3">Message us</h2>
           <p className="text-black dark:text-gray-400 mb-8">
             Contact us — we aim to reply within 24 hours and are happy to help!

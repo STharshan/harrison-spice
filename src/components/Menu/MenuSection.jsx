@@ -408,7 +408,7 @@ export default function MenuFlipbook() {
               className={`px-3 py-2 text-sm font-semibold rounded-lg transition-all
                 ${isActive
                   ? "bg-[#C5A265] text-black dark:text-white shadow-lg"
-                  : "bg-white dark:bg-neutral-800 text-black dark:text-white border border-[#C5A265] hover:scale-105 shadow-sm"
+                  : "bg-white dark:bg-neutral-800 text-black dark:text-white uppercase border border-[#C5A265] hover:scale-105 shadow-sm"
                 }`}
             >
               {s.title}

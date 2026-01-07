@@ -5,34 +5,31 @@ import "aos/dist/aos.css";
 
 const makiItems = [
   {
-    name: "Lamb Shank",
-    description:
-      "A tantalizing blend of spicy tuna, cucumber, and avocado, harmoniously rolled in nori and seasoned rice.",
-    price: "£x",
-    image: "/n4.png",
+    name: "Vegetable Pakora",
+    description: "Crispy, spiced vegetable fritters, perfect as a snack or starter.",
+    price: "£3.95",
+    image: "/s1.png",
   },
   {
-    name: "Monk Fish",
-    description:
-      "Tempura-fried shrimp, cucumber, and cream cheese embrace a center of fresh avocado, delivering a satisfying contrast of textures.",
-    price: "£x",
-    image: "/n3.png",
+    name: "Murag Chilli Masala",
+    description: "Tender chicken cooked in a spicy chili and masala sauce.",
+    price: "£9.95",
+    image: "/s2.png",
   },
   {
-    name: "Duck Meat",
-    description:
-      "Shiitake mushrooms, avocado, and pickled daikon radish nestle within a roll of seasoned rice, coated with nutty sesame seeds.",
-    price: "£x",
-    image: "/n2.png",
+    name: "Tandoori Chicken",
+    description: "Juicy chicken marinated in yogurt and spices, cooked in a tandoor.",
+    price: "£3.95",
+    image: "/s3.png",
   },
   {
-    name: "King Prawn",
-    description:
-      "A vibrant assortment of julienned carrots, bell peppers, and cucumber, tightly encased in a nori-wrapped rice roll.",
-    price: "£x",
-    image: "/n1.png",
+    name: "Butter Chicken Masala",
+    description: "Creamy tomato-based chicken curry with mild spices.",
+    price: "£8.45",
+    image: "/s4.png",
   },
 ];
+
 
 export default function FeaturedMenu() {
   useEffect(() => {
@@ -80,7 +77,7 @@ export default function FeaturedMenu() {
                 <h3 className="text-xl md:text-2xl text-gray-800 dark:text-[#f5f0e1] font-light uppercase tracking-widest">
                   {item.name}
                 </h3>
-                <span className="text-gray-700 dark:text-[#f5f0e1] text-lg">
+                <span className="text-gray-700 dark:text-[#f5f0e1] text-lg font-sans">
                   {item.price}
                 </span>
               </div>

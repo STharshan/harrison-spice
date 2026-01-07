@@ -102,7 +102,7 @@ export default function TeamSection() {
             className="relative flex items-center justify-between bg-[#C5A265] p-8 rounded-xl border border-gray-300 dark:border-gray-800 overflow-hidden transition-all duration-500"
           >
             {/* Social Icons - Vertical Left */}
-            <div className="flex flex-col gap-4">
+            {/* <div className="flex flex-col gap-4">
               <a
                 href={member.socials.instagram}
                 target="_blank"
@@ -127,7 +127,7 @@ export default function TeamSection() {
               >
                 <FaLinkedinIn className="text-xl" />
               </a>
-            </div>
+            </div> */}
 
             {/* Profile Info & Image */}
             <div className="flex flex-col items-center mx-auto w-full">
@@ -176,7 +176,7 @@ export default function TeamSection() {
             </p>
 
             {/* Social Icons */}
-            <div className="flex justify-center gap-3 text-white">
+            {/* <div className="flex justify-center gap-3 text-white">
               <a
                 href={member.socials.instagram}
                 target="_blank"
@@ -201,7 +201,7 @@ export default function TeamSection() {
               >
                 <FaLinkedinIn className="text-lg" />
               </a>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>

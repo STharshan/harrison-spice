@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex justify-center lg:justify-start w-full lg:w-1/3">
           <div className="rounded-full border border-[#C5A265] dark:border-[#C5A265] overflow-hidden w-64 h-64 flex items-center justify-center">
             <img
-              src="/side.png"
+              src="/f1.png"
               alt="Restaurant Interior"
               className="object-cover w-full h-full"
             />
@@ -59,7 +59,7 @@ const Footer = () => {
           </p>
 
           <div className="my-6 border-t border-[#C5A265] dark:border-[#C5A265] w-12 mx-auto relative">
-            <span className="absolute left-1/2 -translate-x-1/2 text-[#C5A265] dark:text-[#C5A265] mt-2"><Star className="w-5 h-5"/></span>
+            <span className="absolute left-1/2 -translate-x-1/2 text-[#C5A265] dark:text-[#C5A265] mt-2"></span>
           </div>
 
           {/* Social Icons */}
@@ -73,7 +73,7 @@ const Footer = () => {
         <div className="flex justify-center lg:justify-end w-full lg:w-1/3">
           <div className="rounded-full border border-[#C5A265] dark:border-[#C5A265] overflow-hidden w-64 h-64 flex items-center justify-center">
             <img
-              src="/side.png"
+              src="/f2.png"
               alt="Delicious Dish"
               className="object-cover w-full h-full"
             />

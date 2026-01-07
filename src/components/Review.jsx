@@ -1,38 +1,10 @@
 "use client";
-import React, { useRef, useLayoutEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import React, { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Review() {
-  const sectionRef = useRef(null);
-  const cardsContainerRef = useRef(null);
-  const cardsRef = useRef([]);
-
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      const cards = cardsRef.current;
-
-      gsap.set(cards, { yPercent: 30, opacity: 0 });
-      gsap.set(cards[0], { yPercent: 0, opacity: 1 });
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: cardsContainerRef.current,
-          start: "top 80%",
-          end: "+=" + cards.length * 400,
-          scrub: 1.5,
-        },
-      });
-
-      cards.forEach((card, i) => {
-        if (i === 0) return;
-        tl.to(cards[i], { opacity: 1, yPercent: 0, duration: 1 }, i * 0.5);
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const testimonials = [
     {
@@ -61,9 +33,31 @@ export default function Review() {
     },
   ];
 
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
+  // Auto-play functionality
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, currentIndex]);
+
   return (
     <section
-      ref={sectionRef}
       className="relative bg-black text-white overflow-hidden"
       id="review"
     >
@@ -72,7 +66,7 @@ export default function Review() {
         <img
           src="logo.png"
           alt="Hear it from our clients"
-          className="w-[100%]  max-w-6xl object-contain "
+          className="w-[100%] max-w-6xl object-contain"
         />
       </div>
 
@@ -83,34 +77,86 @@ export default function Review() {
         </h2>
       </div>
 
-      {/* Testimonials */}
+      {/* Carousel Container */}
       <div
-        ref={cardsContainerRef}
-        className="relative z-10 max-w-xl mx-auto flex flex-col items-center gap-8 pb-20"
+        className="relative z-10 max-w-3xl mx-auto px-4 pb-20"
+        onMouseEnter={() => setIsAutoPlaying(false)}
+        onMouseLeave={() => setIsAutoPlaying(true)}
       >
-        {testimonials.map((item, i) => (
-          <div
-            key={i}
-            ref={(el) => (cardsRef.current[i] = el)}
-            className="w-full bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 
-            shadow-[0_0_20px_rgba(0,0,0,0.3)] p-6 md:p-8 opacity-0 transform translate-y-8"
+        {/* Carousel */}
+        <div className="relative">
+          {/* Previous Button */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-20 
+            bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-full p-2 md:p-3 
+            transition-all duration-300 border border-white/20"
+            aria-label="Previous review"
           >
-            <p className="text-lg md:text-xl font-semibold mb-3">{item.title}</p>
-            <p className="text-sm md:text-base opacity-80 mb-4">{item.text}</p>
-            <div className="flex items-center gap-3">
-              <span
-                className="w-10 h-10 rounded-full flex items-center justify-center font-semibold"
-                style={{ backgroundColor: item.bg, color: "#360802" }}
-              >
-                {item.initials}
-              </span>
-              <span>{item.name}</span>
+            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+          </button>
+
+          {/* Next Button */}
+          <button
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-20 
+            bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-full p-2 md:p-3 
+            transition-all duration-300 border border-white/20"
+            aria-label="Next review"
+          >
+            <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+          </button>
+
+          {/* Review Cards */}
+          <div className="relative overflow-hidden">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {testimonials.map((item, i) => (
+                <div
+                  key={i}
+                  className="w-full flex-shrink-0 px-2"
+                >
+                  <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 
+                  shadow-[0_0_20px_rgba(0,0,0,0.3)] p-6 md:p-8">
+                    <p className="text-sm md:text-base opacity-80 mb-6 leading-relaxed">
+                      {item.text}
+                    </p>
+                    <div className="flex items-center gap-3">
+                      <span
+                        className="w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm"
+                        style={{ backgroundColor: item.bg, color: "#360802" }}
+                      >
+                        {item.initials}
+                      </span>
+                      <span className="font-medium">{item.name}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        ))}
+
+          {/* Dots Navigation */}
+          <div className="flex justify-center gap-2 mt-8">
+            {testimonials.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => goToSlide(i)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  i === currentIndex
+                    ? "bg-[#C5A265] w-8"
+                    : "bg-white/30 hover:bg-white/50"
+                }`}
+                aria-label={`Go to review ${i + 1}`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
 
-      {/* === CTA BUTTON TO GOOGLE REVIEWS === */}
+      {/* CTA BUTTON TO GOOGLE REVIEWS */}
       <div className="relative z-10 pb-28 text-center">
         <a
           href="https://www.google.com/search?sca_esv=cb427c73f925e7d3&rlz=1C5CHFA_enCA1132CA1132&sxsrf=AE3TifNP1hfnOUI-vDbstuSqJ_1SgFsKWA:1764250864617&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E5UMQSIpzR6CcUH4NJtD0qduShT0hwUWz22zNi5zwvrrL9rGE4VMMjyk4LFbaG_SBI1HGyIDoRbuBHyHKOQzEwxE9Png&q=Harrisons+Spice+Reviews&sa=X&ved=2ahUKEwja7dHQupKRAxUdQPUHHWCMAC8Q0bkNegQIIRAE&biw=1366&bih=633&dpr=1"
