@@ -4,8 +4,18 @@ import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  // Handle scroll effect for a "beautiful" sticky feel
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Apply stored theme
   useEffect(() => {
@@ -17,9 +27,7 @@ const Navbar = () => {
     }
   }, []);
 
-  // 🛒 OPEN ORDER MENU (WORKS EVERY TIME)
   const openOrderMenu = () => {
-    // Load script once
     if (!document.getElementById("glf-script")) {
       const script = document.createElement("script");
       script.src = "https://www.fbgcdn.com/embedder/js/ewm2.js";
@@ -29,7 +37,6 @@ const Navbar = () => {
       document.body.appendChild(script);
     }
 
-    // Trigger widget every click
     const interval = setInterval(() => {
       const btn = document.querySelector(".glf-button");
       if (btn) {
@@ -39,91 +46,103 @@ const Navbar = () => {
     }, 200);
   };
 
+  const handleMobileLinkClick = () => setIsMenuOpen(false);
+
   return (
     <>
-      {/* Header */}
-      <header className="bg-black border-b border-gray-300 dark:border-gray-700 shadow-sm fixed top-0 left-0 w-full z-50 transition-colors duration-300">
-        <div className="px-4 py-2 flex items-center justify-between max-w-7xl mx-auto">
-
-          {/* Logo */}
-          <div className="flex items-center space-x-4">
+      <header
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+          scrolled 
+            ? "bg-black/90 dark:bg-gray-900/90 backdrop-blur-md py-2 shadow-lg" 
+            : "bg-black dark:bg-gray-900 py-4"
+        } border-b border-white/10`}
+      >
+        <div className="px-6 flex items-center justify-between max-w-7xl mx-auto">
+          
+          {/* 1. Logo Section */}
+          <div className="flex-shrink-0">
             <img
               src="logo.png"
-              alt="Harrison's Spice Logo"
-              width={200}
-              height={60}
-              className="h-16 w-auto rounded-lg"
+              alt="Logo"
+              className="h-12 md:h-14 w-auto rounded-lg transition-transform hover:scale-105"
             />
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden text-lg flex-grow md:flex justify-center space-x-6 font-semibold text-white dark:text-gray-100">
-            <HashLink smooth to="/#home" className="hover:text-[#C5A265]">
-              Home
-            </HashLink>
-            <HashLink smooth to="/#about" className="hover:text-[#C5A265]">
-              About
-            </HashLink>
-            <HashLink smooth to="/#menu" className="hover:text-[#C5A265]">
-              Menu
-            </HashLink>
-            <HashLink smooth to="/#review" className="hover:text-[#C5A265]">
-              Review
-            </HashLink>
-            <HashLink smooth to="/#contact" className="hover:text-[#C5A265]">
-              Contact
-            </HashLink>
+          {/* 2. Desktop Navigation (Hidden on Mobile) */}
+          <nav className="hidden lg:flex items-center space-x-8 font-medium text-white">
+            {["home", "about", "menu", "review", "contact"].map((section) => (
+              <HashLink
+                key={section}
+                smooth
+                to={`/#${section}`}
+                className="hover:text-[#C5A265] transition-colors relative group"
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#C5A265] transition-all group-hover:w-full"></span>
+              </HashLink>
+            ))}
           </nav>
 
-          {/* Right Section */}
-          <div className="hidden md:flex items-center space-x-3">
+          {/* 3. Action Section (Theme & Buttons) */}
+          <div className="flex items-center space-x-2 md:space-x-4">
+            <ThemeToggle />
+            
+            {/* Desktop Order Button */}
             <button
               onClick={openOrderMenu}
-              className="bg-[#C5A265] transition-transform duration-300 hover:scale-105 py-2 px-3 rounded-lg font-semibold text-white hover:bg-white hover:text-black"
+              className="hidden md:block bg-[#C5A265] py-2 px-5 rounded-full font-bold text-white hover:bg-white hover:text-black transition-all transform hover:scale-105"
             >
               Order Now
             </button>
-          </div>
 
-          {/* Theme Toggle */}
-          <div className="ml-2">
-            <ThemeToggle />
+            {/* Mobile Hamburger - Perfectly Aligned */}
+            <button
+              onClick={toggleMenu}
+              className="lg:hidden text-white p-2 focus:outline-none"
+              aria-label="Toggle Menu"
+            >
+              <div className="w-6 h-5 flex flex-col justify-between items-center">
+                <span className={`h-0.5 w-full bg-white transition-all ${isMenuOpen ? "rotate-45 translate-y-2" : ""}`}></span>
+                <span className={`h-0.5 w-full bg-white transition-all ${isMenuOpen ? "opacity-0" : ""}`}></span>
+                <span className={`h-0.5 w-full bg-white transition-all ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}></span>
+              </div>
+            </button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="md:hidden p-2 text-white"
-          >
-            {isMenuOpen ? "✕" : "☰"}
-          </button>
         </div>
       </header>
 
-      {/* Mobile Menu */}
+      {/* Mobile Full-Screen Overlay */}
       <div
-        className={`${isMenuOpen ? "block" : "hidden"} md:hidden top-20 fixed left-0 w-full bg-[#1a1a1a] py-4 z-40`}
+        className={`lg:hidden fixed inset-0 z-40 bg-black/95 backdrop-blur-xl transition-transform duration-500 ${
+          isMenuOpen ? "translate-y-0" : "-translate-y-full"
+        }`}
       >
-        <div className="flex flex-col items-center space-y-4 font-semibold text-white">
-          <HashLink smooth to="/#home">Home</HashLink>
-          <HashLink smooth to="/#menu">Menu</HashLink>
-          <HashLink smooth to="/#about">About</HashLink>
-          <HashLink smooth to="/#review">Review</HashLink>
-          <HashLink smooth to="/#contact">Contact</HashLink>
+        <div className="flex flex-col items-center justify-center h-full space-y-8 text-white font-bold text-2xl">
+          {["home", "about", "menu", "review", "contact"].map((section, idx) => (
+            <HashLink
+              key={section}
+              smooth
+              to={`/#${section}`}
+              onClick={handleMobileLinkClick}
+              className={`hover:text-[#C5A265] transform transition-all delay-${idx * 100} ${isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </HashLink>
+          ))}
 
           <button
             onClick={() => {
               openOrderMenu();
-              setIsMenuOpen(false);
+              handleMobileLinkClick();
             }}
-            className="bg-[#C5A265] py-2 px-3 rounded-lg font-semibold hover:bg-black"
+            className="bg-[#C5A265] py-3 px-10 rounded-full text-xl shadow-xl active:scale-95 transition-transform"
           >
             Order Now
           </button>
         </div>
       </div>
 
-      {/* 🔹 HIDDEN WIDGET TRIGGER (REQUIRED) */}
+      {/* Hidden Widget */}
       <span
         className="glf-button"
         data-glf-cuid="c9acbc14-8aa6-4d14-af94-14159d5fe9b7"
