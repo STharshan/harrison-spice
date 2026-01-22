@@ -15,22 +15,16 @@ const Hero = () => {
       className="relative h-screen overflow-hidden bg-white dark:bg-black transition-colors duration-300"
     >
       {/* Background Video */}
-      {/* Background Video */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <iframe
-          src="https://player.vimeo.com/video/1153195041?background=1&autoplay=1&loop=1&muted=1"
-          className="
-      absolute
-      top-1/2 left-1/2
-      w-[120vw] h-[120vh]
-      -translate-x-1/2 -translate-y-1/2
-    "
-          frameBorder="0"
-          allow="autoplay; fullscreen"
-          title="Background Video"
-        />
-      </div>
-
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-1/2 left-1/2 w-[120vw] h-[120vh] -translate-x-1/2 -translate-y-1/2 object-cover pointer-events-none"
+      >
+        <source src="/bg.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/60" />
