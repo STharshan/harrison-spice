@@ -1,4 +1,3 @@
-"use client";
 import { Star } from "lucide-react";
 import React, { useState } from "react";
 

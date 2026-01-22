@@ -1,18 +1,12 @@
-'use client';
-
 import React, { forwardRef, useMemo, useRef, useState, useEffect } from "react";
 import HTMLFlipBook from "react-pageflip";
 import { motion } from "framer-motion";
 import sectionsSeed from "./Menu.json";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import {
   FiChevronLeft,
   FiChevronRight,
   FiMapPin,
   FiPhone,
-  FiSun,
-  FiMoon,
 } from "react-icons/fi";
 import { LuChefHat } from "react-icons/lu";
 
@@ -246,7 +240,6 @@ export default function MenuFlipbook() {
   const [itemsPerPage, setItemsPerPage] = useState(6);
 
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
 
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setDarkMode(true);

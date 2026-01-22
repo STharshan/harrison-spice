@@ -1,16 +1,6 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 
 const FindUs = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // animation duration in ms
-      offset: 100, // trigger animation 100px before element
-      easing: "ease-in-out",
-      once: true, // animate only once
-    });
-  }, []);
 
   return (
     <section className="py-10 px-4 bg-[#C7A46B] dark:bg-black">

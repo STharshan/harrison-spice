@@ -1,13 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { FaUtensils } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const Hero = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
 
   return (
     <section

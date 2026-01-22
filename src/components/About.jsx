@@ -1,13 +1,10 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   GiKnifeFork,
   GiMeal,
   GiChefToque,
 } from "react-icons/gi"; // Restaurant/Food Icons
 import { FiArrowRight, FiX } from "react-icons/fi";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const items = [
   {
@@ -35,10 +32,6 @@ const items = [
 
 export default function About() {
   const [selected, setSelected] = useState(null);
-
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: false, mirror: true });
-  }, []);
 
   return (
     <section

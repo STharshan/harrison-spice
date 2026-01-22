@@ -1,7 +1,4 @@
-"use client";
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 
 const makiItems = [
   {
@@ -32,9 +29,6 @@ const makiItems = [
 
 
 export default function FeaturedMenu() {
-  useEffect(() => {
-    AOS.init({ duration: 800, once: true, easing: "ease-in-out" });
-  }, []);
 
   return (
     <section className="bg-white dark:bg-black py-20 px-6 font-serif transition-colors duration-500">

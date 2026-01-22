@@ -1,6 +1,6 @@
 import { Star } from "lucide-react";
 import React from "react";
-import { FaFacebookF, FaInstagram, FaPinterestP, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { PiChefHatBold } from "react-icons/pi";
 
 const Footer = () => {
