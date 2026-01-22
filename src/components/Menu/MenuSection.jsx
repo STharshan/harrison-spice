@@ -17,7 +17,7 @@ import {
 import { LuChefHat } from "react-icons/lu";
 
 // ---------- Utility: Page Splitter ----------
-const paginateByHeight = (items, maxHeight = 550) => {
+const paginateByHeight = (items, maxHeight = 800) => {
   const pages = [];
   let currentPage = [];
   let currentHeight = 0;
