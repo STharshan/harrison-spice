@@ -17,30 +17,11 @@ import {
 import { LuChefHat } from "react-icons/lu";
 
 // ---------- Utility: Page Splitter ----------
-const paginateByHeight = (items, maxHeight = 800) => {
+const paginateByItemCount = (items, itemsPerPage) => {
   const pages = [];
-  let currentPage = [];
-  let currentHeight = 0;
-
-  items.forEach((item) => {
-    const isSmallScreen =
-      typeof window !== "undefined" && window.innerWidth < 640;
-    const baseHeight = isSmallScreen ? 240 : 130;
-    const estimatedHeight =
-      baseHeight +
-      (item.description ? Math.min(item.description.length / 3, 100) : 0);
-
-    if (currentHeight + estimatedHeight > maxHeight && currentPage.length > 0) {
-      pages.push(currentPage);
-      currentPage = [item];
-      currentHeight = estimatedHeight;
-    } else {
-      currentPage.push(item);
-      currentHeight += estimatedHeight;
-    }
-  });
-
-  if (currentPage.length > 0) pages.push(currentPage);
+  for (let i = 0; i < items.length; i += itemsPerPage) {
+    pages.push(items.slice(i, i + itemsPerPage));
+  }
   return pages;
 };
 
@@ -56,9 +37,8 @@ const Page = forwardRef(({ children, className }, ref) => (
       backgroundRepeat: "no-repeat",
     }}
   >
-    {/* Overlay */}
     <div className="absolute inset-0 bg-black/50" />
-    <div className="relative h-full w-full p-4 sm:p-8 overflow-y-auto text-neutral-800 dark:text-neutral-200">
+    <div className="relative h-full w-full p-4 lg:p-6 overflow-y-auto text-neutral-800 dark:text-neutral-200">
       {children}
     </div>
   </div>
@@ -69,7 +49,6 @@ Page.displayName = "Page";
 const CoverPage = forwardRef(({ restaurant, tagline }, ref) => (
   <Page ref={ref}>
     <div className="flex flex-col h-full justify-center items-center text-center relative ">
-      {/* Decorative corners */}
       <div className="absolute top-4 left-4 w-12 sm:w-16 h-12 sm:h-16 border-t-2 border-l-2 border-[#C5A265]/40" />
       <div className="absolute top-4 right-4 w-12 sm:w-16 h-12 sm:h-16 border-t-2 border-r-2 border-[#C5A265]/40" />
       <div className="absolute bottom-4 left-4 w-12 sm:w-16 h-12 sm:h-16 border-b-2 border-l-2 border-[#C5A265]/40" />
@@ -118,9 +97,9 @@ CoverPage.displayName = "CoverPage";
 const SectionPage = forwardRef(({ title, subtitle, items }, ref) => (
   <Page ref={ref}>
     <div className="flex flex-col h-full">
-      <div className="mb-4">
+      <div className="mb-3">
         <h2
-          className="text-lg sm:text-2xl font-bold text-[#C5A265]"
+          className="text-xl lg:text-2xl font-bold text-[#C5A265]"
           style={{ fontFamily: "serif" }}
         >
           {title}
@@ -132,25 +111,25 @@ const SectionPage = forwardRef(({ title, subtitle, items }, ref) => (
         )}
       </div>
 
-      <div className="grid grid-cols-1 gap-3">
+      <div className="grid grid-cols-1 gap-2.5">
         {items.map((item) => (
           <div
             key={item.name}
-            className="flex gap-3 bg-white/70 dark:bg-neutral-800/70 rounded-xl p-3 shadow hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
+            className="flex gap-2.5 bg-white/70 dark:bg-neutral-800/70 rounded-lg p-2.5 shadow hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
           >
-            {/* {item.image && (
+            {item.image && (
               <img
                 src={item.image}
                 alt={item.name}
-                className="h-14 w-14 sm:h-20 sm:w-20 object-cover rounded-lg flex-shrink-0"
+                className="h-16 w-16 lg:h-18 lg:w-18 object-cover rounded-lg flex-shrink-0"
               />
-            )} */}
-            <div className="flex-1">
-              <p className="text-[#C5A265] font-semibold text-sm sm:text-base">
+            )}
+            <div className="flex-1 min-w-0">
+              <p className="text-[#C5A265] font-semibold text-sm lg:text-base">
                 {item.name}
               </p>
               {item.description && (
-                <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-snug">
+                <p className="text-xs lg:text-sm text-neutral-700 dark:text-neutral-300 leading-tight line-clamp-2">
                   {item.description}
                 </p>
               )}
@@ -194,7 +173,6 @@ const InfoPage = forwardRef((_, ref) => (
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-5">
-        {/* Location */}
         <div className="flex items-start gap-3 bg-white/80 dark:bg-neutral-800/70 p-4 rounded-xl shadow">
           <div className="bg-linear-to-br from-[#C5A265] to-orange-500 w-10 h-10 flex items-center justify-center rounded-full text-white">
             <FiMapPin size={20} />
@@ -207,7 +185,6 @@ const InfoPage = forwardRef((_, ref) => (
           </div>
         </div>
 
-        {/* Contact */}
         <div className="flex items-start gap-3 bg-white/80 dark:bg-neutral-800/70 p-4 rounded-xl shadow">
           <div className="bg-linear-to-br from-[#C5A265] to-orange-500 w-10 h-10 flex items-center justify-center rounded-full text-white">
             <FiPhone size={20} />
@@ -266,11 +243,11 @@ export default function MenuFlipbook() {
   const [bookSize, setBookSize] = useState({ width: 700, height: 900 });
   const [isMobile, setIsMobile] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const [itemsPerPage, setItemsPerPage] = useState(6);
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
 
-    // System preference
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setDarkMode(true);
       document.documentElement.classList.add("dark");
@@ -281,6 +258,14 @@ export default function MenuFlipbook() {
       const h = window.innerHeight;
       const mobile = w < 768;
       setIsMobile(mobile);
+      
+      // Desktop: 6 items, Tablet & Mobile: 4 items
+      if (w >= 1024) {
+        setItemsPerPage(6);
+      } else {
+        setItemsPerPage(4);
+      }
+      
       setBookSize({
         width: mobile ? w * 0.9 : Math.min(700, w * 0.8),
         height: mobile ? h * 0.7 : 900,
@@ -305,7 +290,7 @@ export default function MenuFlipbook() {
     let idx = 1;
     sectionsSeed.forEach((section) => {
       map[section.id] = idx;
-      const chunks = paginateByHeight(section.items, 600);
+      const chunks = paginateByItemCount(section.items, itemsPerPage);
       chunks.forEach((chunk, i) => {
         arr.push(
           <SectionPage
@@ -322,7 +307,7 @@ export default function MenuFlipbook() {
     arr.push(<InfoPage key="info" />);
     arr.push(<BackCoverPage key="back" />);
     return { pages: arr, sectionPageMap: map };
-  }, []);
+  }, [itemsPerPage]);
 
   const goPrev = () => flipRef.current?.pageFlip()?.flipPrev();
   const goNext = () => flipRef.current?.pageFlip()?.flipNext();
@@ -330,8 +315,7 @@ export default function MenuFlipbook() {
 
   return (
     <div
-      className={`px-3 py-8 sm:py-12 bg-[#C5A265]  dark:bg-black  transition-colors duration-500"
-        }`}
+      className="px-3 py-8 bg-[#C5A265] dark:bg-black transition-colors duration-500"
       id="menu"
     >
       {/* Header */}
@@ -344,8 +328,7 @@ export default function MenuFlipbook() {
             className="text-3xl sm:text-4xl font-bold text-white dark:text-[#C5A265]"
             style={{ fontFamily: "serif" }}
           >
-            Our Men
-            
+            Our Menu
           </h1>
         </div>
 
