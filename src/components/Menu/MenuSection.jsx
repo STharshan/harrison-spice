@@ -138,13 +138,13 @@ const SectionPage = forwardRef(({ title, subtitle, items }, ref) => (
             key={item.name}
             className="flex gap-3 bg-white/70 dark:bg-neutral-800/70 rounded-xl p-3 shadow hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
           >
-            {item.image && (
+            {/* {item.image && (
               <img
                 src={item.image}
                 alt={item.name}
                 className="h-14 w-14 sm:h-20 sm:w-20 object-cover rounded-lg flex-shrink-0"
               />
-            )}
+            )} */}
             <div className="flex-1">
               <p className="text-[#C5A265] font-semibold text-sm sm:text-base">
                 {item.name}
