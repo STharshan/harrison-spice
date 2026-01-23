@@ -62,6 +62,7 @@ export default function Review() {
       <div className="relative z-10 text-center pt-16 pb-12 flex flex-col items-center">
         <img
           src="logo.png"
+          loading="lazy"
           alt="Harrisons Spice Logo"
           className="w-32 md:w-40 mb-6 object-contain"
         />

@@ -60,6 +60,7 @@ export default function FeaturedMenu() {
             <div className="flex-shrink-0 w-full sm:w-48">
               <img
                 src={item.image}
+                loading="lazy"
                 alt={item.name}
                 className="w-full h-40 object-cover rounded-lg shadow-md"
               />

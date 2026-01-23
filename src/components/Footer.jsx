@@ -12,6 +12,7 @@ const Footer = () => {
           <div className="rounded-full border border-[#C5A265] dark:border-[#C5A265] overflow-hidden w-64 h-64 flex items-center justify-center">
             <img
               src="/f1.png"
+              loading="lazy"
               alt="Restaurant Interior"
               className="object-cover w-full h-full"
             />
@@ -74,6 +75,7 @@ const Footer = () => {
           <div className="rounded-full border border-[#C5A265] dark:border-[#C5A265] overflow-hidden w-64 h-64 flex items-center justify-center">
             <img
               src="/f2.png"
+              loading="lazy"
               alt="Delicious Dish"
               className="object-cover w-full h-full"
             />

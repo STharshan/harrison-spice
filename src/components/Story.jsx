@@ -19,6 +19,7 @@ export default function MyStorySection() {
           <div className="space-y-4 relative z-10">
             <img
               src="/story.jpg"
+              loading="lazy"
               alt="Chef cooking"
               className="rounded-lg w-150 h-100"
             />

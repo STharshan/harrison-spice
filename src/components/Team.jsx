@@ -98,34 +98,6 @@ export default function TeamSection() {
             key={idx}
             className="relative flex items-center justify-between bg-[#C5A265] p-8 rounded-xl border border-gray-300 dark:border-gray-800 overflow-hidden transition-all duration-500"
           >
-            {/* Social Icons - Vertical Left */}
-            {/* <div className="flex flex-col gap-4">
-              <a
-                href={member.socials.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-gray-400 dark:border-gray-600 p-2 rounded hover:border-[#C5A265] transition"
-              >
-                <FaInstagram className="text-xl" />
-              </a>
-              <a
-                href={member.socials.twitter}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-gray-400 dark:border-gray-600 p-2 rounded hover:border-[#C5A265] transition"
-              >
-                <FaXTwitter className="text-xl" />
-              </a>
-              <a
-                href={member.socials.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-gray-400 dark:border-gray-600 p-2 rounded hover:border-[#C5A265] transition"
-              >
-                <FaLinkedinIn className="text-xl" />
-              </a>
-            </div> */}
-
             {/* Profile Info & Image */}
             <div className="flex flex-col items-center mx-auto w-full">
               <div className="w-full text-left mb-6">
@@ -136,6 +108,7 @@ export default function TeamSection() {
               </div>
               <img
                 src={member.image}
+                loading="lazy"
                 alt={member.name}
                 className="w-90 h-105 object-cover rounded-md"
               />
@@ -172,33 +145,6 @@ export default function TeamSection() {
               {member.role}
             </p>
 
-            {/* Social Icons */}
-            {/* <div className="flex justify-center gap-3 text-white">
-              <a
-                href={member.socials.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-gray-300 dark:border-[#2B2B2B] w-9 h-9 flex items-center justify-center hover:border-[#C5A265] transition"
-              >
-                <FaInstagram className="text-lg" />
-              </a>
-              <a
-                href={member.socials.twitter}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-gray-300 dark:border-[#2B2B2B] w-9 h-9 flex items-center justify-center hover:border-[#C5A265] transition"
-              >
-                <FaXTwitter className="text-lg" />
-              </a>
-              <a
-                href={member.socials.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-gray-300 dark:border-[#2B2B2B] w-9 h-9 flex items-center justify-center hover:border-[#C5A265] transition"
-              >
-                <FaLinkedinIn className="text-lg" />
-              </a>
-            </div> */}
           </div>
         ))}
       </div>

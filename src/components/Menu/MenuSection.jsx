@@ -51,6 +51,7 @@ const CoverPage = forwardRef(({ restaurant, tagline }, ref) => (
       <motion.img
         src="/logo.png"
         alt="Harrison Spice Logo"
+        loading="lazy"
         className="w-40 sm:w-56 mb-5 drop-shadow-2xl"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -115,6 +116,7 @@ const SectionPage = forwardRef(({ title, subtitle, items }, ref) => (
               <img
                 src={item.image}
                 alt={item.name}
+                loading="lazy"
                 className="h-16 w-16 lg:h-18 lg:w-18 object-cover rounded-lg flex-shrink-0"
               />
             )}
@@ -196,7 +198,7 @@ const InfoPage = forwardRef((_, ref) => (
       </div>
 
       <div className="flex justify-center mt-6">
-        <img src="/logo.png" alt="Logo" className="w-24 sm:w-32 opacity-90" />
+        <img src="/logo.png" alt="Logo" loading="lazy" className="w-24 sm:w-32 opacity-90" />
       </div>
 
       <p className="text-center text-[10px] sm:text-xs text-neutral-500 dark:text-neutral-400 mt-4 border-t border-[#C5A265]/10 pt-3">
@@ -211,7 +213,7 @@ InfoPage.displayName = "InfoPage";
 const BackCoverPage = forwardRef((_, ref) => (
   <Page ref={ref}>
     <div className="flex flex-col h-full items-center justify-center text-center">
-      <img src="/logo.png" alt="Logo" className="w-36 sm:w-48 mb-6" />
+      <img src="/logo.png" alt="Logo" loading="lazy" className="w-36 sm:w-48 mb-6" />
       <h3
         className="text-2xl sm:text-3xl font-bold text-[#C5A265]"
         style={{ fontFamily: "serif" }}

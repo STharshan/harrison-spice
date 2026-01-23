@@ -61,7 +61,7 @@ export default function About() {
             >
               {/* Image */}
               <div className="w-full h-[280px] rounded-2xl overflow-hidden">
-                <img src={item.img} className="w-full h-full object-cover" />
+                <img src={item.img} loading="lazy" className="w-full h-full object-cover" />
               </div>
 
               {/* Overlay Card */}

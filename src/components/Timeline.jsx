@@ -1,5 +1,5 @@
 import React from 'react';
-import { Plane, Sparkles, ChefHat, TrendingUp, Award, Building, Star } from 'lucide-react';
+import { Plane, Sparkles, ChefHat, TrendingUp, Award, Building } from 'lucide-react';
 
 const TimelineEvent = ({ year, title, description, icon: Icon, isLeft }) => {
     return (

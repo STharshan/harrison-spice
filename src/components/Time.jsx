@@ -42,6 +42,7 @@ export default function EventBooking() {
         <img
           src="/new2.avif"
           alt="chili"
+          loading="lazy"
           className="absolute top-10 -left-40 w-20 md:w-24 lg:w-28 animate-bounce"
         />
 
@@ -49,6 +50,7 @@ export default function EventBooking() {
         <img
           src="/event.png"
           alt="dish"
+          loading="lazy"
           className="relative w-80 md:w-[26rem] lg:w-[30rem] object-contain"
         />
       </div>

@@ -81,6 +81,7 @@ Message: ${form.message}
           <div className="relative w-80 h-96 overflow-hidden rounded-t-full border border-black p-1">
             <img
               src="/c1.png"
+              loading="lazy"
               alt="Restaurant Interior"
               className="w-full h-full object-cover rounded-t-full"
             />

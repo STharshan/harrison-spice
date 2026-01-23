@@ -4,7 +4,6 @@ import About from '../components/About'
 import MenuFlipbook from '../components/Menu/MenuSection'
 import Contact from '../components/Contact'
 import FindUs from '../components/Findus'
-import MyStorySection from '../components/Story'
 import FeaturedMenus from '../components/FeaturedMenus'
 import WhyDineWithUs from '../components/WithUs'
 import EventBooking from '../components/Time'
@@ -19,7 +18,6 @@ const Home = () => {
       <Hero />
       <About />
       <WhatWeOffer />
-      {/* <MyStorySection /> */}
       <Timeline />
       <WhyDineWithUs />
       <FeaturedMenus />

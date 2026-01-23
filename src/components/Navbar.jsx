@@ -63,6 +63,7 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <img
               src="logo.png"
+              loading="lazy"
               alt="Logo"
               className="h-12 md:h-14 w-auto rounded-lg transition-transform hover:scale-105"
             />

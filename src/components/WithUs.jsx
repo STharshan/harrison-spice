@@ -45,6 +45,7 @@ const WhyDineWithUs = () => {
                 <img
                   src={stat.image}
                   alt={stat.title}
+                  loading="lazy"
                   className="w-full h-full object-contain p-2"
                 />
               </div>
@@ -53,17 +54,6 @@ const WhyDineWithUs = () => {
               <h3 className="mt-5 text-lg md:text-xl font-semibold text-gray-200 dark:text-black text-center">
                 {stat.title}
               </h3>
-
-              {/* (Optional stats – uncomment if needed) */}
-              {/* <h3 className="text-4xl md:text-5xl font-bold mt-3 text-[#C5A265] dark:text-black">
-                {stat.number}
-              </h3>
-              <p className="mt-1 uppercase text-sm tracking-wide text-[#e9a736] dark:text-black">
-                {stat.label}
-              </p>
-              <p className="mt-3 text-gray-300 dark:text-black text-sm text-center leading-relaxed">
-                {stat.text}
-              </p> */}
             </div>
           ))}
         </div>
