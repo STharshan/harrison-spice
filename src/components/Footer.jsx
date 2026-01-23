@@ -106,7 +106,7 @@ const Footer = () => {
 
           {/* Center - Copyright */}
           <div className="text-center text-sm text-black dark:text-gray-400">
-            <p>© 2025 All Rights Reserved</p>
+            <p>© {new Date().getFullYear()} All Rights Reserved</p>
           </div>
 
           {/* Right - Powered by */}
