@@ -34,10 +34,13 @@ const Hero = () => {
         loop
         muted
         playsInline
-        className="absolute top-1/2 left-1/2 w-[120vw] h-[120vh] -translate-x-1/2 -translate-y-1/2 object-cover pointer-events-none"
+        poster="/fall.png"
+        onError={(e) => (e.currentTarget.style.display = "none")}
+        className="absolute top-1/2 left-1/2 w-[120vw] h-[120vh] 
+             -translate-x-1/2 -translate-y-1/2 
+             object-cover pointer-events-none"
       >
         <source src="/bg.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
       </video>
 
       {/* Dark Overlay */}
