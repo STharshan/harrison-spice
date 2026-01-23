@@ -4,6 +4,25 @@ import { FiPhone } from "react-icons/fi";
 
 const Hero = () => {
 
+  const openOrderMenu = () => {
+    if (!document.getElementById("glf-script")) {
+      const script = document.createElement("script");
+      script.src = "https://www.fbgcdn.com/embedder/js/ewm2.js";
+      script.async = true;
+      script.defer = true;
+      script.id = "glf-script";
+      document.body.appendChild(script);
+    }
+
+    const interval = setInterval(() => {
+      const btn = document.querySelector(".glf-button");
+      if (btn) {
+        btn.click();
+        clearInterval(interval);
+      }
+    }, 200);
+  };
+
   return (
     <section
       id="home"
@@ -51,14 +70,24 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 items-center justify-center"
           >
             {/* View Menu */}
-            <a href="#menu">
-              <button className="group bg-[#C5A265] hover:scale-105 hover:shadow-lg shadow-black flex items-center text-white py-2 px-6 rounded-lg font-semibold transition-all duration-300">
-                <FaUtensils className="mr-2 h-5 w-5 transition-transform group-hover:-translate-x-1" />
-                <span className="transition-transform group-hover:translate-x-1">
-                  View Menu
-                </span>
+            <button className="group bg-[#C5A265] hover:scale-105 hover:shadow-lg shadow-black flex items-center text-white py-2 px-6 rounded-lg font-semibold transition-all duration-300">
+              <FaUtensils className="mr-2 h-5 w-5 transition-transform group-hover:-translate-x-1" />
+
+              {/* Mobile text */}
+              <button
+                onClick={openOrderMenu}
+                className="sm:hidden transition-transform group-hover:translate-x-1">
+                Order Now
               </button>
-            </a>
+
+              {/* Desktop text */}
+              <a
+                href="#menu"
+                className="hidden sm:inline transition-transform group-hover:translate-x-1">
+                View Menu
+              </a>
+            </button>
+
 
             {/* Reservation */}
             <a href="tel:01162395644">
@@ -72,6 +101,15 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      {/* Hidden Widget */}
+      <span
+        className="glf-button"
+        data-glf-cuid="c9acbc14-8aa6-4d14-af94-14159d5fe9b7"
+        data-glf-ruid="ceb1cabf-e92d-4a29-9345-46ab1c24b01d"
+        style={{ display: "none" }}
+      >
+        Order
+      </span>
     </section>
   );
 };
