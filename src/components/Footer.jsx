@@ -1,6 +1,6 @@
 import { Star } from "lucide-react";
 import React from "react";
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
 import { PiChefHatBold } from "react-icons/pi";
 
 const Footer = () => {
@@ -65,9 +65,25 @@ const Footer = () => {
 
           {/* Social Icons */}
           <div className="flex justify-center gap-4 mt-4">
-            <FaFacebookF className="hover:text-blue-600 text-black dark:hover:text-[#C5A265] cursor-pointer transition-colors duration-300" />
-            <FaInstagram className="hover:text-pink-600 text-black dark:hover:text-[#C5A265] cursor-pointer transition-colors duration-300" />
+            <a
+              href="https://www.tiktok.com/@harrisonspiceofficial?_r=1&_t=ZN-93Ql2Nmc3L4"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+            >
+              <FaTiktok className=" text-black hover:text-[#C5A265] text-xl cursor-pointer transition-colors duration-300" />
+            </a>
+
+            <a
+              href="https://www.instagram.com/harrisonspice.official?igsh=dTA0eTBmdmZ2bDlu&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <FaInstagram className="hover:text-pink-600 text-black text-xl dark:hover:text-[#C5A265] cursor-pointer transition-colors duration-300" />
+            </a>
           </div>
+
         </div>
 
         {/* Right Image */}
