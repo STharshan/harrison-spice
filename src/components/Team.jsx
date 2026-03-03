@@ -1,25 +1,15 @@
-import React from "react";
+
 
 const topTeam = [
   {
     name: " Kolilur ",
     role: "Head Chef",
     image: "/p1.jpg",
-    socials: {
-      instagram: "#",
-      twitter: "#",
-      linkedin: "#",
-    },
   },
   {
     name: "Kabir ",
     role: "Front Of House",
     image: "/p7.jpg",
-    socials: {
-      instagram: "#",
-      twitter: "#",
-      linkedin: "#",
-    },
   },
 ];
 
@@ -28,51 +18,26 @@ const teamMembers = [
     name: "Abhijit ",
     role: "Waiter",
     image: "/p6.jpg",
-    socials: {
-      instagram: "#",
-      twitter: "#",
-      linkedin: "#",
-    },
   },
   {
     name: " Katie ",
     role: "Waiter",
     image: "/p2.jpg",
-    socials: {
-      instagram: "#",
-      twitter: "#",
-      linkedin: "#",
-    },
   },
   {
     name: " Kasrul",
     role: "Second Chef",
     image: "/p3.jpg",
-    socials: {
-      instagram: "#",
-      twitter: "#",
-      linkedin: "#",
-    },
   },
   {
     name: "Mahibub",
     role: "Kitchen assistant",
     image: "/p9.jpg",
-    socials: {
-      instagram: "#",
-      twitter: "#",
-      linkedin: "#",
-    },
   },
   {
     name: "Jamil ",
     role: "Waiter",
     image: "/p8.jpg",
-    socials: {
-      instagram: "#",
-      twitter: "#",
-      linkedin: "#",
-    },
   },
 ];
 

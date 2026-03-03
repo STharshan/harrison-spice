@@ -1,7 +1,8 @@
 import { Star } from "lucide-react";
-import React from "react";
-import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
+
+import { FaInstagram, FaTiktok } from "react-icons/fa";
 import { PiChefHatBold } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -37,7 +38,7 @@ const Footer = () => {
           </p>
           <p>
             <a
-              href="https://maps.app.goo.gl/mw462tj8uVG1w7T9A"
+              href="https://maps.app.goo.gl/WydZrXZ9Qfk4fpQF6"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline text-black dark:text-gray-300"
@@ -71,7 +72,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               aria-label="TikTok"
             >
-              <FaTiktok className=" text-black hover:text-[#C5A265] text-xl cursor-pointer transition-colors duration-300" />
+              <FaTiktok className=" text-black dark:text-gray-200 hover:text-[#C5A265] text-xl cursor-pointer transition-colors duration-300" />
             </a>
 
             <a
@@ -80,7 +81,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               aria-label="Instagram"
             >
-              <FaInstagram className="hover:text-pink-600 text-black text-xl dark:hover:text-[#C5A265] cursor-pointer transition-colors duration-300" />
+              <FaInstagram className="hover:text-pink-600 dark:text-gray-200 text-black text-xl  cursor-pointer transition-colors duration-300" />
             </a>
           </div>
 
@@ -105,19 +106,19 @@ const Footer = () => {
 
           {/* Left - Links */}
           <div className="flex gap-4 text-black dark:text-gray-400 text-sm">
-            <a
-              href="/privacy-policy"
+            <Link
+              to="/privacy-policy"
               className="hover:text-[#C5A265] dark:hover:text-[#C5A265] transition hover:underline"
             >
               Privacy Policy
-            </a>
+            </Link>
             <span>|</span>
-            <a
-              href="/terms&condition"
+            <Link
+              to="/terms-and-conditions"
               className="hover:text-[#C5A265] dark:hover:text-[#C5A265] transition hover:underline"
             >
               Terms & Conditions
-            </a>
+            </Link>
           </div>
 
           {/* Center - Copyright */}

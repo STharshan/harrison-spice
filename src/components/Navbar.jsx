@@ -17,16 +17,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Apply stored theme
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, []);
-
   const openOrderMenu = () => {
     if (!document.getElementById("glf-script")) {
       const script = document.createElement("script");
@@ -51,14 +41,13 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          scrolled 
-            ? "bg-black/90 dark:bg-gray-900/90 backdrop-blur-md py-2 shadow-lg" 
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled
+            ? "bg-black/90 dark:bg-gray-900/90 backdrop-blur-md py-2 shadow-lg"
             : "bg-black dark:bg-gray-900 py-4"
-        } border-b border-white/10`}
+          } border-b border-white/10`}
       >
         <div className="px-6 flex items-center justify-between max-w-7xl mx-auto">
-          
+
           {/* 1. Logo Section */}
           <div className="flex-shrink-0">
             <img
@@ -87,7 +76,7 @@ const Navbar = () => {
           {/* 3. Action Section (Theme & Buttons) */}
           <div className="flex items-center space-x-2 md:space-x-4">
             <ThemeToggle />
-            
+
             {/* Desktop Order Button */}
             <button
               onClick={openOrderMenu}
@@ -114,9 +103,9 @@ const Navbar = () => {
 
       {/* Mobile Full-Screen Overlay */}
       <div
-        className={`lg:hidden fixed inset-0 z-40 bg-black/95 backdrop-blur-xl transition-transform duration-500 ${
-          isMenuOpen ? "translate-y-0" : "-translate-y-full"
-        }`}
+        id="mobile-menu"
+        className={`lg:hidden fixed inset-0 z-40 bg-black/95 backdrop-blur-xl transition-transform duration-500 ${isMenuOpen ? "translate-y-0" : "-translate-y-full"
+          }`}
       >
         <div className="flex flex-col items-center justify-center h-full space-y-8 text-white font-bold text-2xl">
           {["home", "about", "menu", "review", "contact"].map((section, idx) => (

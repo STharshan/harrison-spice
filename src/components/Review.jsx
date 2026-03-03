@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Review() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+   const slideRef = useRef(null);
 
   const testimonials = [
     {
@@ -32,28 +33,35 @@ export default function Review() {
     },
   ];
 
-  const nextSlide = () => {
+// Stable slide function
+  slideRef.current = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
 
+  const nextSlide = () => {
+    slideRef.current();
+  };
+
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   const goToSlide = (index) => {
     setCurrentIndex(index);
   };
 
-  // Auto-play functionality
+  // Optimized Auto-play (no currentIndex dep)
   useEffect(() => {
     if (!isAutoPlaying) return;
-    
+
     const interval = setInterval(() => {
-      nextSlide();
-    }, 5000); // Change slide every 5 seconds
+      slideRef.current();
+    }, 5000);
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying, currentIndex]);
+  }, [isAutoPlaying]);
 
   return (
     <section className="relative bg-black text-white overflow-hidden" id="review">

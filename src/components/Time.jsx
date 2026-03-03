@@ -1,4 +1,4 @@
-import React from "react";
+
 import { HashLink } from "react-router-hash-link";
 
 export default function EventBooking() {
@@ -23,7 +23,7 @@ export default function EventBooking() {
         {/* Reservation */}
         <p className="text-lg mb-6 text-gray-700 dark:text-gray-300">
           Just Call for Reservation:{" "}
-          <a href="tel:01162395644" className="text-[#C5A265] font-sans font-medium hover:underline">
+          <a href="tel:+441162395644" className="text-[#C5A265] font-sans font-medium hover:underline">
             0116 2395 644
           </a>
         </p>

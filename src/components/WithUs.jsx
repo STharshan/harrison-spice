@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const WhyDineWithUs = () => {
 
@@ -7,16 +7,11 @@ const WhyDineWithUs = () => {
     {
       image: "/logo1.png",
       title: "Ratby Town Cricket Club",
-      number: "60+",
-      label: "MONTHLY VISITORS",
-      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry has been.",
+      
     },
     {
       image: "/logo2.png",
       title: "Kirby Muxloe Football Club",
-      number: "22+",
-      label: "POSITIVE REVIEWS",
-      text: "Simply dummy text of the printing and typesetting industry lorem Ipsum has been.",
     },
   ];
 

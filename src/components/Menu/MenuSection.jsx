@@ -1,4 +1,4 @@
-import React, { forwardRef, useMemo, useRef, useState, useEffect } from "react";
+import { forwardRef, useMemo, useRef, useState, useEffect } from "react";
 import HTMLFlipBook from "react-pageflip";
 import { motion } from "framer-motion";
 import sectionsSeed from "./Menu.json";
@@ -242,11 +242,6 @@ export default function MenuFlipbook() {
   const [itemsPerPage, setItemsPerPage] = useState(6);
 
   useEffect(() => {
-
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setDarkMode(true);
-      document.documentElement.classList.add("dark");
-    }
 
     const handleResize = () => {
       const w = window.innerWidth;
