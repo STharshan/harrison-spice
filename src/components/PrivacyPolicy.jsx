@@ -44,7 +44,6 @@ const PrivacyPolicy = () => {
                     </p>
                     <ul className="list-disc ml-6 text-gray-700">
                         <li>Respond to inquiries and provide quotes</li>
-                        <li>Deliver scaffolding services</li>
                         <li>Communicate with you about your project</li>
                         <li>Maintain business records and comply with legal requirements</li>
                     </ul>

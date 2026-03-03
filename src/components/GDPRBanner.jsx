@@ -55,19 +55,22 @@ export default function GDPRConsent() {
 
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3">
-            <button
-              onClick={handleReject}
-              className="bg-[#C5A265] text-white px-4 py-2 rounded text-sm hover:bg-yellow-600 transition"
-            >
-              Reject
-            </button>
+            {/* Accept - Primary */}
             <button
               onClick={handleAccept}
-              className="bg-gray-100 text-gray-900 px-4 py-2 rounded text-sm 
-                         hover:bg-gray-200 transition 
-                         "
+              className="bg-[#C5A265] text-white px-4 py-2 rounded text-sm 
+               hover:bg-yellow-600 transition font-semibold"
             >
               Accept
+            </button>
+
+            {/* Reject - Secondary */}
+            <button
+              onClick={handleReject}
+              className="border border-gray-400 text-gray-200 px-4 py-2 rounded text-sm 
+               hover:bg-gray-700 transition"
+            >
+              Reject
             </button>
           </div>
         </div>

@@ -61,7 +61,7 @@ export default function About() {
             >
               {/* Image */}
               <div className="w-full h-[280px] rounded-2xl overflow-hidden">
-                <img src={item.img} loading="lazy" className="w-full h-full object-cover" />
+                <img src={item.img} loading="lazy" alt="about" className="w-full h-full object-cover" />
               </div>
 
               {/* Overlay Card */}
@@ -119,7 +119,7 @@ export default function About() {
             </div>
 
             <p className="whitespace-pre-line leading-relaxed text-black dark:text-gray-300">
-              {selected.full || "Delightful dining experience awaits!"}
+              {selected.full}
             </p>
           </div>
         </div>

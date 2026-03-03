@@ -108,7 +108,7 @@ Special Request: ${form.message}
 
             <p className="dark:text-gray-400">
               <a
-                href="https://maps.app.goo.gl/er1GfnFtH3k9oxV79"
+                href="https://maps.app.goo.gl/WydZrXZ9Qfk4fpQF6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
