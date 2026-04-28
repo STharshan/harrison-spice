@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FaUtensils } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
 import { openOrderMenu } from "../utils/openOrderMenu";
@@ -63,14 +64,14 @@ const Hero = () => {
             </div>
 
             {/* Reservation */}
-            <a href="tel:+441162395644">
+            <Link to="/reservations">
               <div className="group border border-[#C5A265] hover:scale-105 hover:shadow-lg hover:shadow-[#C5A265] text-white bg-transparent hover:bg-black flex items-center py-2 px-6 rounded-lg font-semibold transition-all duration-300">
                 <FiPhone className="mr-2 h-5 w-5 transition-transform group-hover:-translate-x-1" />
                 <span className="transition-transform group-hover:translate-x-1">
                   Make Reservation
                 </span>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

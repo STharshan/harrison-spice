@@ -1,5 +1,4 @@
-
-import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 export default function EventBooking() {
   return (
@@ -28,12 +27,12 @@ export default function EventBooking() {
           </a>
         </p>
 
-        <HashLink 
-          to="/#contact"
-          smooth
-          className="bg-[#C7A46B] font-semibold px-6 py-3 rounded-md shadow-md hover:bg-[#d7b784] hover:text-black transition">
+        <Link
+          to="/reservations"
+          className="inline-block bg-[#C7A46B] font-semibold px-6 py-3 rounded-md shadow-md hover:bg-[#d7b784] hover:text-black transition text-center"
+        >
           BOOK YOUR TABLE
-        </HashLink>
+        </Link>
       </div>
 
       {/* === RIGHT IMAGE === */}

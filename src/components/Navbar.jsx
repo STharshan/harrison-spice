@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import ThemeToggle from "./ThemeToggle";
 
@@ -77,6 +78,14 @@ const Navbar = () => {
           <div className="flex items-center space-x-2 md:space-x-4">
             <ThemeToggle />
 
+            {/* Desktop Reservations Button */}
+            <Link
+              to="/reservations"
+              className="hidden md:inline-flex items-center justify-center rounded-full border border-white/25 bg-transparent py-2 px-5 font-bold text-white hover:border-[#C5A265] hover:text-[#C5A265] transition-all"
+            >
+              Reservations
+            </Link>
+
             {/* Desktop Order Button */}
             <button
               onClick={openOrderMenu}
@@ -119,6 +128,13 @@ const Navbar = () => {
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </HashLink>
           ))}
+          <Link
+            to="/reservations"
+            onClick={handleMobileLinkClick}
+            className={`hover:text-[#C5A265] text-2xl font-bold ${isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+          >
+            Reservations
+          </Link>
 
           <button
             onClick={() => {
