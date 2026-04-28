@@ -10,8 +10,8 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (!id.includes("node_modules")) return;
-          if (id.includes("react")) return "react";
-          if (id.includes("react-router")) return "router";
+          if (id.includes("/node_modules/react-router")) return "router";
+          if (id.includes("/node_modules/react/") || id.includes("/node_modules/react-dom/")) return "react";
           if (id.includes("lucide-react") || id.includes("react-icons")) return "icons";
           if (id.includes("@tanstack")) return "tanstack";
           return "vendor";
