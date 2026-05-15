@@ -1,3 +1,4 @@
+import React from "react";
 import { FaUtensils } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
 import { openOrderMenu } from "../utils/openOrderMenu";

@@ -1,4 +1,4 @@
-import { forwardRef, useMemo, useRef, useState, useEffect } from "react";
+import React, { forwardRef, useMemo, useRef, useState, useEffect } from "react";
 import HTMLFlipBook from "react-pageflip";
 import { motion } from "framer-motion";
 import sectionsSeed from "./Menu.json";
@@ -238,11 +238,9 @@ export default function MenuFlipbook() {
   const [page, setPage] = useState(0);
   const [bookSize, setBookSize] = useState({ width: 700, height: 900 });
   const [isMobile, setIsMobile] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
   const [itemsPerPage, setItemsPerPage] = useState(6);
 
   useEffect(() => {
-
     const handleResize = () => {
       const w = window.innerWidth;
       const h = window.innerHeight;
@@ -273,7 +271,7 @@ export default function MenuFlipbook() {
       <CoverPage
         key="cover"
         restaurant="Harrison Spice"
-        tagline="Modern Comfort Food & Coastal Cocktails"
+        tagline="Modern Indian Comfort Food"
       />
     );
 
@@ -360,9 +358,8 @@ export default function MenuFlipbook() {
           onFlip={(e) => setPage(e.data)}
           ref={flipRef}
         >
-          {pages.map((node, idx) => (
-            <div key={idx}>{node}</div>
-          ))}
+          {/* Mapping direct React forwardRef components inside HTMLFlipBook */}
+          {pages.map((node) => node)}
         </HTMLFlipBook>
       </div>
 

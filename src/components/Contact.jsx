@@ -56,7 +56,7 @@ Special Request: ${form.message}
 
     window.open(url, "_blank");
 
-    // ✅ Clear the form after submission
+    // Clear the form after submission
     setForm({
       guests: "1 Person",
       date: "",

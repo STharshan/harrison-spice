@@ -1,4 +1,4 @@
-
+import React from "react";
 import { HashLink } from "react-router-hash-link";
 
 export default function EventBooking() {

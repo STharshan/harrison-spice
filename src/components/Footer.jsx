@@ -1,5 +1,5 @@
+import React from "react";
 import { Star } from "lucide-react";
-
 import { FaInstagram, FaTiktok } from "react-icons/fa";
 import { PiChefHatBold } from "react-icons/pi";
 import { Link } from "react-router-dom";
