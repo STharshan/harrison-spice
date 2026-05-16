@@ -112,6 +112,7 @@ const SectionPage = forwardRef(({ title, subtitle, items }, ref) => (
             key={item.name}
             className="flex gap-2.5 bg-white/70 dark:bg-neutral-800/70 rounded-lg p-2.5 shadow hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
           >
+
             <div className="flex-1 min-w-0">
               <p className="text-[#C5A265] font-semibold text-sm lg:text-base">
                 {item.name}
@@ -350,7 +351,6 @@ export default function MenuFlipbook() {
           onFlip={(e) => setPage(e.data)}
           ref={flipRef}
         >
-          {/* Mapping direct React forwardRef components inside HTMLFlipBook */}
           {pages.map((node) => node)}
         </HTMLFlipBook>
       </div>
