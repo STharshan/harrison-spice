@@ -1,4 +1,4 @@
-import React, { forwardRef, useMemo, useRef, useState, useEffect } from "react";
+import { forwardRef, useMemo, useRef, useState, useEffect } from "react";
 import HTMLFlipBook from "react-pageflip";
 import { motion } from "framer-motion";
 import sectionsSeed from "./Menu.json";
@@ -23,7 +23,7 @@ const paginateByItemCount = (items, itemsPerPage) => {
 const Page = forwardRef(({ children, className }, ref) => (
   <div
     ref={ref}
-    className={`relative h-full w-full overflow-hidden rounded-[28px] border border-white/20 shadow-[0_24px_70px_rgba(15,23,42,0.45)] ${className || ""}`}
+    className={`relative h-full w-full overflow-hidden rounded-2xl ${className || ""}`}
     style={{
       backgroundImage: 'url("/back.jpg")',
       backgroundSize: "cover",
@@ -31,9 +31,8 @@ const Page = forwardRef(({ children, className }, ref) => (
       backgroundRepeat: "no-repeat",
     }}
   >
-    <div className="absolute inset-0 " />
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.35),_transparent_48%)]" />
-    <div className="relative h-full w-full overflow-y-auto p-4 text-[#2a2117] lg:p-6">
+    <div className="absolute inset-0 bg-black/50" />
+    <div className="relative h-full w-full p-4 lg:p-6 overflow-y-auto text-neutral-800 ">
       {children}
     </div>
   </div>
@@ -70,7 +69,7 @@ const CoverPage = forwardRef(({ restaurant, tagline }, ref) => (
       </motion.h1>
 
       <motion.p
-        className="mt-3 max-w-md px-3 text-sm text-[#36291c] sm:text-lg"
+        className="text-sm sm:text-lg text-black  mt-3 max-w-md px-3"
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5 }}
@@ -78,11 +77,11 @@ const CoverPage = forwardRef(({ restaurant, tagline }, ref) => (
         {tagline}
       </motion.p>
 
-      <p className="mt-4 text-xs italic text-[#4b3827] sm:text-sm">
+      <p className="text-xs sm:text-sm text-black italic mt-4 ">
         Experience Authentic Indian Cuisine
       </p>
     </div>
-    <div className="absolute bottom-5 right-5 rounded-full border border-[#C5A265]/35 bg-white/80 px-3 py-1 text-xs font-medium text-[#8f6b2e] shadow-lg backdrop-blur-sm">
+    <div className="absolute bottom-5 right-5 text-xs text-[#C5A265] bg-white/70  px-3 py-1 rounded-full">
       Swipe to explore →
     </div>
   </Page>
@@ -101,38 +100,33 @@ const SectionPage = forwardRef(({ title, subtitle, items }, ref) => (
           {title}
         </h2>
         {subtitle && (
-          <p className="text-sm text-white">
+          <p className="text-sm text-neutral-600 ">
             {subtitle}
           </p>
         )}
       </div>
 
-      <div className="grid grid-cols-1 gap-3">
+      <div className="grid grid-cols-1 gap-2.5">
         {items.map((item) => (
           <div
             key={item.name}
-            className="group flex gap-2.5 rounded-2xl border border-white/60 bg-white/78 p-3 shadow-[0_12px_30px_rgba(68,43,16,0.12)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_36px_rgba(68,43,16,0.22)]"
+            className="flex gap-2.5 bg-white/70  rounded-lg p-2.5 shadow hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
           >
             <div className="flex-1 min-w-0">
-              <div className="flex items-start justify-between gap-3">
-                <p className="text-sm font-semibold text-[#8c6724] lg:text-base">
-                  {item.name}
-                </p>
-                <span className="shrink-0 rounded-full bg-[#f4e1b5] px-2.5 py-1 text-sm font-bold text-[#51360f] shadow-sm">
-                  {item.price}
-                </span>
-              </div>
+              <p className="text-[#C5A265] font-semibold text-sm lg:text-base">
+                {item.name}
+              </p>
               {item.description && (
-                <p className="mt-1 text-xs leading-relaxed text-[#4e3d2d] lg:text-sm line-clamp-2">
+                <p className="text-xs lg:text-sm text-neutral-700  leading-tight line-clamp-2">
                   {item.description}
                 </p>
               )}
-              <div className="mt-2 flex items-center justify-between">
-                <span className="text-[11px] font-medium uppercase tracking-[0.24em] text-[#9d7f49]">
-                  Signature Flavor
+              <div className="flex justify-between items-center mt-1">
+                <span className="text-sm font-bold text-neutral-800 ">
+                  {item.price}
                 </span>
                 {item.badge && (
-                  <span className="rounded-full border border-amber-300/80 bg-amber-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-800">
+                  <span className="bg-amber-100  text-amber-700  text-[10px] px-2 py-0.5 rounded-full">
                     {item.badge}
                   </span>
                 )}
@@ -157,8 +151,8 @@ const InfoPage = forwardRef((_, ref) => (
         >
           About Us
         </h2>
-        <div className="w-16 h-0.5 bg-linear-to-r from-[#C5A265] to-orange-500 mb-4" />
-        <p className="text-sm leading-relaxed text-neutral-700 sm:text-base">
+        <div className="w-16 h-0.5 bg-[#C5A265] mb-4" />
+        <p className="text-sm sm:text-base text-neutral-700  leading-relaxed">
           Welcome to{" "}
           <span className="font-bold text-[#C5A265]">Harrison Spice</span>,
           where authentic Indian flavors meet modern dining excellence. Every
@@ -167,29 +161,26 @@ const InfoPage = forwardRef((_, ref) => (
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-5">
-        <div className="flex items-start gap-3 rounded-xl border border-white/60 bg-white/80 p-4 shadow">
-          <div className="bg-linear-to-br from-[#C5A265] to-orange-500 w-10 h-10 flex items-center justify-center rounded-full text-white">
+        <div className="flex items-start gap-3 bg-white/80  p-4 rounded-xl shadow">
+          <div className="bg-[#C5A265] w-10 h-10 flex items-center justify-center rounded-full text-white">
             <FiMapPin size={20} />
           </div>
           <div>
             <p className="text-sm font-bold text-[#C5A265]">Location</p>
-            <p className="text-xs leading-snug text-neutral-600">
+            <p className="text-xs text-neutral-600  leading-snug">
               23-27 Station Street, Ratby<br />Leicestershire, LE6 0JQ
             </p>
           </div>
         </div>
 
-        <div className="flex items-start gap-3 rounded-xl border border-white/60 bg-white/80 p-4 shadow">
-          <div className="bg-linear-to-br from-[#C5A265] to-orange-500 w-10 h-10 flex items-center justify-center rounded-full text-white">
+        <div className="flex items-start gap-3 bg-white/80  p-4 rounded-xl shadow">
+          <div className="bg-[#C5A265]  w-10 h-10 flex items-center justify-center rounded-full text-white">
             <FiPhone size={20} />
           </div>
           <div>
             <p className="text-sm font-bold text-[#C5A265]">Contact</p>
-            <p className="text-xs text-neutral-600">
+            <p className="text-xs text-neutral-600 ">
               0116 2395 644
-            </p>
-            <p className="text-xs text-neutral-600">
-              reservations@harrisonsspice.co.uk
             </p>
           </div>
         </div>
@@ -199,7 +190,7 @@ const InfoPage = forwardRef((_, ref) => (
         <img src="/logo.png" alt="Logo" loading="lazy" className="w-24 sm:w-32 opacity-90" />
       </div>
 
-      <p className="mt-4 border-t border-[#C5A265]/10 pt-3 text-center text-[10px] text-neutral-500 sm:text-xs">
+      <p className="text-center text-[10px] sm:text-xs text-neutral-500  mt-4 border-t border-[#C5A265]/10 pt-3">
         © {new Date().getFullYear()} Harrison Spice. All rights reserved.
       </p>
     </div>
@@ -218,11 +209,11 @@ const BackCoverPage = forwardRef((_, ref) => (
       >
         Thank You
       </h3>
-      <p className="mb-4 text-sm text-neutral-700 sm:text-base">
+      <p className="text-neutral-700  text-sm sm:text-base mb-4">
         for dining with us
       </p>
-      <LuChefHat className="mb-4 text-3xl text-neutral-600" />
-      <p className="text-sm text-neutral-600 sm:text-lg">
+      <LuChefHat className="text-3xl text-neutral-600  mb-4" />
+      <p className="text-neutral-600  text-sm sm:text-lg">
         See you again soon!
       </p>
     </div>
@@ -239,6 +230,7 @@ export default function MenuFlipbook() {
   const [itemsPerPage, setItemsPerPage] = useState(6);
 
   useEffect(() => {
+
     const handleResize = () => {
       const w = window.innerWidth;
       const h = window.innerHeight;
@@ -269,7 +261,7 @@ export default function MenuFlipbook() {
       <CoverPage
         key="cover"
         restaurant="Harrison Spice"
-        tagline="Modern Indian Comfort Food"
+        tagline="Modern Comfort Food & Coastal Cocktails"
       />
     );
 
@@ -301,7 +293,7 @@ export default function MenuFlipbook() {
 
   return (
     <div
-      className="bg-black px-3 py-8 transition-colors duration-500"
+      className="px-3 py-8 bg-black transition-colors duration-500"
       id="menu"
     >
       {/* Header */}
@@ -311,7 +303,7 @@ export default function MenuFlipbook() {
       >
         <div>
           <h1
-            className="text-3xl font-bold text-white drop-shadow-[0_5px_18px_rgba(63,33,4,0.28)] sm:text-4xl"
+            className="text-3xl sm:text-4xl font-bold text-[#C5A265]"
             style={{ fontFamily: "serif" }}
           >
             Our Menu
@@ -320,19 +312,19 @@ export default function MenuFlipbook() {
 
         <div className="flex items-center gap-3">
           {!isMobile && (
-            <div className="flex items-center gap-3 rounded-full border border-white/50 bg-white/90 px-4 py-2 shadow-xl backdrop-blur-sm">
+            <div className="flex items-center gap-3 bg-neutral-800 rounded-full shadow px-4 py-2">
               <button
                 onClick={goPrev}
-                className="flex items-center gap-1 rounded-full bg-[#C5A265] px-3 py-1.5 text-white transition hover:bg-[#ad872e]"
+                className="bg-[#C5A265] px-3 py-1.5 text-white rounded-full flex items-center gap-1"
               >
                 <FiChevronLeft /> Prev
               </button>
-              <span className="text-sm font-bold text-[#7b5c25]">
+              <span className="text-sm font-bold text-[#C5A265] ">
                 {String(page + 1).padStart(2, "0")} / {pages.length}
               </span>
               <button
                 onClick={goNext}
-                className="flex items-center gap-1 rounded-full bg-[#C5A265] px-3 py-1.5 text-white transition hover:bg-[#ad872e]"
+                className="bg-[#C5A265] px-3 py-1.5 text-white rounded-full flex items-center gap-1"
               >
                 Next <FiChevronRight />
               </button>
@@ -356,7 +348,9 @@ export default function MenuFlipbook() {
           onFlip={(e) => setPage(e.data)}
           ref={flipRef}
         >
-          {pages.map((node) => node)}
+          {pages.map((node, idx) => (
+            <div key={idx}>{node}</div>
+          ))}
         </HTMLFlipBook>
       </div>
 
@@ -373,10 +367,10 @@ export default function MenuFlipbook() {
             <button
               key={s.id}
               onClick={() => goTo(target)}
-              className={`rounded-xl px-3 py-2 text-sm font-semibold transition-all
+              className={`px-3 py-2 text-sm font-semibold rounded-lg transition-all
                 ${isActive
-                  ? "bg-[#C5A265] text-white shadow-[0_14px_28px_rgba(44,25,13,0.28)]"
-                  : "border border-white/60 bg-white/88 text-[#C5A265] shadow-sm backdrop-blur-sm hover:scale-105 hover:bg-white"
+                  ? "bg-[#C5A265] text-[[#C5A265]  shadow-lg"
+                  : "bg-neutral-800 text-[#C5A265] uppercase border border-[#C5A265] hover:scale-105 shadow-sm"
                 }`}
             >
               {s.title}
