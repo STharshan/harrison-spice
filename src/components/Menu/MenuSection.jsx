@@ -375,8 +375,8 @@ export default function MenuFlipbook() {
               onClick={() => goTo(target)}
               className={`rounded-xl px-3 py-2 text-sm font-semibold transition-all
                 ${isActive
-                  ? "bg-[#2c190d] text-white shadow-[0_14px_28px_rgba(44,25,13,0.28)]"
-                  : "border border-white/60 bg-white/88 text-[#3f2b19] shadow-sm backdrop-blur-sm hover:scale-105 hover:bg-white"
+                  ? "bg-[#C5A265] text-white shadow-[0_14px_28px_rgba(44,25,13,0.28)]"
+                  : "border border-white/60 bg-white/88 text-[#C5A265] shadow-sm backdrop-blur-sm hover:scale-105 hover:bg-white"
                 }`}
             >
               {s.title}
