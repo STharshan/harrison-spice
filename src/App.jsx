@@ -9,6 +9,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import GDPRConsent from "./components/GDPRBanner";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS CSS globally
+import ScrollToHash from "./components/ScrollToHash";
 
 function App() {
   useEffect(() => {
@@ -28,6 +29,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <ScrollToHash />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
