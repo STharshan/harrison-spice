@@ -47,14 +47,6 @@ const Footer = () => {
             </a>
           </p>
           <p>
-            <a
-              href="mailto:reservations@harrisonsspice.co.uk"
-              className="hover:underline text-black dark:text-gray-300"
-            >
-              reservations@harrisonsspice.co.uk
-            </a>
-          </p>
-          <p>
             <a href="tel:+441162395644" className="text-black dark:text-gray-300">
               Booking Request : <span className="hover:underline">0116 2395 644</span>
             </a>

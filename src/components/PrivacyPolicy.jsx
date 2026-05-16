@@ -14,7 +14,6 @@ const PrivacyPolicy = () => {
                     </p>
                     <ul className="list-disc ml-6 text-gray-700">
                         <li>Full name</li>
-                        <li>Email address</li>
                         <li>Phone number</li>
                         <li>Address (if relevant to the service)</li>
                         <li>Details of your enquiry or project</li>
@@ -110,7 +109,6 @@ const PrivacyPolicy = () => {
                     </p>
                     <div className="text-gray-700">
                         <p><strong>Harrison Spice</strong></p>
-                        <p>Email: <a href="mailto:reservations@harrisonsspice.co.uk" className="text-emerald-800 hover:underline">reservations@harrisonsspice.co.uk</a></p>
                         <p>Phone: 0116 2395 644</p>
                         <p>Address: 23-27 Station Street, Ratby Leicestershire, LE6 0JQ</p>
                     </div>

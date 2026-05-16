@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
-import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -73,10 +72,8 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* 3. Action Section (Theme & Buttons) */}
+          {/* 3. Action Section */}
           <div className="flex items-center space-x-2 md:space-x-4">
-            <ThemeToggle />
-
             {/* Desktop Order Button */}
             <button
               onClick={openOrderMenu}

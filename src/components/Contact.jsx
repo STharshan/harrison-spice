@@ -134,15 +134,6 @@ Special Request: ${form.message}
               </a>
             </p>
 
-            <p className="dark:text-gray-400">
-              Email:{" "}
-              <a
-                href="mailto:reservations@harrisonsspice.co.uk"
-                className="hover:underline"
-              >
-                reservations@harrisonsspice.co.uk
-              </a>
-            </p>
           </div>
         </div>
 
