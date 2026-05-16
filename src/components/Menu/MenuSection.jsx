@@ -101,7 +101,7 @@ const SectionPage = forwardRef(({ title, subtitle, items }, ref) => (
           {title}
         </h2>
         {subtitle && (
-          <p className="text-sm text-[#5c4b3a]">
+          <p className="text-sm text-white">
             {subtitle}
           </p>
         )}
